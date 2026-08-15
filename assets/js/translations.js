@@ -313,15 +313,18 @@ translations.ru.diplomas.splice(7, 0, [
 
 translations.pl.references = [
   ["Referencja MANEKIN", "List polecający z restauracji MANEKIN, potwierdzający pracę kuchenną, organizację stanowiska i współpracę z zespołem."],
-  ["Referencja Palfinger Poland", "List polecający za pracę jako pomocnik lakiernika w Palfinger Poland w latach 2022-2024."]
+  ["Referencja Palfinger Poland", "List polecający za pracę jako pomocnik lakiernika w Palfinger Poland w latach 2022-2024."],
+  ["Referencja SOL-WORK", "List polecający za pracę na stanowisku inspektora ds. bezpieczeństwa i higieny pracy w firmie SOL-WORK."]
 ];
 translations.en.references = [
   ["MANEKIN reference", "Recommendation letter from MANEKIN restaurant confirming kitchen work, workstation organization and teamwork."],
-  ["Palfinger Poland reference", "Recommendation letter for work as a painter assistant at Palfinger Poland in 2022-2024."]
+  ["Palfinger Poland reference", "Recommendation letter for work as a painter assistant at Palfinger Poland in 2022-2024."],
+  ["SOL-WORK reference", "Recommendation letter for work as an occupational health and safety inspector at SOL-WORK."]
 ];
 translations.ru.references = [
   ["Рекомендация MANEKIN", "Рекомендательное письмо из ресторана MANEKIN, подтверждающее работу на кухне, организацию рабочего места и командное взаимодействие."],
-  ["Рекомендация Palfinger Poland", "Рекомендательное письмо за работу помощником маляра в Palfinger Poland в 2022-2024 годах."]
+  ["Рекомендация Palfinger Poland", "Рекомендательное письмо за работу помощником маляра в Palfinger Poland в 2022-2024 годах."],
+  ["Рекомендация SOL-WORK", "Рекомендательное письмо за работу инспектором по охране труда и технике безопасности в компании SOL-WORK."]
 ];
 
 Object.assign(translations.pl.text, {

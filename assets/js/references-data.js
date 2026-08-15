@@ -10,5 +10,11 @@ window.references = [
     desc: "List polecający za pracę jako pomocnik lakiernika w Palfinger Poland w latach 2022-2024.",
     img: "referencje/Referencje Palfinger Poland.jpg",
     file: "referencje/Referencje Palfinger Poland.pdf"
+  },
+  {
+    title: "Referencja SOL-WORK",
+    desc: "List polecający za pracę na stanowisku inspektora ds. bezpieczeństwa i higieny pracy w firmie SOL-WORK.",
+    img: "referencje/photo_2026-08-15_23-11-58.jpg",
+    file: "referencje/solwork.pdf"
   }
 ];
