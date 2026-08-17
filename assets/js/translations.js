@@ -9,26 +9,28 @@ const emailBox = {
 const translations = {
   pl: {
     lang: "pl",
-    title: "Vladyslav Konohrai | CV – psychologia i BHP",
+    title: "Vladyslav Konohrai | Inspektor BHP i psychologia, Toruń",
+    description: "Vladyslav Konohrai - CV inspektora BHP i studenta psychologii UMK w Toruniu. Doświadczenie w BHP, produkcji, gastronomii, szkoleniach i obsłudze klienta.",
     attrs: [
       [".menu-toggle", "aria-label", "Menu"],
       [".lang-switch", "aria-label", "Wybierz język strony"],
       ["nav", "aria-label", "Główna nawigacja"],
       ["[data-diploma-prev]", "aria-label", "Poprzedni dyplom"],
       ["[data-diploma-next]", "aria-label", "Następny dyplom"],
-      ["#diplomaImage", "alt", "Dyplom"]
+      ["#diplomaImage", "alt", "Certyfikat: Excel dla początkujących"],
+      [".photo", "alt", "Portret Vladyslava Konohraia"]
     ],
     text: {
       ".skip-link": "Przejdź do treści",
       ".tag": "STUDENT PSYCHOLOGII • SPECJALISTA BHP",
-      ".hero p": "Student psychologii z doświadczeniem w pracy fizycznej, obsłudze klienta oraz w obszarze BHP. Motywuje mnie nauka, odpowiedzialność i rozwój.",
+      ".hero p": "Nazywam się Vladyslav Konohrai. Jestem studentem psychologii UMK w Toruniu i inspektorem BHP z doświadczeniem w pracy fizycznej, produkcji, gastronomii oraz obsłudze klienta. Motywuje mnie nauka, odpowiedzialność i rozwój.",
       ".journey .section-title": "MÓJ PUNKT DROGI",
       ".journey p": "Każde doświadczenie było krokiem naprzód. Od pracy fizycznej przez przemysł, aż do psychologii i bezpieczeństwa pracy. Dziś łączę wiedzę o człowieku z dbałością o bezpieczeństwo i rozwój.",
       "#skills .section-title": "Moje mocne strony",
       ".section-heading .section-title": "Zakres współpracy",
       ".section-heading h2": "Co wnoszę do zespołu",
       ".section-heading p": "Łączę praktyczne doświadczenie z BHP, pracą operacyjną i psychologicznym spojrzeniem na ludzi.",
-      "#experience .section-title": "Doświadczenie",
+      "#experience .section-title": "Doświadczenie zawodowe",
       "#education .card:nth-child(1) .section-title": "Edukacja",
       "#education .card:nth-child(2) .section-title": "Języki",
       "#education .card:nth-child(3) .section-title": "Osiągnięcia i certyfikaty",
@@ -91,13 +93,15 @@ const translations = {
   },
   en: {
     lang: "en",
-    title: "Vladyslav Konohrai | CV – Psychology & Safety",
+    title: "Vladyslav Konohrai | OHS specialist and psychology, Toruń",
+    description: "CV of Vladyslav Konohrai, an OHS inspector and psychology student at Nicolaus Copernicus University in Toruń, with experience in safety, production, gastronomy and customer service.",
     attrs: [
       [".lang-switch", "aria-label", "Choose page language"],
       ["nav", "aria-label", "Main navigation"],
       ["[data-diploma-prev]", "aria-label", "Previous certificate"],
       ["[data-diploma-next]", "aria-label", "Next certificate"],
-      ["#diplomaImage", "alt", "Certificate"]
+      ["#diplomaImage", "alt", "Certificate: Excel for Beginners"],
+      [".photo", "alt", "Portrait of Vladyslav Konohrai"]
     ],
     text: {
       ".skip-link": "Skip to content",
@@ -109,7 +113,7 @@ const translations = {
       ".section-heading .section-title": "Collaboration scope",
       ".section-heading h2": "What I bring to a team",
       ".section-heading p": "I combine practical OHS experience, operational work and a psychological view of people.",
-      "#experience .section-title": "Experience",
+      "#experience .section-title": "Professional experience",
       "#education .card:nth-child(1) .section-title": "Education",
       "#education .card:nth-child(2) .section-title": "Languages",
       "#education .card:nth-child(3) .section-title": "Achievements and certificates",
@@ -172,25 +176,27 @@ const translations = {
   },
   ru: {
     lang: "ru",
-    title: "Владислав Конохрай | CV – психология и безопасность",
+    title: "Vladyslav Konohrai | Охрана труда и психология, Торунь",
+    description: "Vladyslav Konohrai (Владислав Конохрай) - инспектор по охране труда и студент психологии UMK в Торуни. Опыт в производстве, гастрономии и работе с клиентами.",
     attrs: [
       [".lang-switch", "aria-label", "Выберите язык страницы"],
       ["nav", "aria-label", "Главная навигация"],
       ["[data-diploma-prev]", "aria-label", "Предыдущий диплом"],
       ["[data-diploma-next]", "aria-label", "Следующий диплом"],
-      ["#diplomaImage", "alt", "Диплом"]
+      ["#diplomaImage", "alt", "Сертификат: Excel для начинающих"],
+      [".photo", "alt", "Портрет Владислава Конохрая"]
     ],
     text: {
       ".skip-link": "Перейти к содержанию",
       ".tag": "СТУДЕНТ ПСИХОЛОГИИ • СПЕЦИАЛИСТ ПО ОХРАНЕ ТРУДА",
-      ".hero p": "Студент психологии с опытом физической работы, обслуживания клиентов и охраны труда. Меня мотивируют обучение, ответственность и развитие.",
+      ".hero p": "Меня зовут Владислав Конохрай (Vladyslav Konohrai). Я студент психологии UMK в Торуни и инспектор по охране труда с опытом производства, гастрономии и обслуживания клиентов.",
       ".journey .section-title": "МОЙ ПУТЬ",
       ".journey p": "Каждый опыт был шагом вперед. От физической работы через промышленность к психологии и охране труда. Сегодня я объединяю знания о человеке с заботой о безопасности и развитии.",
       "#skills .section-title": "Мои сильные стороны",
       ".section-heading .section-title": "Формат сотрудничества",
       ".section-heading h2": "Что я даю команде",
       ".section-heading p": "Я объединяю практический опыт в охране труда, операционную работу и психологический взгляд на людей.",
-      "#experience .section-title": "Опыт",
+      "#experience .section-title": "Профессиональный опыт",
       "#education .card:nth-child(1) .section-title": "Образование",
       "#education .card:nth-child(2) .section-title": "Языки",
       "#education .card:nth-child(3) .section-title": "Достижения и сертификаты",
@@ -386,6 +392,24 @@ translations.ru.attrs.push(
 
 let activeLanguage = "pl";
 
+const languageSeo = {
+  pl: {
+    url: "https://groznayabulochka.github.io/vladyslav-konohrai-cv/",
+    locale: "pl_PL",
+    imageAlt: "Portret Vladyslava Konohraia"
+  },
+  ru: {
+    url: "https://groznayabulochka.github.io/vladyslav-konohrai-cv/?lang=ru",
+    locale: "ru_RU",
+    imageAlt: "Портрет Владислава Конохрая"
+  },
+  en: {
+    url: "https://groznayabulochka.github.io/vladyslav-konohrai-cv/?lang=en",
+    locale: "en_US",
+    imageAlt: "Portrait of Vladyslav Konohrai"
+  }
+};
+
 const storage = {
   get(key) {
     try {
@@ -424,6 +448,49 @@ const setAttr = (selector, attr, value) => {
   const element = getElement(selector);
   if (element) {
     element.setAttribute(attr, value);
+  }
+};
+
+const updateLanguageSeo = (dictionary) => {
+  const seo = languageSeo[dictionary.lang] || languageSeo.pl;
+
+  setAttr('link[rel="canonical"]', "href", seo.url);
+  setAttr('meta[name="description"]', "content", dictionary.description);
+  setAttr('meta[property="og:title"]', "content", dictionary.title);
+  setAttr('meta[property="og:description"]', "content", dictionary.description);
+  setAttr('meta[property="og:url"]', "content", seo.url);
+  setAttr('meta[property="og:locale"]', "content", seo.locale);
+  setAttr('meta[property="og:image:alt"]', "content", seo.imageAlt);
+  setAttr('meta[name="twitter:title"]', "content", dictionary.title);
+  setAttr('meta[name="twitter:description"]', "content", dictionary.description);
+  setAttr('meta[name="twitter:image:alt"]', "content", seo.imageAlt);
+
+  const structuredData = getElement("#profile-structured-data");
+  if (structuredData) {
+    try {
+      const data = JSON.parse(structuredData.textContent);
+      const profile = data["@graph"]?.find((item) => item["@type"] === "ProfilePage");
+      if (profile) {
+        profile["@id"] = `${seo.url}#profile`;
+        profile.url = seo.url;
+        profile.name = dictionary.title;
+        profile.inLanguage = dictionary.lang;
+        structuredData.textContent = JSON.stringify(data);
+      }
+    } catch {
+      // Static structured data remains available if it cannot be localized.
+    }
+  }
+
+  if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+    const currentUrl = new URL(window.location.href);
+    if (dictionary.lang === "pl") {
+      currentUrl.searchParams.delete("lang");
+    } else {
+      currentUrl.searchParams.set("lang", dictionary.lang);
+    }
+
+    window.history.replaceState(null, "", `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
   }
 };
 
@@ -475,6 +542,7 @@ const applyLanguage = (language) => {
 
   document.documentElement.lang = dictionary.lang;
   document.title = dictionary.title;
+  updateLanguageSeo(dictionary);
 
   Object.entries(dictionary.text).forEach(([selector, value]) => setText(selector, value));
   Object.entries(dictionary.html).forEach(([selector, value]) => setHtml(selector, value));
@@ -524,8 +592,13 @@ window.getLocalizedReference = (reference) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
   const savedLanguage = storage.get("siteLanguage");
-  const initialLanguage = translations[savedLanguage] ? savedLanguage : "pl";
+  const initialLanguage = translations[requestedLanguage]
+    ? requestedLanguage
+    : translations[savedLanguage]
+      ? savedLanguage
+      : "pl";
 
   getElements("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => applyLanguage(button.dataset.lang));
