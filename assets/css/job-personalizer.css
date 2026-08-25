@@ -34,6 +34,57 @@ body.job-gate-open {
   box-shadow: 0 34px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08);
 }
 
+.job-gate-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.job-gate-brand {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-gate-brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.job-gate-brand strong {
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+
+.job-gate-language {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-gate-language > span {
+  color: #bfc7d9;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.job-gate-lang-switch {
+  border-color: rgba(101, 224, 163, .22);
+  background: rgba(255,255,255,.055);
+}
+
+.job-gate-lang-switch button:hover,
+.job-gate-lang-switch button.active {
+  background: rgba(101, 224, 163, .2);
+  box-shadow: 0 0 18px rgba(101, 224, 163, .14);
+}
+
 .job-gate-panel::before {
   content: "";
   position: absolute;
@@ -225,6 +276,26 @@ body.job-gate-open {
   transition: transform .22s ease, border-color .22s ease, background .22s ease;
 }
 
+.hero-profile-tools {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hero-profile-tools .tag {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.hero-role-change {
+  min-height: 42px;
+  padding: 10px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
 .role-change:hover {
   transform: translateY(-1px);
   border-color: rgba(101, 224, 163, .52);
@@ -237,7 +308,7 @@ body.job-gate-open {
 }
 
 .experience {
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .strength {
@@ -280,16 +351,45 @@ body.job-gate-open {
 
   .job-gate-panel {
     max-height: calc(100vh - 20px);
-    padding: 20px;
-    border-radius: 14px;
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .job-gate-topbar {
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .job-gate-brand strong,
+  .job-gate-language > span {
+    display: none;
+  }
+
+  .job-gate-brand img {
+    width: 38px;
+    height: 38px;
   }
 
   .job-gate h2 {
-    font-size: 30px;
+    font-size: 27px;
+    line-height: 1.12;
+    margin-bottom: 10px;
+  }
+
+  .hero-profile-tools {
+    align-items: stretch;
+    flex-direction: column;
+    margin-bottom: 22px;
+  }
+
+  .hero-profile-tools .role-change {
+    align-self: flex-start;
   }
 
   .job-gate p {
-    font-size: 16px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .job-choice-grid {
@@ -298,14 +398,45 @@ body.job-gate-open {
 
   .job-choice {
     min-height: auto;
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 4px 12px;
+    padding: 13px;
+  }
+
+  .job-choice vk-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+  }
+
+  .job-choice span,
+  .job-choice small {
+    grid-column: 2;
+  }
+
+  .job-choice span {
+    grid-row: 1;
+    font-size: 15px;
+  }
+
+  .job-choice small {
+    grid-row: 2;
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   .role-summary {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
   }
 
   .role-change {
-    width: 100%;
+    width: auto;
+    padding: 10px 12px;
+    font-size: 12px;
   }
 }

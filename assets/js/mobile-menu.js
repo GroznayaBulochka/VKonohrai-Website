@@ -32,7 +32,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   links.forEach((link) => {
-    link.addEventListener("click", () => setMenuState(false));
+    link.addEventListener("click", (event) => {
+      const target = link.hash ? document.querySelector(link.hash) : null;
+
+      if (mobileMenu.matches && target) {
+        event.preventDefault();
+      }
+
+      setMenuState(false);
+
+      if (mobileMenu.matches && target) {
+        window.setTimeout(() => {
+          const html = document.documentElement;
+          const previousScrollBehavior = html.style.scrollBehavior;
+          const navHeight = nav.getBoundingClientRect().height;
+          const targetTop = target.getBoundingClientRect().top + window.scrollY;
+
+          html.style.scrollBehavior = "auto";
+          window.scrollTo(0, Math.max(0, targetTop - navHeight - 14));
+          window.history.pushState(null, "", link.hash);
+          html.style.scrollBehavior = previousScrollBehavior;
+        }, 340);
+      }
+    });
   });
 
   document.addEventListener("keydown", (event) => {

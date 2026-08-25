@@ -26,13 +26,13 @@
 
 .experience {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
 .exp-card {
   padding: 24px;
-  min-height: 250px;
+  min-height: 230px;
   transition: transform .22s ease, border-color .22s ease, background .22s ease;
 }
 
@@ -195,7 +195,7 @@
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 18px;
   margin-top: 24px;
 }
@@ -204,18 +204,24 @@
   grid-column: span 2;
 }
 
+.contact-method {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-location,
+.contact-social {
+  grid-column: span 3;
+}
+
 .contact-card {
   padding: 22px;
   color: white;
   text-decoration: none;
   min-width: 0;
-}
-
-.contact-copy {
-  width: 100%;
-  text-align: left;
-  font: inherit;
-  cursor: pointer;
 }
 
 .contact-card h2 {
@@ -232,11 +238,51 @@
   transition: transform .22s ease, border-color .22s ease, background .22s ease;
 }
 
-.contact-link:hover,
-.contact-copy:hover {
+.contact-link:hover {
   transform: translateY(-3px);
   border-color: rgba(101, 224, 163, .24);
   background: rgba(101, 224, 163, .06);
+}
+
+.contact-method > vk-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--green);
+}
+
+.contact-method > div {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.contact-method a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-quick-copy {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(255,255,255,.05);
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.contact-quick-copy:hover {
+  transform: translateY(-2px);
+  border-color: rgba(101, 224, 163, .36);
+  background: rgba(101, 224, 163, .1);
+}
+
+.contact-quick-copy vk-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .rodo {
@@ -260,7 +306,7 @@
 
 .side-info {
   align-self: start;
-  padding-top: 118px;
+  padding-top: 0;
 }
 
 .side-info .info-box {

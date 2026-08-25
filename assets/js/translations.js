@@ -18,7 +18,11 @@ const translations = {
       ["[data-diploma-prev]", "aria-label", "Poprzedni dyplom"],
       ["[data-diploma-next]", "aria-label", "Następny dyplom"],
       ["#diplomaImage", "alt", "Certyfikat: Excel dla początkujących"],
-      [".photo", "alt", "Portret Vladyslava Konohraia"]
+      [".photo", "alt", "Portret Vladyslava Konohraia"],
+      [".contact-email [data-copy]", "aria-label", "Skopiuj e-mail"],
+      [".contact-email [data-copy]", "title", "Skopiuj e-mail"],
+      [".contact-phone [data-copy]", "aria-label", "Skopiuj telefon"],
+      [".contact-phone [data-copy]", "title", "Skopiuj telefon"]
     ],
     text: {
       ".skip-link": "Przejdź do treści",
@@ -39,6 +43,8 @@ const translations = {
       ".diploma-head p": "Pełna galeria certyfikatów i zaświadczeń potwierdzających moje kwalifikacje.",
       ".contact .contact-card:first-child h2": "Porozmawiajmy!",
       ".contact .contact-card:first-child small": "Jestem otwarty na nowe możliwości i ciekawe projekty.",
+      ".contact-email .contact-action-label": "Napisz do mnie",
+      ".contact-phone .contact-action-label": "Zadzwoń",
       ".quote-card p": "Najważniejszy zasób każdej organizacji to ludzie. Moim celem jest zrozumieć ich i tworzyć bezpieczne środowisko do rozwoju.",
       ".rodo": "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w CV na potrzeby obecnej oraz przyszłych rekrutacji, zgodnie z RODO."
     },
@@ -47,25 +53,20 @@ const translations = {
       ".actions .btn:first-child": `Pobierz CV ${icon("download")}`,
       ".actions .btn.secondary": `Skontaktuj się ${icon("arrow-right")}`,
       ".hero-subtitle": "Rozumiem ludzi.<br>Buduję bezpieczniejsze środowiska.",
-      ".side-info .info-box:nth-child(1)": `<b>${icon("map-pin")} Jurija Gagarina 19</b><br>87-100 Toruń`,
+      ".side-info .info-box:nth-child(1)": `<b>${icon("map-pin")} Toruń</b><br>Polska`,
       ".side-info .info-box:nth-child(2)": `<b>${icon("phone")} +48 739-64-22-77</b>`,
       ".side-info .info-box:nth-child(3)": emailBox.pl,
       ".side-info .info-box:nth-child(4)": `<b>${icon("star")} Dostępny do współpracy</b><br>Otwarty na nowe możliwości`,
       ".journey h2": "Droga, która mnie<br><span>ukształtowała</span>",
       ".journey .btn": `Poznaj moją historię ${icon("arrow-right")}`,
       "#diplomaPdf": `Otwórz dyplom ${icon("external-link")}`,
-      ".contact-link:nth-of-type(1)": `${icon("mail")}<br><b>v.konohrai.work@gmail.com</b><br><small>Napisz do mnie</small>`,
-      ".contact-link:nth-of-type(2)": `${icon("phone")}<br><b>+48 739-64-22-77</b><br><small>Zadzwoń</small>`,
-      ".contact-location": `${icon("map-pin")}<br><b>Jurija Gagarina 19</b><br><small>87-100 Toruń</small>`,
+      ".contact-location": `${icon("map-pin")}<br><b>Toruń</b><br><small>Polska</small>`,
       ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Zobacz mój profil</small>`
     },
     lists: [
       [".menu a", ["O mnie", "Umiejętności", "Zakres", "Doświadczenie", "Edukacja", "Osiągnięcia", "Kontakt"]],
       [".hero-pills span", [`${icon("shield")} Inspektor BHP`, `${icon("brain")} Psychologia UMK`, `${icon("clipboard-check")} Organizacja pracy`, `${icon("map-pin")} Toruń`], true],
-      [".stat small", ["lat doświadczenia", "kierunki edukacji", "języków", "certyfikatów"]],
-      [".orbit-item span", ["Psychologia", "Zespół", "Analiza", "BHP"]],
-      [".focus-card h2", ["Bezpieczeństwo pracy", "Praca z ludźmi", "Analiza i porządek"]],
-      [".focus-card p", ["Dokumentacja, szkolenia i praktyczne podejście do procedur BHP.", "Komunikacja, obsługa klienta i wsparcie zespołu w codziennych zadaniach.", "Uważność na detale, szybka adaptacja i odpowiedzialność za wynik."]],
+      [".stat small", ["lat doświadczenia", "kierunki edukacji", "języków", "dyplomów i certyfikatów"]],
       [".point b", ["Budownictwo", "Farma", "Przemysł", "Specjalista BHP", "Psychologia"]],
       [".point small", ["Pierwsze doświadczenie w pracy fizycznej i na budowie.", "Praca w gospodarstwie, opieka nad zwierzętami, dyscyplina.", "Lakierowanie, organizacja pracy i zarządzanie zespołem.", "Odpowiedzialność za bezpieczeństwo, szkolenia i procedury.", "Rozwój wiedzy o człowieku, motywacji i komunikacji."]],
       [".strength span", ["Organizacja<br>i samodzielność", "Praca pod presją<br>czasu", "Obsługa klienta<br>i komunikacja", "Rozwiązywanie<br>problemów", "Szybka nauka<br>i adaptacja", "Odpowiedzialność<br>i zaangażowanie", "Uprawnienia<br>UDT", "Praca zespołowa<br>i wsparcie"], true],
@@ -87,7 +88,7 @@ const translations = {
       ["Kierowanie zespołem", "Zaświadczenie ukończenia treningu menedżerskiego."],
       ["Photoshop dla początkujących", "Certyfikat ukończenia kursu podstaw Adobe Photoshop."],
       ["Pomoc osobom LGBT+", "Certyfikat ukończenia szkolenia specjalistycznego."],
-      ["Pilot BSP A1/A3", "Potwierdzenie zaliczenia szkolenia i zdania egzaminu."],
+      ["Pilot BSP A1/A3", "Potwierdzenie zaliczenia szkolenia i zdania egzaminu.", "Ważny do 20.09.2030"],
       ["Umiejętności interpersonalne", "Certyfikat ukończenia kursu z zakresu umiejętności interpersonalnych."]
     ]
   },
@@ -101,7 +102,11 @@ const translations = {
       ["[data-diploma-prev]", "aria-label", "Previous certificate"],
       ["[data-diploma-next]", "aria-label", "Next certificate"],
       ["#diplomaImage", "alt", "Certificate: Excel for Beginners"],
-      [".photo", "alt", "Portrait of Vladyslav Konohrai"]
+      [".photo", "alt", "Portrait of Vladyslav Konohrai"],
+      [".contact-email [data-copy]", "aria-label", "Copy e-mail"],
+      [".contact-email [data-copy]", "title", "Copy e-mail"],
+      [".contact-phone [data-copy]", "aria-label", "Copy phone number"],
+      [".contact-phone [data-copy]", "title", "Copy phone number"]
     ],
     text: {
       ".skip-link": "Skip to content",
@@ -122,6 +127,8 @@ const translations = {
       ".diploma-head p": "A full gallery of certificates and confirmations documenting my qualifications.",
       ".contact .contact-card:first-child h2": "Let's talk!",
       ".contact .contact-card:first-child small": "I am open to new opportunities and interesting projects.",
+      ".contact-email .contact-action-label": "Write to me",
+      ".contact-phone .contact-action-label": "Call me",
       ".quote-card p": "People are the most important resource in every organization. My goal is to understand them and create a safe environment for growth.",
       ".rodo": "I consent to the processing of my personal data included in this CV for current and future recruitment processes in accordance with GDPR."
     },
@@ -130,25 +137,20 @@ const translations = {
       ".actions .btn:first-child": `Download CV ${icon("download")}`,
       ".actions .btn.secondary": `Contact me ${icon("arrow-right")}`,
       ".hero-subtitle": "Understanding people.<br>Building safer environments.",
-      ".side-info .info-box:nth-child(1)": `<b>${icon("map-pin")} Jurija Gagarina 19</b><br>87-100 Toruń`,
+      ".side-info .info-box:nth-child(1)": `<b>${icon("map-pin")} Toruń</b><br>Poland`,
       ".side-info .info-box:nth-child(2)": `<b>${icon("phone")} +48 739-64-22-77</b>`,
       ".side-info .info-box:nth-child(3)": emailBox.en,
       ".side-info .info-box:nth-child(4)": `<b>${icon("star")} Available for collaboration</b><br>Open to new opportunities`,
       ".journey h2": "The road that<br><span>shaped me</span>",
       ".journey .btn": `See my story ${icon("arrow-right")}`,
       "#diplomaPdf": `Open certificate ${icon("external-link")}`,
-      ".contact-link:nth-of-type(1)": `${icon("mail")}<br><b>v.konohrai.work@gmail.com</b><br><small>Write to me</small>`,
-      ".contact-link:nth-of-type(2)": `${icon("phone")}<br><b>+48 739-64-22-77</b><br><small>Call me</small>`,
-      ".contact-location": `${icon("map-pin")}<br><b>Jurija Gagarina 19</b><br><small>87-100 Toruń</small>`,
+      ".contact-location": `${icon("map-pin")}<br><b>Toruń</b><br><small>Poland</small>`,
       ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>View my profile</small>`
     },
     lists: [
       [".menu a", ["About", "Skills", "Scope", "Experience", "Education", "Achievements", "Contact"]],
       [".hero-pills span", [`${icon("shield")} OHS inspector`, `${icon("brain")} Psychology at UMK`, `${icon("clipboard-check")} Work organization`, `${icon("map-pin")} Toruń`], true],
-      [".stat small", ["years of experience", "education paths", "languages", "certificates"]],
-      [".orbit-item span", ["Psychology", "Leadership", "Analysis", "Safety"]],
-      [".focus-card h2", ["Workplace safety", "Working with people", "Analysis and order"]],
-      [".focus-card p", ["Documentation, training and a practical approach to OHS procedures.", "Communication, customer service and daily team support.", "Attention to detail, fast adaptation and responsibility for results."]],
+      [".stat small", ["years of experience", "education paths", "languages", "diplomas and certificates"]],
       [".point b", ["Construction", "Farm", "Industry", "OHS specialist", "Psychology"]],
       [".point small", ["First experience in physical and construction work.", "Farm work, animal care and discipline.", "Painting, work organization and team management.", "Responsibility for safety, training and procedures.", "Development of knowledge about people, motivation and communication."]],
       [".strength span", ["Organization<br>and independence", "Working under<br>time pressure", "Customer service<br>and communication", "Problem<br>solving", "Fast learning<br>and adaptation", "Responsibility<br>and commitment", "UDT<br>license", "Teamwork<br>and support"], true],
@@ -170,7 +172,7 @@ const translations = {
       ["Team management", "Confirmation of completing management training."],
       ["Photoshop for Beginners", "Certificate of completing an Adobe Photoshop basics course."],
       ["Support for LGBT+ people", "Certificate of completing specialist training."],
-      ["UAV pilot A1/A3", "Confirmation of completing training and passing the exam."],
+      ["UAV pilot A1/A3", "Confirmation of completing training and passing the exam.", "Valid until 20.09.2030"],
       ["Interpersonal skills", "Certificate of completing an interpersonal skills course."]
     ]
   },
@@ -184,7 +186,11 @@ const translations = {
       ["[data-diploma-prev]", "aria-label", "Предыдущий диплом"],
       ["[data-diploma-next]", "aria-label", "Следующий диплом"],
       ["#diplomaImage", "alt", "Сертификат: Excel для начинающих"],
-      [".photo", "alt", "Портрет Владислава Конохрая"]
+      [".photo", "alt", "Портрет Владислава Конохрая"],
+      [".contact-email [data-copy]", "aria-label", "Скопировать e-mail"],
+      [".contact-email [data-copy]", "title", "Скопировать e-mail"],
+      [".contact-phone [data-copy]", "aria-label", "Скопировать телефон"],
+      [".contact-phone [data-copy]", "title", "Скопировать телефон"]
     ],
     text: {
       ".skip-link": "Перейти к содержанию",
@@ -205,6 +211,8 @@ const translations = {
       ".diploma-head p": "Полная галерея сертификатов и подтверждений моих квалификаций.",
       ".contact .contact-card:first-child h2": "Давайте поговорим!",
       ".contact .contact-card:first-child small": "Я открыт к новым возможностям и интересным проектам.",
+      ".contact-email .contact-action-label": "Написать мне",
+      ".contact-phone .contact-action-label": "Позвонить",
       ".quote-card p": "Самый важный ресурс любой организации — это люди. Моя цель — понимать их и создавать безопасную среду для развития.",
       ".rodo": "Я даю согласие на обработку моих персональных данных, содержащихся в CV, для текущих и будущих процессов подбора персонала в соответствии с GDPR."
     },
@@ -213,25 +221,20 @@ const translations = {
       ".actions .btn:first-child": `Скачать CV ${icon("download")}`,
       ".actions .btn.secondary": `Связаться ${icon("arrow-right")}`,
       ".hero-subtitle": "Понимать людей.<br>Создавать более безопасную среду.",
-      ".side-info .info-box:nth-child(1)": `<b>${icon("map-pin")} Jurija Gagarina 19</b><br>87-100 Торунь`,
+      ".side-info .info-box:nth-child(1)": `<b>${icon("map-pin")} Торунь</b><br>Польша`,
       ".side-info .info-box:nth-child(2)": `<b>${icon("phone")} +48 739-64-22-77</b>`,
       ".side-info .info-box:nth-child(3)": emailBox.ru,
       ".side-info .info-box:nth-child(4)": `<b>${icon("star")} Открыт к сотрудничеству</b><br>Готов к новым возможностям`,
       ".journey h2": "Путь, который<br><span>сформировал меня</span>",
       ".journey .btn": `Узнать мою историю ${icon("arrow-right")}`,
       "#diplomaPdf": `Открыть диплом ${icon("external-link")}`,
-      ".contact-link:nth-of-type(1)": `${icon("mail")}<br><b>v.konohrai.work@gmail.com</b><br><small>Написать мне</small>`,
-      ".contact-link:nth-of-type(2)": `${icon("phone")}<br><b>+48 739-64-22-77</b><br><small>Позвонить</small>`,
-      ".contact-location": `${icon("map-pin")}<br><b>Jurija Gagarina 19</b><br><small>87-100 Торунь</small>`,
+      ".contact-location": `${icon("map-pin")}<br><b>Торунь</b><br><small>Польша</small>`,
       ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Посмотреть профиль</small>`
     },
     lists: [
       [".menu a", ["Обо мне", "Навыки", "Направления", "Опыт", "Образование", "Достижения", "Контакт"]],
       [".hero-pills span", [`${icon("shield")} Инспектор ОТ`, `${icon("brain")} Психология UMK`, `${icon("clipboard-check")} Организация работы`, `${icon("map-pin")} Торунь`], true],
-      [".stat small", ["лет опыта", "направления образования", "языков", "сертификатов"]],
-      [".orbit-item span", ["Психология", "Лидерство", "Анализ", "Безопасность"]],
-      [".focus-card h2", ["Охрана труда", "Работа с людьми", "Анализ и порядок"]],
-      [".focus-card p", ["Документация, обучение и практический подход к процедурам охраны труда.", "Коммуникация, обслуживание клиентов и ежедневная поддержка команды.", "Внимание к деталям, быстрая адаптация и ответственность за результат."]],
+      [".stat small", ["лет опыта", "направления образования", "языков", "дипломов и сертификатов"]],
       [".point b", ["Строительство", "Ферма", "Промышленность", "Специалист ОТ", "Психология"]],
       [".point small", ["Первый опыт физической работы и работы на стройке.", "Работа в хозяйстве, уход за животными и дисциплина.", "Покраска, организация работы и управление командой.", "Ответственность за безопасность, обучение и процедуры.", "Развитие знаний о человеке, мотивации и коммуникации."]],
       [".strength span", ["Организация<br>и самостоятельность", "Работа в условиях<br>дефицита времени", "Обслуживание клиентов<br>и коммуникация", "Решение<br>проблем", "Быстрое обучение<br>и адаптация", "Ответственность<br>и вовлеченность", "Допуск<br>UDT", "Командная работа<br>и поддержка"], true],
@@ -253,7 +256,7 @@ const translations = {
       ["Управление командой", "Подтверждение прохождения управленческого тренинга."],
       ["Photoshop для начинающих", "Сертификат об окончании курса по основам Adobe Photoshop."],
       ["Помощь людям LGBT+", "Сертификат об окончании специализированного обучения."],
-      ["Пилот БПЛА A1/A3", "Подтверждение прохождения обучения и сдачи экзамена."],
+      ["Пилот БПЛА A1/A3", "Подтверждение прохождения обучения и сдачи экзамена.", "Действителен до 20.09.2030"],
       ["Межличностные навыки", "Сертификат об окончании курса межличностных навыков."]
     ]
   }
@@ -280,6 +283,28 @@ translations.ru.lists.find(([selector]) => selector === ".cert")?.[1].splice(
   8,
   0,
   `${icon("message")} Польский жестовый язык A1`
+);
+
+translations.pl.lists.find(([selector]) => selector === ".cert")?.[1].splice(
+  9,
+  0,
+  `${icon("brain")} Psychologia inwestowania – Fundacja GPW`,
+  `${icon("chart")} Opcje giełdowe – Fundacja GPW`,
+  `${icon("target")} Kontrakty terminowe – Fundacja GPW`
+);
+translations.en.lists.find(([selector]) => selector === ".cert")?.[1].splice(
+  9,
+  0,
+  `${icon("brain")} Psychology of investing – GPW Foundation`,
+  `${icon("chart")} Stock options – GPW Foundation`,
+  `${icon("target")} Futures contracts – GPW Foundation`
+);
+translations.ru.lists.find(([selector]) => selector === ".cert")?.[1].splice(
+  9,
+  0,
+  `${icon("brain")} Психология инвестирования – Фонд GPW`,
+  `${icon("chart")} Биржевые опционы – Фонд GPW`,
+  `${icon("target")} Фьючерсные контракты – Фонд GPW`
 );
 
 translations.pl.diplomas.push([
@@ -317,6 +342,67 @@ translations.ru.diplomas.splice(7, 0, [
   "Сертификат о прохождении активностей YUFE Civic Star, связанных с гражданским участием."
 ]);
 
+translations.pl.diplomas.push(
+  ["Psychologia inwestowania", "Certyfikat ukończenia szkolenia o psychologicznych aspektach podejmowania decyzji inwestycyjnych."],
+  ["Opcje giełdowe", "Certyfikat ukończenia szkolenia dotyczącego opcji giełdowych i zasad działania instrumentów pochodnych."],
+  ["Kontrakty terminowe", "Certyfikat ukończenia szkolenia o kontraktach terminowych i funkcjonowaniu rynku terminowego."]
+);
+translations.en.diplomas.push(
+  ["Psychology of investing", "Certificate of completing training on the psychological aspects of investment decisions."],
+  ["Stock options", "Certificate of completing training on stock options and how derivatives work."],
+  ["Futures contracts", "Certificate of completing training on futures contracts and the futures market."]
+);
+translations.ru.diplomas.push(
+  ["Психология инвестирования", "Сертификат о прохождении обучения по психологическим аспектам принятия инвестиционных решений."],
+  ["Биржевые опционы", "Сертификат о прохождении обучения по биржевым опционам и принципам работы производных инструментов."],
+  ["Фьючерсные контракты", "Сертификат о прохождении обучения по фьючерсным контрактам и работе срочного рынка."]
+);
+
+const diplomaGroupLabels = {
+  pl: {
+    groupsLabel: "Kategorie certyfikatów",
+    featuredTab: "Prestiżowe",
+    otherTab: "Pozostałe",
+    featuredKicker: "Wyróżnione kwalifikacje",
+    featuredTitle: "Najbardziej prestiżowe certyfikaty",
+    featuredDescription: "Dokumenty wydane lub potwierdzone przez rozpoznawalne instytucje branżowe i akademickie.",
+    otherKicker: "Pozostałe kwalifikacje",
+    otherTitle: "Pozostałe certyfikaty",
+    otherDescription: "Kursy i szkolenia uzupełniające kompetencje zawodowe, cyfrowe oraz interpersonalne.",
+    featuredBadge: "Wyróżniony",
+    openLabel: "Pokaż dokument",
+    issuerLabel: "Wystawca"
+  },
+  en: {
+    groupsLabel: "Certificate categories",
+    featuredTab: "Prestigious",
+    otherTab: "Other",
+    featuredKicker: "Highlighted qualifications",
+    featuredTitle: "Most prestigious certificates",
+    featuredDescription: "Documents issued or confirmed by recognized industry and academic institutions.",
+    otherKicker: "Additional qualifications",
+    otherTitle: "Other certificates",
+    otherDescription: "Courses and training that complement professional, digital and interpersonal skills.",
+    featuredBadge: "Highlighted",
+    openLabel: "Show document",
+    issuerLabel: "Issuer"
+  },
+  ru: {
+    groupsLabel: "Категории сертификатов",
+    featuredTab: "Престижные",
+    otherTab: "Остальные",
+    featuredKicker: "Ключевые квалификации",
+    featuredTitle: "Наиболее престижные сертификаты",
+    featuredDescription: "Документы, выданные или подтвержденные признанными отраслевыми и академическими организациями.",
+    otherKicker: "Дополнительные квалификации",
+    otherTitle: "Остальные сертификаты",
+    otherDescription: "Курсы и обучение, дополняющие профессиональные, цифровые и коммуникативные навыки.",
+    featuredBadge: "Выделенный",
+    openLabel: "Показать документ",
+    issuerLabel: "Организация"
+  }
+};
+
 translations.pl.references = [
   ["Referencja MANEKIN", "List polecający z restauracji MANEKIN, potwierdzający pracę kuchenną, organizację stanowiska i współpracę z zespołem."],
   ["Referencja Palfinger Poland", "List polecający za pracę jako pomocnik lakiernika w Palfinger Poland w latach 2022-2024."],
@@ -351,43 +437,19 @@ Object.assign(translations.ru.text, {
   ".reference-head p": "Рекомендательные письма от работодателей и людей, с которыми я сотрудничал."
 });
 
-Object.assign(translations.pl.html, {
-  ".contact-copy-email": `${icon("copy")}<br><b>Skopiuj e-mail</b><br><small>v.konohrai.work@gmail.com</small>`,
-  ".contact-copy-phone": `${icon("copy")}<br><b>Skopiuj telefon</b><br><small>+48 739-64-22-77</small>`,
-  ".floating-actions a[href='#contact']": `${icon("mail")}<span>Kontakt</span>`,
-  ".floating-actions a[download]": `${icon("download")}<span>CV</span>`,
-  "[data-scroll-top]": `${icon("arrow-up")}<span>Góra</span>`
-});
-
-Object.assign(translations.en.html, {
-  ".contact-copy-email": `${icon("copy")}<br><b>Copy e-mail</b><br><small>v.konohrai.work@gmail.com</small>`,
-  ".contact-copy-phone": `${icon("copy")}<br><b>Copy phone</b><br><small>+48 739-64-22-77</small>`,
-  ".floating-actions a[href='#contact']": `${icon("mail")}<span>Contact</span>`,
-  ".floating-actions a[download]": `${icon("download")}<span>CV</span>`,
-  "[data-scroll-top]": `${icon("arrow-up")}<span>Top</span>`
-});
-
-Object.assign(translations.ru.html, {
-  ".contact-copy-email": `${icon("copy")}<br><b>Скопировать e-mail</b><br><small>v.konohrai.work@gmail.com</small>`,
-  ".contact-copy-phone": `${icon("copy")}<br><b>Скопировать телефон</b><br><small>+48 739-64-22-77</small>`,
-  ".floating-actions a[href='#contact']": `${icon("mail")}<span>Контакт</span>`,
-  ".floating-actions a[download]": `${icon("download")}<span>CV</span>`,
-  "[data-scroll-top]": `${icon("arrow-up")}<span>Вверх</span>`
-});
-
 translations.pl.attrs.push(
-  ["[data-diploma-autoplay]", "aria-label", "Automatyczne przewijanie dyplomów"],
-  ["[data-scroll-top]", "aria-label", "Do góry"]
+  [".hero-pills", "aria-label", "Najważniejsze obszary"],
+  [".stats", "aria-label", "Podsumowanie profilu"]
 );
 
 translations.en.attrs.push(
-  ["[data-diploma-autoplay]", "aria-label", "Auto-play certificates"],
-  ["[data-scroll-top]", "aria-label", "Back to top"]
+  [".hero-pills", "aria-label", "Key areas"],
+  [".stats", "aria-label", "Profile summary"]
 );
 
 translations.ru.attrs.push(
-  ["[data-diploma-autoplay]", "aria-label", "Автоматическое переключение дипломов"],
-  ["[data-scroll-top]", "aria-label", "Наверх"]
+  [".hero-pills", "aria-label", "Ключевые направления"],
+  [".stats", "aria-label", "Краткое описание профиля"]
 );
 
 let activeLanguage = "pl";
@@ -445,10 +507,9 @@ const setHtml = (selector, value) => {
 };
 
 const setAttr = (selector, attr, value) => {
-  const element = getElement(selector);
-  if (element) {
+  getElements(selector).forEach((element) => {
     element.setAttribute(attr, value);
-  }
+  });
 };
 
 const updateLanguageSeo = (dictionary) => {
@@ -572,9 +633,12 @@ window.getLocalizedDiploma = (diploma) => {
   return {
     ...diploma,
     title: localized[0],
-    desc: localized[1]
+    desc: localized[1],
+    detail: localized[2] || diploma.detail
   };
 };
+
+window.getDiplomaGroupLabels = () => diplomaGroupLabels[activeLanguage] || diplomaGroupLabels.pl;
 
 window.getLocalizedReference = (reference) => {
   const index = window.references?.indexOf(reference) ?? -1;

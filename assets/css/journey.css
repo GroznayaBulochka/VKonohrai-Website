@@ -12,10 +12,7 @@
   min-height: 430px;
   padding: 34px 22px 22px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 91% 18%, rgba(122, 88, 255, .34), transparent 24%),
-    radial-gradient(circle at 56% 42%, rgba(122, 88, 255, .16), transparent 35%),
-    linear-gradient(90deg, rgba(8, 13, 27, .96), rgba(8, 13, 27, .84));
+  background: linear-gradient(105deg, rgba(8, 13, 24, .98), rgba(12, 23, 38, .94));
 }
 
 .journey::before {

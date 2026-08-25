@@ -47,28 +47,6 @@ vk-icon svg {
   color: #9b6cff;
 }
 
-.orbit-item vk-icon {
-  width: 30px;
-  height: 30px;
-  padding: 6px;
-  border-radius: 50%;
-  background: rgba(122, 88, 255, .13);
-  border: 1px solid rgba(154, 124, 255, .42);
-  color: #9b6cff;
-}
-
-.focus-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.focus-top vk-icon {
-  width: 34px;
-  height: 34px;
-  color: #9b6cff;
-}
-
 .icon vk-icon {
   width: 32px;
   height: 32px;

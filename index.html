@@ -60,15 +60,15 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
 <link rel="manifest" href="site.webmanifest">
 
-<link rel="preload" href="photo.png" as="image" type="image/png" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/base.css?v=20260630-4">
-<link rel="stylesheet" href="assets/css/journey.css?v=20260630-1">
-<link rel="stylesheet" href="assets/css/sections.css?v=20260630-1">
-<link rel="stylesheet" href="assets/css/diplomas.css?v=20260630-1">
-<link rel="stylesheet" href="assets/css/icons.css?v=20260630-1">
-<link rel="stylesheet" href="assets/css/animations.css?v=20260630-1">
-<link rel="stylesheet" href="assets/css/job-personalizer.css?v=20260721-1">
-<link rel="stylesheet" href="assets/css/responsive.css?v=20260630-4">
+<link rel="preload" href="photo.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/base.css?v=20260825-2">
+<link rel="stylesheet" href="assets/css/journey.css?v=20260825-2">
+<link rel="stylesheet" href="assets/css/sections.css?v=20260825-2">
+<link rel="stylesheet" href="assets/css/diplomas.css?v=20260825-4">
+<link rel="stylesheet" href="assets/css/icons.css?v=20260825-2">
+<link rel="stylesheet" href="assets/css/animations.css?v=20260825-2">
+<link rel="stylesheet" href="assets/css/job-personalizer.css?v=20260825-3">
+<link rel="stylesheet" href="assets/css/responsive.css?v=20260825-2">
 
 <script id="profile-structured-data" type="application/ld+json">
 {
@@ -96,7 +96,7 @@
         "height": 1553
       },
       "inLanguage": "pl",
-      "dateModified": "2026-08-17"
+      "dateModified": "2026-08-25"
     },
     {
       "@type": "Person",
@@ -145,6 +145,20 @@
 <a class="skip-link" href="#main-content">Przejdź do treści</a>
 <div class="job-gate" data-job-gate role="dialog" aria-modal="true" aria-labelledby="jobGateTitle" aria-describedby="jobGateDesc" hidden>
   <div class="job-gate-panel">
+    <div class="job-gate-topbar">
+      <div class="job-gate-brand" aria-label="Vladyslav Konohrai">
+        <img src="icon-192.png" alt="" width="192" height="192">
+        <strong>Vladyslav Konohrai</strong>
+      </div>
+      <div class="job-gate-language">
+        <span data-job-language-label>Język strony</span>
+        <div class="lang-switch job-gate-lang-switch" data-job-language-switch aria-label="Wybierz język strony">
+          <button type="button" data-lang="pl" class="active" aria-pressed="true">PL</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        </div>
+      </div>
+    </div>
     <div class="job-gate-kicker" data-job-gate-kicker>Dopasuj profil</div>
     <h2 id="jobGateTitle" data-job-gate-title>Na jakie stanowisko szukasz pracownika?</h2>
     <p id="jobGateDesc" data-job-gate-desc>Wybierz obszar, a strona od razu pokaże najważniejsze doświadczenia, umiejętności i dokumenty.</p>
@@ -177,7 +191,7 @@
 
   <nav aria-label="Główna nawigacja">
     <a class="logo" href="#home" aria-label="Vladyslav Konohrai">
-  <img src="logocv.svg" alt="">
+  <img src="icon-192.png" alt="" width="192" height="192">
 </a>
 
     <button class="menu-toggle" type="button" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
@@ -215,7 +229,12 @@
 
   <section id="home" class="hero">
     <div>
-      <div class="tag">PSYCHOLOGY STUDENT • SAFETY SPECIALIST</div>
+      <div class="hero-profile-tools">
+        <div class="tag">STUDENT PSYCHOLOGII • SPECJALISTA BHP</div>
+        <button class="role-change hero-role-change" type="button" data-role-change>
+          Zmień profil <vk-icon name="arrow-right"></vk-icon>
+        </button>
+      </div>
 
       <h1>Vladyslav <span>Konohrai</span></h1>
 
@@ -237,17 +256,6 @@
         <span><vk-icon name="map-pin"></vk-icon> Toruń</span>
       </div>
 
-      <div class="role-summary" data-role-summary aria-live="polite">
-        <div>
-          <span data-role-eyebrow>Wybrany profil</span>
-          <strong data-role-title>Pełny profil</strong>
-          <small data-role-desc>Strona pokazuje pełny przekrój doświadczenia.</small>
-        </div>
-        <button class="role-change" type="button" data-role-change>
-          Zmień profil <vk-icon name="arrow-right"></vk-icon>
-        </button>
-      </div>
-
       <div class="actions">
         <a class="btn" data-cv-link
    href="CV/CV_All_Vladyslav_Konohrai.pdf"
@@ -258,25 +266,14 @@
         <a class="btn secondary" href="mailto:v.konohrai.work@gmail.com">Skontaktuj się <vk-icon name="arrow-right"></vk-icon></a>
       </div>
 
-      <div class="stats">
-        <div class="stat"><vk-icon name="briefcase"></vk-icon><strong>5+</strong><small>lat doświadczenia</small></div>
-        <div class="stat"><vk-icon name="graduation-cap"></vk-icon><strong>3</strong><small>kierunki edukacji</small></div>
-        <div class="stat"><vk-icon name="globe"></vk-icon><strong>5</strong><small>języków</small></div>
-        <div class="stat"><vk-icon name="award"></vk-icon><strong>10+</strong><small>certyfikatów</small></div>
-      </div>
     </div>
 
     <div class="photo-wrap">
-    <img class="photo" src="photo.png" alt="Portret Vladyslava Konohraia" width="1000" height="1553" fetchpriority="high" decoding="async">
-
-    <div class="orbit-item orbit-1"><vk-icon name="brain"></vk-icon><span>Psychologia</span></div>
-    <div class="orbit-item orbit-2"><vk-icon name="users"></vk-icon><span>Zespół</span></div>
-    <div class="orbit-item orbit-3"><vk-icon name="chart"></vk-icon><span>Analiza</span></div>
-    <div class="orbit-item orbit-4"><vk-icon name="shield"></vk-icon><span>BHP</span></div>
+    <img class="photo" src="photo.webp" alt="Portret Vladyslava Konohraia" width="1000" height="1553" fetchpriority="high" decoding="async">
     </div>
 
     <div class="side-info">
-      <div class="info-box"><b><vk-icon name="map-pin"></vk-icon> Jurija Gagarina 19</b><br>87-100 Toruń</div>
+      <div class="info-box"><b><vk-icon name="map-pin"></vk-icon> Toruń</b><br>Polska</div>
       <div class="info-box"><b><vk-icon name="phone"></vk-icon> +48 739-64-22-77</b></div>
       <div class="info-box">
   <b>
@@ -290,24 +287,11 @@
     </div>
   </section>
 
-  <section class="section focus-strip" aria-label="Najważniejsze kompetencje">
-    <article class="focus-card focus-card-primary">
-      <div class="focus-top"><vk-icon name="shield"></vk-icon><span>01</span></div>
-      <h2>Bezpieczeństwo pracy</h2>
-      <p>Dokumentacja, szkolenia i praktyczne podejście do procedur BHP.</p>
-    </article>
-
-    <article class="focus-card">
-      <div class="focus-top"><vk-icon name="users"></vk-icon><span>02</span></div>
-      <h2>Praca z ludźmi</h2>
-      <p>Komunikacja, obsługa klienta i wsparcie zespołu w codziennych zadaniach.</p>
-    </article>
-
-    <article class="focus-card">
-      <div class="focus-top"><vk-icon name="target"></vk-icon><span>03</span></div>
-      <h2>Analiza i porządek</h2>
-      <p>Uważność na detale, szybka adaptacja i odpowiedzialność za wynik.</p>
-    </article>
+  <section class="section stats" aria-label="Podsumowanie profilu">
+    <div class="stat"><vk-icon name="briefcase"></vk-icon><strong>5+</strong><small>lat doświadczenia</small></div>
+    <div class="stat"><vk-icon name="graduation-cap"></vk-icon><strong>3</strong><small>kierunki edukacji</small></div>
+    <div class="stat"><vk-icon name="globe"></vk-icon><strong>5</strong><small>języków</small></div>
+    <div class="stat"><vk-icon name="award"></vk-icon><strong>13</strong><small>dyplomów i certyfikatów</small></div>
   </section>
 
   <section id="about" class="section card">
@@ -606,6 +590,9 @@
         <div class="cert"><vk-icon name="award"></vk-icon> Operator wózka widłowego UDT</div>
         <div class="cert"><vk-icon name="navigation"></vk-icon> Pilot BSP A1/A3</div>
         <div class="cert cert-new"><vk-icon name="message"></vk-icon> Polski język migowy A1</div>
+        <div class="cert cert-new"><vk-icon name="brain"></vk-icon> Psychologia inwestowania</div>
+        <div class="cert cert-new"><vk-icon name="chart"></vk-icon> Opcje giełdowe</div>
+        <div class="cert cert-new"><vk-icon name="target"></vk-icon> Kontrakty terminowe</div>
         <div class="cert"><vk-icon name="heart-handshake"></vk-icon> Wolontariat Pernikalia 2025</div>
       </div>
     </div>
@@ -619,41 +606,71 @@
       <h2>Zobacz wszystkie dyplomy</h2>
       <p>Pełna galeria certyfikatów i zaświadczeń potwierdzających moje kwalifikacje.</p>
     </div>
-
-    <div class="diploma-controls">
-      <button type="button" data-diploma-prev aria-label="Poprzedni dyplom"><vk-icon name="arrow-left"></vk-icon></button>
-      <button type="button" data-diploma-autoplay aria-label="Automatyczne przewijanie dyplomów" aria-pressed="false"><vk-icon name="play"></vk-icon></button>
-      <button type="button" data-diploma-next aria-label="Następny dyplom"><vk-icon name="arrow-right"></vk-icon></button>
-    </div>
   </div>
 
-  <div class="diploma-viewer">
-    <div class="diploma-preview">
-      <img id="diplomaImage" src="dyplomy/ExcelDyp.jpg" alt="Certyfikat: Excel dla początkujących" decoding="async">
+  <div class="credential-browser">
+    <div class="credential-navigation">
+      <div class="credential-tabs" role="tablist" aria-label="Kategorie certyfikatów" data-credential-tabs>
+        <button type="button" role="tab" aria-selected="true" aria-controls="featuredCertificates" data-credential-tab="featured">
+          <span data-featured-tab-label>Najbardziej prestiżowe</span>
+          <strong data-featured-count>0</strong>
+        </button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="otherCertificates" data-credential-tab="other">
+          <span data-other-tab-label>Pozostałe</span>
+          <strong data-other-count>0</strong>
+        </button>
+      </div>
+
+      <div class="credential-groups" aria-label="Kategorie certyfikatów">
+        <section id="featuredCertificates" class="credential-group credential-featured" data-certificate-group="featured" role="tabpanel">
+          <div class="credential-group-head">
+            <div>
+          <span class="credential-group-kicker" data-featured-kicker>Wyróżnione kwalifikacje</span>
+          <h3 data-featured-title>Najbardziej prestiżowe certyfikaty</h3>
+          <p data-featured-description>Dokumenty wydane lub potwierdzone przez rozpoznawalne instytucje branżowe i akademickie.</p>
+            </div>
+          </div>
+          <div class="credential-list" data-featured-certificates></div>
+        </section>
+
+        <section id="otherCertificates" class="credential-group credential-other" data-certificate-group="other" role="tabpanel" hidden>
+          <div class="credential-group-head">
+            <div>
+              <span class="credential-group-kicker" data-other-kicker>Pozostałe kwalifikacje</span>
+              <h3 data-other-title>Pozostałe certyfikaty</h3>
+              <p data-other-description>Kursy i szkolenia uzupełniające kompetencje zawodowe, cyfrowe oraz interpersonalne.</p>
+            </div>
+          </div>
+          <div class="credential-list" data-other-certificates></div>
+        </section>
+      </div>
     </div>
 
-    <div class="diploma-info" aria-live="polite" aria-atomic="true">
-      <span id="diplomaCount">01 / 10</span>
-      <h3 id="diplomaTitle">Excel dla początkujących</h3>
-      <p id="diplomaDesc">Certyfikat ukończenia kursu podstaw Excela.</p>
+    <div class="diploma-viewer">
+      <div class="diploma-preview">
+        <img id="diplomaImage" src="dyplomy/potwierdzenie_zdania_egzaminu_A1A3.jpg" alt="Pilot BSP A1/A3" decoding="async">
+      </div>
 
-      <a id="diplomaPdf" class="btn" href="dyplomy/ExcelDyp.pdf" target="_blank" rel="noopener">
-        Otwórz dyplom <vk-icon name="external-link"></vk-icon>
-      </a>
+      <div class="diploma-info" aria-live="polite" aria-atomic="true">
+        <div class="diploma-meta">
+          <span id="diplomaCount">01 / 05</span>
+          <span class="diploma-featured-badge" data-diploma-featured>Wyróżniony</span>
+        </div>
+        <h3 id="diplomaTitle">Pilot BSP A1/A3</h3>
+        <p id="diplomaDesc">Potwierdzenie zaliczenia szkolenia i zdania egzaminu.</p>
+        <p class="diploma-source" data-diploma-source>Wystawca: EASA / Urząd Lotnictwa Cywilnego · Ważny do 20.09.2030</p>
+
+        <div class="diploma-actions">
+          <a id="diplomaPdf" class="btn" href="dyplomy/potwierdzenie_zdania_egzaminu_A1A3.pdf" target="_blank" rel="noopener">
+            Otwórz dyplom <vk-icon name="external-link"></vk-icon>
+          </a>
+          <div class="diploma-controls">
+            <button type="button" data-diploma-prev aria-label="Poprzedni dyplom"><vk-icon name="arrow-left"></vk-icon></button>
+            <button type="button" data-diploma-next aria-label="Następny dyplom"><vk-icon name="arrow-right"></vk-icon></button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="diploma-thumbs">
-    <img src="dyplomy/ExcelDyp.jpg" class="active" alt="Excel dla początkujących" loading="lazy" decoding="async">
-    <img src="dyplomy/FigmaDyp.jpg" alt="Wprowadzenie do Figmy" loading="lazy" decoding="async">
-    <img src="dyplomy/InwestDyp1.jpg" alt="Praktyczny kurs inwestowania w akcje" loading="lazy" decoding="async">
-    <img src="dyplomy/MenedzDyp.jpg" alt="Kierowanie zespołem" loading="lazy" decoding="async">
-    <img src="dyplomy/PhotoshopDyp.jpg" alt="Photoshop dla początkujących" loading="lazy" decoding="async">
-    <img src="dyplomy/PomocLGBT.jpg" alt="Pomoc osobom LGBT+" loading="lazy" decoding="async">
-    <img src="dyplomy/potwierdzenie_zdania_egzaminu_A1A3.jpg" alt="Pilot BSP A1/A3" loading="lazy" decoding="async">
-    <img src="dyplomy/Civicstar.jpg" alt="YUFE Civic Star" loading="lazy" decoding="async">
-    <img src="dyplomy/UmiejętnościinterpersonalneDyp.jpg" alt="Umiejętności interpersonalne" loading="lazy" decoding="async">
-    <img src="dyplomy/MigowyA1.jpg" alt="Polski język migowy A1" loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -709,26 +726,36 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" aria-labelledby="contact-title">
     <div class="contact-card">
-      <h2>Porozmawiajmy!</h2>
+      <h2 id="contact-title">Porozmawiajmy!</h2>
       <small>Jestem otwarty na nowe możliwości i ciekawe projekty.</small>
     </div>
 
-    <a class="contact-card contact-link" href="mailto:v.konohrai.work@gmail.com?subject=Kontakt%20ze%20strony%20CV">
-      <vk-icon name="mail"></vk-icon><br><b>v.konohrai.work@gmail.com</b><br><small>Napisz do mnie</small>
-    </a>
-    <a class="contact-card contact-link" href="tel:+48739642277"><vk-icon name="phone"></vk-icon><br><b>+48 739-64-22-77</b><br><small>Zadzwoń</small></a>
-    <button class="contact-card contact-copy contact-copy-email" type="button" data-copy="v.konohrai.work@gmail.com">
-      <vk-icon name="copy"></vk-icon><br><b>Skopiuj e-mail</b><br><small>v.konohrai.work@gmail.com</small>
-    </button>
-    <button class="contact-card contact-copy contact-copy-phone" type="button" data-copy="+48739642277">
-      <vk-icon name="copy"></vk-icon><br><b>Skopiuj telefon</b><br><small>+48 739-64-22-77</small>
-    </button>
-    <div class="contact-card contact-location"><vk-icon name="map-pin"></vk-icon><br><b>Jurija Gagarina 19</b><br><small>87-100 Toruń</small></div>
+    <div class="contact-card contact-method contact-email">
+      <vk-icon name="mail"></vk-icon>
+      <div>
+        <a href="mailto:v.konohrai.work@gmail.com?subject=Kontakt%20ze%20strony%20CV"><b>v.konohrai.work@gmail.com</b></a>
+        <small class="contact-action-label">Napisz do mnie</small>
+      </div>
+      <button class="contact-quick-copy" type="button" data-copy="v.konohrai.work@gmail.com" aria-label="Skopiuj e-mail" title="Skopiuj e-mail">
+        <vk-icon name="copy"></vk-icon>
+      </button>
+    </div>
+    <div class="contact-card contact-method contact-phone">
+      <vk-icon name="phone"></vk-icon>
+      <div>
+        <a href="tel:+48739642277"><b>+48 739-64-22-77</b></a>
+        <small class="contact-action-label">Zadzwoń</small>
+      </div>
+      <button class="contact-quick-copy" type="button" data-copy="+48739642277" aria-label="Skopiuj telefon" title="Skopiuj telefon">
+        <vk-icon name="copy"></vk-icon>
+      </button>
+    </div>
+    <div class="contact-card contact-location"><vk-icon name="map-pin"></vk-icon><br><b>Toruń</b><br><small>Polska</small></div>
     <a class="contact-card contact-social contact-link" href="https://www.linkedin.com/in/vkonohrai/" target="_blank" rel="noopener noreferrer"><vk-icon name="linkedin"></vk-icon><br><b>LinkedIn</b><br><small>Zobacz mój profil</small></a>
   </section>
-    <section class="quote-card">
+    <blockquote class="quote-card">
     <div class="quote-mark">“</div>
 
     <p>
@@ -737,26 +764,21 @@
     </p>
 
     <div class="quote-logo">VK</div>
-    </section>
+    </blockquote>
   <footer class="rodo">
     Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w CV na potrzeby obecnej oraz przyszłych rekrutacji, zgodnie z RODO.
   </footer>
   </main>
 
 </div>
-<div class="floating-actions" aria-label="Szybkie akcje">
-  <a href="#contact" aria-label="Kontakt"><vk-icon name="mail"></vk-icon><span>Kontakt</span></a>
-  <a href="CV/CV_All_Vladyslav_Konohrai.pdf" data-cv-link download="CV_All_Vladyslav_Konohrai.pdf" aria-label="Pobierz CV"><vk-icon name="download"></vk-icon><span>CV</span></a>
-  <button type="button" data-scroll-top aria-label="Do góry"><vk-icon name="arrow-up"></vk-icon><span>Góra</span></button>
-</div>
-<script src="assets/js/diplomas-data.js?v=20260728-1" defer></script>
+<script src="assets/js/diplomas-data.js?v=20260825-1" defer></script>
 <script src="assets/js/references-data.js?v=20260815-1" defer></script>
 <script src="assets/js/icons.js?v=20260630-1" defer></script>
-<script src="assets/js/translations.js?v=20260817-2" defer></script>
-<script src="assets/js/job-personalizer.js?v=20260817-2" defer></script>
-<script src="assets/js/mobile-menu.js?v=20260630-1" defer></script>
-<script src="assets/js/diploma-gallery.js?v=20260630-1" defer></script>
+<script src="assets/js/translations.js?v=20260825-3" defer></script>
+<script src="assets/js/job-personalizer.js?v=20260825-3" defer></script>
+<script src="assets/js/mobile-menu.js?v=20260825-2" defer></script>
+<script src="assets/js/diploma-gallery.js?v=20260825-4" defer></script>
 <script src="assets/js/references.js?v=20260728-1" defer></script>
-<script src="assets/js/ui-enhancements.js?v=20260630-4" defer></script>
+<script src="assets/js/ui-enhancements.js?v=20260825-2" defer></script>
 </body>
 </html>

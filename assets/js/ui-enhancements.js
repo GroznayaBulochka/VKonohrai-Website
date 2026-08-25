@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(progress);
 
   const nav = document.querySelector("nav");
-  const floatingActions = document.querySelector(".floating-actions");
   let scrollFrame = null;
 
   const updateScrollState = () => {
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
     progress.style.setProperty("--scroll-progress", `${Math.min(percent, 100)}%`);
     nav?.classList.toggle("is-scrolled", window.scrollY > 18);
-    floatingActions?.classList.toggle("is-visible", window.scrollY > 320);
     scrollFrame = null;
   };
 
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ".photo-wrap",
     ".side-info .info-box",
     ".stat",
-    ".focus-card",
     ".journey",
     ".strength",
     ".service-card",
@@ -51,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   uniqueElements.forEach((element, index) => {
     element.classList.add("reveal");
-    element.style.setProperty("--reveal-delay", `${Math.min(index * 35, 280)}ms`);
+    element.style.setProperty("--reveal-delay", `${Math.min(index * 20, 100)}ms`);
   });
 
   const bars = [...document.querySelectorAll(".bar")];
@@ -93,33 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     requestAnimationFrame(tick);
   };
-
-  const spotlightTargets = [
-    ".stat",
-    ".focus-card",
-    ".service-card",
-    ".strength",
-    ".exp-card",
-    ".cert",
-    ".contact-card",
-    ".diploma-preview",
-    ".reference-card"
-  ];
-
-  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-    spotlightTargets
-      .flatMap((selector) => [...document.querySelectorAll(selector)])
-      .forEach((element) => {
-        element.classList.add("spotlight");
-        element.addEventListener("pointermove", (event) => {
-          const rect = element.getBoundingClientRect();
-          const x = ((event.clientX - rect.left) / rect.width) * 100;
-          const y = ((event.clientY - rect.top) / rect.height) * 100;
-          element.style.setProperty("--spotlight-x", `${x}%`);
-          element.style.setProperty("--spotlight-y", `${y}%`);
-        });
-      });
-  }
 
   const toast = document.querySelector(".copy-toast");
   let toastTimer;
@@ -177,10 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       showToast();
     });
-  });
-
-  document.querySelector("[data-scroll-top]")?.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
   if (!("IntersectionObserver" in window)) {

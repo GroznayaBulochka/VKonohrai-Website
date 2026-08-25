@@ -2,6 +2,7 @@
   const STORAGE_KEY = "selectedCvProfile";
   const roles = ["production", "gastro", "office", "all"];
   const icon = (name) => `<vk-icon name="${name}"></vk-icon>`;
+  let gateReturnFocus = null;
 
   const files = {
     production: {
@@ -145,16 +146,80 @@
     }
   };
 
+  const translatedExperience = {
+    en: {
+      cook: {
+        title: "Cook", company: "MANEKIN Sp. z o.o.", date: "04.2026 – present",
+        items: ["Preparing dishes according to recipes and quality standards", "Preparing salads, burgers and pasta dishes", "Thermal processing and frying meat", "Preparing ingredients and semi-finished products for current production", "Organizing the workstation and cooperating with the team on orders"]
+      },
+      safety: {
+        title: "OHS inspector", company: "SOL-WORK Tetiana Logvyn", date: "10.2024 – present",
+        items: ["Preparing OHS documentation in accordance with applicable regulations", "Conducting introductory and periodic OHS training", "Identifying and analyzing hazards and proposing corrective and preventive actions", "Cooperating with management to implement procedures and a safety culture", "Monitoring compliance with OHS regulations and rules"]
+      },
+      "restaurant-torun": {
+        title: "Restaurant employee", company: "Happy Food AWK Sp. z o.o.", date: "08.2025 – 11.2025",
+        items: ["Fulfilling and packing orders", "Serving customers, operating the till and accepting payments", "Preparing products according to quality standards", "Maintaining continuity of kitchen operations", "Checking and replenishing stock"]
+      },
+      painting: {
+        title: "Painter assistant", company: "Palfinger Poland Sp. z o.o.", date: "06.2022 – 08.2024",
+        items: ["Preparing machines and components for painting", "Painting components independently and preparing and mixing paints", "Shot blasting metal components and operating surface treatment equipment", "Performing minor repairs and maintaining equipment in good technical condition", "Organizing department work and cooperating with the warehouse on projects", "Training new employees and supporting the team"]
+      },
+      "restaurant-bydgoszcz": {
+        title: "Restaurant employee", company: "Wojciech Szpila Sp. z o.o.", date: "09.2023 – 12.2023",
+        items: ["Packing orders and serving customers", "Resolving customer issues and supporting the team in difficult situations", "Maintaining smooth kitchen operations and checking stock", "Operating equipment and responding to faults", "Training and onboarding new employees"]
+      },
+      farm: {
+        title: "Farm worker", company: "Ukraine", date: "01.2020 – 04.2020",
+        items: ["Carrying out field work: planting, crop care and harvesting", "Caring for animals and maintaining order on the farm"]
+      },
+      construction: {
+        title: "Construction assistant", company: "Ukraine", date: "04.2019 – 12.2019",
+        items: ["Transporting materials and preparing construction mortar", "Assembling scaffolding and assisting with wall construction", "Building simple structures from plans", "Finishing work: insulation, painting and decorative textures"]
+      }
+    },
+    ru: {
+      cook: {
+        title: "Повар", company: "MANEKIN Sp. z o.o.", date: "04.2026 – настоящее время",
+        items: ["Приготовление блюд по рецептурам и стандартам качества", "Приготовление салатов, бургеров и блюд из пасты", "Термическая обработка и жарка мяса", "Подготовка ингредиентов и полуфабрикатов для текущего производства", "Организация рабочего места и взаимодействие с командой при выполнении заказов"]
+      },
+      safety: {
+        title: "Инспектор по охране труда", company: "SOL-WORK Tetiana Logvyn", date: "10.2024 – настоящее время",
+        items: ["Подготовка документации по охране труда в соответствии с действующими нормами", "Проведение вводных и периодических инструктажей по охране труда", "Выявление и анализ рисков, предложение корректирующих и профилактических мер", "Сотрудничество с руководством при внедрении процедур и культуры безопасности", "Контроль соблюдения норм и правил охраны труда"]
+      },
+      "restaurant-torun": {
+        title: "Работник ресторана", company: "Happy Food AWK Sp. z o.o.", date: "08.2025 – 11.2025",
+        items: ["Выполнение и упаковка заказов", "Обслуживание клиентов, работа с кассой и прием платежей", "Подготовка продуктов в соответствии со стандартами качества", "Обеспечение бесперебойной работы кухни", "Контроль и пополнение запасов"]
+      },
+      painting: {
+        title: "Помощник маляра", company: "Palfinger Poland Sp. z o.o.", date: "06.2022 – 08.2024",
+        items: ["Подготовка машин и деталей к покраске", "Самостоятельная покраска деталей, подготовка и смешивание красок", "Дробеструйная обработка металлических деталей и работа с оборудованием для обработки поверхностей", "Выполнение мелкого ремонта и поддержание оборудования в исправном состоянии", "Организация работы отдела и взаимодействие со складом при реализации проектов", "Обучение новых сотрудников и поддержка команды"]
+      },
+      "restaurant-bydgoszcz": {
+        title: "Работник ресторана", company: "Wojciech Szpila Sp. z o.o.", date: "09.2023 – 12.2023",
+        items: ["Упаковка заказов и обслуживание клиентов", "Решение проблем клиентов и поддержка команды в сложных ситуациях", "Поддержание бесперебойной работы кухни и контроль запасов", "Работа с оборудованием и реагирование на неисправности", "Обучение и адаптация новых сотрудников"]
+      },
+      farm: {
+        title: "Рабочий на ферме", company: "Украина", date: "01.2020 – 04.2020",
+        items: ["Полевые работы: посадка, уход за культурами и сбор урожая", "Уход за животными и поддержание порядка в хозяйстве"]
+      },
+      construction: {
+        title: "Помощник строителя", company: "Украина", date: "04.2019 – 12.2019",
+        items: ["Перевозка материалов и приготовление строительных растворов", "Монтаж строительных лесов и помощь при возведении стен", "Выполнение простых конструкций по чертежам", "Отделочные работы: утепление, покраска и декоративные покрытия"]
+      }
+    }
+  };
+
   const copy = {
     pl: {
       gateKicker: "Dopasuj profil",
       gateTitle: "Na jakie stanowisko szukasz pracownika?",
       gateDesc: "Wybierz obszar, a strona od razu pokaże najważniejsze doświadczenia, umiejętności i dokumenty.",
       choiceLabel: "Obszary stanowiska",
+      languageLabel: "Język strony",
+      languageAria: "Wybierz język strony",
       selectedProfile: "Wybrany profil",
       changeProfile: "Zmień profil",
       download: "Pobierz CV",
-      floatingCv: "CV",
       choices: {
         production: {
           title: "Produkcja i praca techniczna",
@@ -309,7 +374,7 @@
           subtitle: "Dokumentacja i procedury.<br>Dokładność, kontakt i organizacja.",
           hero: "Student psychologii i technik BHP z doświadczeniem w pracy z dokumentacją, procedurami, prowadzeniu szkoleń oraz obsłudze klienta. Stawia na dokładność, odpowiedzialność i dobrą organizację.",
           pills: [`${icon("clipboard-check")} Dokumentacja`, `${icon("shield")} BHP`, `${icon("message")} Obsługa klienta`, `${icon("file-check")} Excel`],
-          stats: [["2", "role"], ["4", "certyfikaty"], ["5", "języków"], ["3", "kierunki edukacji"]],
+          stats: [["2", "role"], ["7", "certyfikatów"], ["5", "języków"], ["3", "kierunki edukacji"]],
           orbit: ["Dokumenty", "BHP", "Klienci", "Narzędzia"],
           sideStatus: `<b>${icon("star")} Profil biurowy i BHP</b><br>Gotowy do dokumentacji, procedur i obsługi`,
           contactTitle: "Porozmawiajmy o pracy biurowej lub BHP",
@@ -368,12 +433,15 @@
             ["file-check", "Excel dla początkujących – certyfikat"],
             ["target", "Kierowanie zespołem – trening menedżerski"],
             ["users", "Umiejętności interpersonalne – certyfikat"],
-            ["message", "Kurs Polskiego Języka Migowego – poziom A1", true]
+            ["message", "Kurs Polskiego Języka Migowego – poziom A1", true],
+            ["brain", "Psychologia inwestowania – Fundacja GPW", true],
+            ["chart", "Opcje giełdowe – Fundacja GPW", true],
+            ["target", "Kontrakty terminowe – Fundacja GPW", true]
           ],
           diplomaTitle: "Dyplomy i certyfikaty",
           diplomaHeading: "Dokumenty wspierające profil biurowy",
           diplomaLead: "W tym wariancie pokazuję certyfikaty wspierające dokumentację, komunikację i pracę z ludźmi.",
-          diplomaIndexes: [0, 3, 8, 9],
+          diplomaIndexes: [0, 3, 8, 9, 10, 11, 12],
           quote: "W pracy biurowej i BHP największą wartość daje porządek: w dokumentach, procedurach, komunikacji i codziennych priorytetach."
         },
         all: {
@@ -385,7 +453,7 @@
           subtitle: "Szerokie doświadczenie.<br>Szybka adaptacja i odpowiedzialność.",
           hero: "Student psychologii UMK w Toruniu i inspektor BHP z doświadczeniem w pracy technicznej, gastronomii oraz obsłudze klienta. Potrafi samodzielnie organizować pracę, szkolić nowych pracowników i skutecznie rozwiązywać problemy.",
           pills: [`${icon("shield")} BHP`, `${icon("utensils")} Gastronomia`, `${icon("factory")} Produkcja`, `${icon("users")} Obsługa klienta`],
-          stats: [["7", "doświadczeń"], ["3", "kierunki edukacji"], ["5", "języków"], ["10", "certyfikatów i aktywności"]],
+          stats: [["7", "doświadczeń"], ["3", "kierunki edukacji"], ["5", "języków"], ["13", "dyplomów i certyfikatów"]],
           orbit: ["BHP", "Kuchnia", "Produkcja", "Ludzie"],
           sideStatus: `<b>${icon("star")} Pełny profil</b><br>BHP, gastronomia, produkcja i obsługa klienta`,
           contactTitle: "Porozmawiajmy o najlepszym dopasowaniu",
@@ -435,6 +503,9 @@
             ["sparkles", "Wprowadzenie do Figmy – certyfikat"],
             ["paintbrush", "Photoshop dla początkujących – certyfikat"],
             ["chart", "Praktyczny kurs inwestowania w akcje – certyfikat"],
+            ["brain", "Psychologia inwestowania – Fundacja GPW", true],
+            ["chart", "Opcje giełdowe – Fundacja GPW", true],
+            ["target", "Kontrakty terminowe – Fundacja GPW", true],
             ["heart-handshake", "Wolontariat podczas Pernikaliów 2025 – zaświadczenie"]
           ],
           diplomaTitle: "Dyplomy i certyfikaty",
@@ -450,10 +521,11 @@
       gateTitle: "What position are you hiring for?",
       gateDesc: "Choose the area and the page will highlight the most relevant experience, skills and documents.",
       choiceLabel: "Position areas",
+      languageLabel: "Page language",
+      languageAria: "Choose page language",
       selectedProfile: "Selected profile",
       changeProfile: "Change profile",
       download: "Download CV",
-      floatingCv: "CV",
       choices: {
         production: { title: "Production and technical work", desc: "Production, painting, OHS, UDT and technical practice." },
         gastro: { title: "Gastronomy", desc: "Kitchen work, orders, customer service and time pressure." },
@@ -516,10 +588,11 @@
       gateTitle: "На какую должность вы ищете сотрудника?",
       gateDesc: "Выберите направление, и страница сразу покажет самые важные опыт, навыки и документы.",
       choiceLabel: "Направления работы",
+      languageLabel: "Язык страницы",
+      languageAria: "Выберите язык страницы",
       selectedProfile: "Выбранный профиль",
       changeProfile: "Изменить профиль",
       download: "Скачать CV",
-      floatingCv: "CV",
       choices: {
         production: { title: "Производство и техническая работа", desc: "Покраска, производство, охрана труда, UDT и техническая практика." },
         gastro: { title: "Гастрономия", desc: "Кухня, заказы, обслуживание клиентов и работа в темпе." },
@@ -685,13 +758,14 @@
 
     setHtml(".nav-cta", `${dictionary.download} ${icon("download")}`);
     setHtml(".actions .btn:first-child", `${dictionary.download} ${icon("download")}`);
-    setHtml(".floating-actions a[download]", `${icon("download")}<span>${dictionary.floatingCv}</span>`);
   };
 
   const updateChoiceButtons = (role, dictionary) => {
     setText("[data-job-gate-kicker]", dictionary.gateKicker);
     setText("[data-job-gate-title]", dictionary.gateTitle);
     setText("[data-job-gate-desc]", dictionary.gateDesc);
+    setText("[data-job-language-label]", dictionary.languageLabel);
+    document.querySelector("[data-job-language-switch]")?.setAttribute("aria-label", dictionary.languageAria);
     document.querySelector("[data-job-choice-grid]")?.setAttribute("aria-label", dictionary.choiceLabel);
 
     document.querySelectorAll("[data-role-choice]").forEach((button) => {
@@ -776,7 +850,9 @@
 
     document.querySelectorAll(".exp-card[data-experience-key]").forEach((card, index) => {
       const key = card.dataset.experienceKey;
-      const content = language() === "pl" ? profile.experienceOverrides?.[key] || experienceText[key] : profile.experienceOverrides?.[key];
+      const content = language() === "pl"
+        ? profile.experienceOverrides?.[key] || experienceText[key]
+        : profile.experienceOverrides?.[key] || translatedExperience[language()]?.[key];
       const orderIndex = order.indexOf(key);
       const isVisible = orderIndex >= 0;
 
@@ -828,7 +904,7 @@
     if (!profile.certs) {
       document.querySelectorAll(".cert").forEach((element, index) => {
         element.hidden = false;
-        element.className = `cert${index === 8 ? " cert-new" : ""}`;
+        element.className = `cert${[8, 9, 10, 11].includes(index) ? " cert-new" : ""}`;
       });
       return;
     }
@@ -888,17 +964,12 @@
     setHtml(".hero-subtitle", profile.subtitle);
     setText(".hero p", profile.hero);
     setList(".hero-pills span", profile.pills, true);
-    setList(".orbit-item span", profile.orbit);
 
     setText("[data-role-eyebrow]", dictionary.selectedProfile);
     setText("[data-role-title]", profile.title);
     setText("[data-role-desc]", profile.summary);
     setHtml("[data-role-change]", `${dictionary.changeProfile} ${icon("arrow-right")}`);
     document.querySelector("[data-role-change]")?.setAttribute("aria-label", dictionary.changeProfile);
-
-    setIconList(".focus-top vk-icon", profile.focusIcons);
-    setList(".focus-card h2", profile.focusTitles);
-    setList(".focus-card p", profile.focusTexts);
 
     updateStats(profile);
     updateJourney(profile);
@@ -923,12 +994,17 @@
       return;
     }
 
+    const activeElement = document.activeElement;
+    gateReturnFocus = activeElement && activeElement !== document.body && !gate.contains(activeElement)
+      ? activeElement
+      : null;
     gate.hidden = false;
     document.body.classList.add("job-gate-open");
+    gate.querySelector(".job-gate-panel")?.scrollTo({ top: 0 });
 
     requestAnimationFrame(() => {
-      const activeButton = gate.querySelector(".job-choice.is-active") || gate.querySelector(".job-choice");
-      activeButton?.focus({ preventScroll: true });
+      const focusTarget = gate.querySelector(".job-gate-lang-switch button.active") || gate.querySelector(".job-choice.is-active") || gate.querySelector(".job-choice");
+      focusTarget?.focus({ preventScroll: true });
     });
   };
 
@@ -940,6 +1016,8 @@
 
     gate.hidden = true;
     document.body.classList.remove("job-gate-open");
+    gateReturnFocus?.focus({ preventScroll: true });
+    gateReturnFocus = null;
   };
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -957,8 +1035,36 @@
     document.querySelector("[data-role-change]")?.addEventListener("click", openGate);
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !document.querySelector("[data-job-gate]")?.hidden) {
+      const gate = document.querySelector("[data-job-gate]");
+      if (!gate || gate.hidden) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        event.preventDefault();
         closeGate();
+        return;
+      }
+
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusable = [...gate.querySelectorAll("button:not([disabled]), a[href], [tabindex]:not([tabindex='-1'])")]
+        .filter((element) => element.getClientRects().length > 0);
+      if (!focusable.length) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     });
   });
