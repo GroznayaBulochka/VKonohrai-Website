@@ -163,7 +163,7 @@
   .experience,
   .strengths,
   .stats,
-  .certs {
+  .authorizations {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -211,7 +211,7 @@
 
   .hero-background-video {
     object-position: 54% 50%;
-    opacity: .88;
+    opacity: 1;
   }
 
   .hero-background::after {
@@ -359,6 +359,9 @@
     align-items: center;
     gap: 12px;
     overflow: visible;
+    background: rgba(5, 9, 20, .96);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .logo {
@@ -470,7 +473,7 @@
 
   .experience,
   .strengths,
-  .certs {
+  .authorizations {
     grid-template-columns: 1fr;
   }
 
@@ -570,7 +573,7 @@
 
   .hero-background-video {
     object-position: 58% 50%;
-    opacity: .8;
+    opacity: 1;
   }
 
   .photo {
@@ -606,6 +609,10 @@
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .authorization-card {
+    min-height: 0;
   }
 
   .diploma-head {
@@ -668,6 +675,25 @@
 }
 
 @media (max-width: 380px) {
+  .menu-toggle {
+    width: 44px;
+    padding: 0;
+  }
+
+  .menu-toggle-label {
+    display: none;
+  }
+
+  .lang-switch {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .lang-switch button {
+    width: 30px;
+    height: 30px;
+  }
+
   h1 {
     font-size: 38px;
   }
@@ -679,5 +705,16 @@
 
   .diploma-thumbs img {
     height: 96px;
+  }
+
+  .authorization-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .authorization-icon {
+    width: 38px;
+    height: 38px;
   }
 }

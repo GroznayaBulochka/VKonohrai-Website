@@ -91,15 +91,9 @@ vk-icon svg {
 }
 
 .timeline-item vk-icon,
-.cert vk-icon {
+.authorization-card vk-icon {
   width: 18px;
   height: 18px;
-}
-
-.cert {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .contact-card > vk-icon {

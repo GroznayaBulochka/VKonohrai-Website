@@ -16,7 +16,7 @@
 .service-card,
 .strength,
 .exp-card,
-.cert,
+.authorization-card,
 .contact-card,
 .diploma-preview {
   position: relative;
@@ -27,7 +27,7 @@
 .service-card::before,
 .strength::before,
 .exp-card::before,
-.cert::before,
+.authorization-card::before,
 .contact-card::before {
   content: "";
   position: absolute;
@@ -43,21 +43,10 @@
 .service-card:hover::before,
 .strength:hover::before,
 .exp-card:hover::before,
-.cert:hover::before,
+.authorization-card:hover::before,
 .contact-card:hover::before {
   opacity: 1;
   transform: translateX(100%);
-}
-
-.cert-new {
-  border-color: rgba(101, 224, 163, .34);
-  background:
-    linear-gradient(135deg, rgba(101, 224, 163, .14), rgba(154, 92, 255, .08)),
-    rgba(255,255,255,.04);
-}
-
-.cert-new vk-icon {
-  color: var(--green);
 }
 
 .bar div {
@@ -95,10 +84,12 @@
   top: 0;
   left: 0;
   z-index: 80;
-  width: var(--scroll-progress, 0%);
+  width: 100%;
   height: 3px;
   background: linear-gradient(90deg, var(--green), var(--accent), var(--accent-2));
   box-shadow: 0 0 18px rgba(var(--accent-rgb), .42);
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left center;
   pointer-events: none;
 }
 
@@ -160,6 +151,18 @@
 .spotlight > * {
   position: relative;
   z-index: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .stat::before,
+  .service-card::before,
+  .strength::before,
+  .exp-card::before,
+  .authorization-card::before,
+  .contact-card::before,
+  .spotlight::after {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

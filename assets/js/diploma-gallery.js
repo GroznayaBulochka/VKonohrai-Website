@@ -1,6 +1,7 @@
 (() => {
   let currentDiploma = 0;
   let activeGroup = "featured";
+  let thumbnailObserver;
 
   const getDiplomas = () => window.activeDiplomas || window.diplomas || [];
 
@@ -68,6 +69,36 @@
     });
   };
 
+  const loadThumbnail = (image) => {
+    const source = image.dataset.src;
+    if (!source) {
+      return;
+    }
+
+    image.src = source;
+    image.removeAttribute("data-src");
+    thumbnailObserver?.unobserve(image);
+  };
+
+  const observeThumbnail = (image) => {
+    if (!("IntersectionObserver" in window)) {
+      loadThumbnail(image);
+      return;
+    }
+
+    if (!thumbnailObserver) {
+      thumbnailObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadThumbnail(entry.target);
+          }
+        });
+      }, { rootMargin: "240px 0px" });
+    }
+
+    thumbnailObserver.observe(image);
+  };
+
   const createCredentialButton = (diploma, index, labels) => {
     const localized = window.getLocalizedDiploma ? window.getLocalizedDiploma(diploma) : diploma;
     const button = document.createElement("button");
@@ -81,22 +112,27 @@
     button.dataset.diplomaGroupIndex = String(index);
     button.setAttribute("aria-label", `${labels.openLabel}: ${localized.title}`);
 
-    preview.src = diploma.img;
+    preview.dataset.src = diploma.img;
     preview.alt = "";
     preview.loading = "lazy";
     preview.decoding = "async";
+    preview.width = 68;
+    preview.height = 48;
 
     title.textContent = localized.title;
     meta.textContent = [localized.issuer, localized.detail].filter(Boolean).join(" · ");
     content.append(title, meta);
     button.append(preview, content);
     button.addEventListener("click", () => showDiploma(index));
+    observeThumbnail(preview);
 
     return button;
   };
 
   const renderCertificateGroups = () => {
     const diplomas = getDiplomas();
+    thumbnailObserver?.disconnect();
+    thumbnailObserver = undefined;
     const labels = window.getDiplomaGroupLabels?.() || {
       groupsLabel: "Kategorie certyfikatów",
       featuredTab: "Prestiżowe",

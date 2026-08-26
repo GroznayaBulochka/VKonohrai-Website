@@ -37,7 +37,7 @@ const translations = {
       "#experience .section-title": "Doświadczenie zawodowe",
       "#education .card:nth-child(1) .section-title": "Edukacja",
       "#education .card:nth-child(2) .section-title": "Języki",
-      "#education .card:nth-child(3) .section-title": "Osiągnięcia i certyfikaty",
+      "#education .card:nth-child(3) .section-title": "Uprawnienia",
       ".diploma-head .section-title": "Dyplomy i certyfikaty",
       ".diploma-head h2": "Zobacz wszystkie dyplomy",
       ".diploma-head p": "Pełna galeria certyfikatów i zaświadczeń potwierdzających moje kwalifikacje.",
@@ -78,8 +78,7 @@ const translations = {
       [".timeline-item span", [`${icon("graduation-cap")} 2024 – obecnie`, `${icon("graduation-cap")} 2023 – 2024`, `${icon("graduation-cap")} 2021 – 2023`], true],
       [".timeline-item b", ["Psychologia", "Asystent stomatologiczny", "Technik BHP"]],
       [".timeline-item small", ["Uniwersytet Mikołaja Kopernika w Toruniu", "Szkoła Policealna MEDICUS", "Szkoła Policealna MEDICUS"]],
-      [".lang-row", ["<span>Ukraiński</span><span>C2</span>", "<span>Polski</span><span>C1</span>", "<span>Rosyjski</span><span>C1</span>", "<span>Angielski</span><span>A1</span>", "<span>Polski język migowy</span><span>A1</span>"], true],
-      [".cert", [`${icon("file-check")} Excel dla początkujących`, `${icon("users")} Umiejętności interpersonalne`, `${icon("target")} Kierowanie zespołem`, `${icon("chart")} Praktyczny kurs inwestowania w akcje`, `${icon("paintbrush")} Photoshop dla początkujących`, `${icon("sparkles")} Wprowadzenie do Figmy`, `${icon("award")} Operator wózka widłowego UDT`, `${icon("navigation")} Pilot BSP A1/A3`, `${icon("heart-handshake")} Wolontariat Pernikalia 2025`], true]
+      [".lang-row", ["<span>Ukraiński</span><span>C2</span>", "<span>Polski</span><span>C1</span>", "<span>Rosyjski</span><span>C1</span>", "<span>Angielski</span><span>A1</span>", "<span>Polski język migowy</span><span>A1</span>"], true]
     ],
     diplomas: [
       ["Excel dla początkujących", "Certyfikat ukończenia kursu podstaw Excela."],
@@ -121,7 +120,7 @@ const translations = {
       "#experience .section-title": "Professional experience",
       "#education .card:nth-child(1) .section-title": "Education",
       "#education .card:nth-child(2) .section-title": "Languages",
-      "#education .card:nth-child(3) .section-title": "Achievements and certificates",
+      "#education .card:nth-child(3) .section-title": "Licenses and authorizations",
       ".diploma-head .section-title": "Diplomas and certificates",
       ".diploma-head h2": "View all certificates",
       ".diploma-head p": "A full gallery of certificates and confirmations documenting my qualifications.",
@@ -162,8 +161,7 @@ const translations = {
       [".timeline-item span", [`${icon("graduation-cap")} 2024 – present`, `${icon("graduation-cap")} 2023 – 2024`, `${icon("graduation-cap")} 2021 – 2023`], true],
       [".timeline-item b", ["Psychology", "Dental assistant", "OHS technician"]],
       [".timeline-item small", ["Nicolaus Copernicus University in Toruń", "MEDICUS post-secondary school", "MEDICUS post-secondary school"]],
-      [".lang-row", ["<span>Ukrainian</span><span>C2</span>", "<span>Polish</span><span>C1</span>", "<span>Russian</span><span>C1</span>", "<span>English</span><span>A1</span>", "<span>Polish Sign Language</span><span>A1</span>"], true],
-      [".cert", [`${icon("file-check")} Excel for Beginners Certificate`, `${icon("users")} Interpersonal skills`, `${icon("target")} Team management`, `${icon("chart")} Stock Investing Course`, `${icon("paintbrush")} Photoshop for Beginners`, `${icon("sparkles")} Introduction to Figma`, `${icon("award")} Forklift operator UDT`, `${icon("navigation")} UAV pilot A1/A3`, `${icon("heart-handshake")} Pernikalia 2025 volunteering`], true]
+      [".lang-row", ["<span>Ukrainian</span><span>C2</span>", "<span>Polish</span><span>C1</span>", "<span>Russian</span><span>C1</span>", "<span>English</span><span>A1</span>", "<span>Polish Sign Language</span><span>A1</span>"], true]
     ],
     diplomas: [
       ["Excel for Beginners Certificate", "Certificate of completing an Excel basics course."],
@@ -205,7 +203,7 @@ const translations = {
       "#experience .section-title": "Профессиональный опыт",
       "#education .card:nth-child(1) .section-title": "Образование",
       "#education .card:nth-child(2) .section-title": "Языки",
-      "#education .card:nth-child(3) .section-title": "Достижения и сертификаты",
+      "#education .card:nth-child(3) .section-title": "Допуски и разрешения",
       ".diploma-head .section-title": "Дипломы и сертификаты",
       ".diploma-head h2": "Посмотреть все дипломы",
       ".diploma-head p": "Полная галерея сертификатов и подтверждений моих квалификаций.",
@@ -246,8 +244,7 @@ const translations = {
       [".timeline-item span", [`${icon("graduation-cap")} 2024 – настоящее время`, `${icon("graduation-cap")} 2023 – 2024`, `${icon("graduation-cap")} 2021 – 2023`], true],
       [".timeline-item b", ["Психология", "Ассистент стоматолога", "Техник по охране труда"]],
       [".timeline-item small", ["Университет Николая Коперника в Торуни", "Полицеальная школа MEDICUS", "Полицеальная школа MEDICUS"]],
-      [".lang-row", ["<span>Украинский</span><span>C2</span>", "<span>Польский</span><span>C1</span>", "<span>Русский</span><span>C1</span>", "<span>Английский</span><span>A1</span>", "<span>Польский жестовый язык</span><span>A1</span>"], true],
-      [".cert", [`${icon("file-check")} Excel для начинающих`, `${icon("users")} Межличностные навыки`, `${icon("target")} Управление командой`, `${icon("chart")} Практический курс инвестирования в акции`, `${icon("paintbrush")} Photoshop для начинающих`, `${icon("sparkles")} Введение в Figma`, `${icon("award")} Оператор вилочного погрузчика UDT`, `${icon("navigation")} Пилот БПЛА A1/A3`, `${icon("heart-handshake")} Волонтерство Pernikalia 2025`], true]
+      [".lang-row", ["<span>Украинский</span><span>C2</span>", "<span>Польский</span><span>C1</span>", "<span>Русский</span><span>C1</span>", "<span>Английский</span><span>A1</span>", "<span>Польский жестовый язык</span><span>A1</span>"], true]
     ],
     diplomas: [
       ["Excel для начинающих", "Сертификат об окончании курса по основам Excel."],
@@ -268,44 +265,6 @@ translations.ru.text[".menu-toggle-label"] = "Меню";
 
 translations.en.attrs.unshift([".menu-toggle", "aria-label", "Menu"]);
 translations.ru.attrs.unshift([".menu-toggle", "aria-label", "Меню"]);
-
-translations.pl.lists.find(([selector]) => selector === ".cert")?.[1].splice(
-  8,
-  0,
-  `${icon("message")} Polski język migowy A1`
-);
-translations.en.lists.find(([selector]) => selector === ".cert")?.[1].splice(
-  8,
-  0,
-  `${icon("message")} Polish Sign Language A1`
-);
-translations.ru.lists.find(([selector]) => selector === ".cert")?.[1].splice(
-  8,
-  0,
-  `${icon("message")} Польский жестовый язык A1`
-);
-
-translations.pl.lists.find(([selector]) => selector === ".cert")?.[1].splice(
-  9,
-  0,
-  `${icon("brain")} Psychologia inwestowania – Fundacja GPW`,
-  `${icon("chart")} Opcje giełdowe – Fundacja GPW`,
-  `${icon("target")} Kontrakty terminowe – Fundacja GPW`
-);
-translations.en.lists.find(([selector]) => selector === ".cert")?.[1].splice(
-  9,
-  0,
-  `${icon("brain")} Psychology of investing – GPW Foundation`,
-  `${icon("chart")} Stock options – GPW Foundation`,
-  `${icon("target")} Futures contracts – GPW Foundation`
-);
-translations.ru.lists.find(([selector]) => selector === ".cert")?.[1].splice(
-  9,
-  0,
-  `${icon("brain")} Психология инвестирования – Фонд GPW`,
-  `${icon("chart")} Биржевые опционы – Фонд GPW`,
-  `${icon("target")} Фьючерсные контракты – Фонд GPW`
-);
 
 translations.pl.diplomas.push([
   "Polski język migowy A1",
@@ -555,35 +514,7 @@ const updateLanguageSeo = (dictionary) => {
   }
 };
 
-const isHighlightedCert = (value) => /język migowy|Sign Language|жестовый язык/i.test(String(value));
-
-const renderCertList = (values, useHtml = false) => {
-  const container = getElement(".certs");
-  if (!container) {
-    return false;
-  }
-
-  container.innerHTML = values.map((value) => {
-    const className = `cert${isHighlightedCert(value) ? " cert-new" : ""}`;
-    const content = useHtml ? value : value.replace(/[&<>"']/g, (char) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      "\"": "&quot;",
-      "'": "&#39;"
-    })[char]);
-
-    return `<div class="${className}">${content}</div>`;
-  }).join("");
-
-  return true;
-};
-
 const setList = (selector, values, useHtml = false) => {
-  if (selector === ".cert" && renderCertList(values, useHtml)) {
-    return;
-  }
-
   getElements(selector).forEach((element, index) => {
     if (values[index] === undefined) {
       return;

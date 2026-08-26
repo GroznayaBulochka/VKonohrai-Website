@@ -9,21 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateScrollState = () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-    progress.style.setProperty("--scroll-progress", `${Math.min(percent, 100)}%`);
+    const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progress.style.setProperty("--scroll-progress", String(Math.min(ratio, 1)));
     nav?.classList.toggle("is-scrolled", window.scrollY > 18);
-    scrollFrame = null;
   };
-
-  const scheduleScrollUpdate = () => {
-    if (scrollFrame === null) {
-      scrollFrame = requestAnimationFrame(updateScrollState);
-    }
-  };
-
-  updateScrollState();
-  window.addEventListener("scroll", scheduleScrollUpdate, { passive: true });
-  window.addEventListener("resize", scheduleScrollUpdate);
 
   const revealTargets = [
     ".hero > div:first-child",
@@ -224,8 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  let activeLinkFrame = null;
-
   const updateActiveLink = () => {
     const anchorLine = (nav?.getBoundingClientRect().bottom || 0) + 24;
     let activeSection = sections[0];
@@ -236,16 +223,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    const reachedPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    if (reachedPageEnd) {
+      activeSection = sections.at(-1);
+    }
+
     if (activeSection) {
       setActiveLink(activeSection);
     }
 
-    activeLinkFrame = null;
   };
 
-  const scheduleActiveLinkUpdate = () => {
-    if (activeLinkFrame === null) {
-      activeLinkFrame = requestAnimationFrame(updateActiveLink);
+  const scheduleViewportUpdate = () => {
+    if (scrollFrame === null) {
+      scrollFrame = requestAnimationFrame(() => {
+        updateScrollState();
+        updateActiveLink();
+        scrollFrame = null;
+      });
     }
   };
 
@@ -258,7 +253,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  updateScrollState();
   updateActiveLink();
-  window.addEventListener("scroll", scheduleActiveLinkUpdate, { passive: true });
-  window.addEventListener("resize", scheduleActiveLinkUpdate);
+  window.addEventListener("scroll", scheduleViewportUpdate, { passive: true });
+  window.addEventListener("resize", scheduleViewportUpdate);
 });

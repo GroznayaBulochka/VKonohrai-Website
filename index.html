@@ -62,14 +62,14 @@
 
 <link rel="preload" href="assets/images/photo.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preload" href="assets/images/background-poster.webp" as="image" type="image/webp">
-<link rel="stylesheet" href="assets/css/base.css?v=20260826-1">
+<link rel="stylesheet" href="assets/css/base.css?v=20260826-2">
 <link rel="stylesheet" href="assets/css/journey.css?v=20260825-2">
-<link rel="stylesheet" href="assets/css/sections.css?v=20260825-2">
-<link rel="stylesheet" href="assets/css/diplomas.css?v=20260825-4">
-<link rel="stylesheet" href="assets/css/icons.css?v=20260825-2">
-<link rel="stylesheet" href="assets/css/animations.css?v=20260826-1">
-<link rel="stylesheet" href="assets/css/job-personalizer.css?v=20260826-1">
-<link rel="stylesheet" href="assets/css/responsive.css?v=20260825-10">
+<link rel="stylesheet" href="assets/css/sections.css?v=20260826-1">
+<link rel="stylesheet" href="assets/css/diplomas.css?v=20260826-1">
+<link rel="stylesheet" href="assets/css/icons.css?v=20260826-1">
+<link rel="stylesheet" href="assets/css/animations.css?v=20260826-3">
+<link rel="stylesheet" href="assets/css/job-personalizer.css?v=20260826-2">
+<link rel="stylesheet" href="assets/css/responsive.css?v=20260826-2">
 
 <script id="profile-structured-data" type="application/ld+json">
 {
@@ -147,7 +147,8 @@
 <div class="job-gate" data-job-gate role="dialog" aria-modal="true" aria-labelledby="jobGateTitle" aria-describedby="jobGateDesc" hidden>
   <div class="job-gate-background" aria-hidden="true">
     <video class="job-gate-background-video" autoplay muted loop playsinline preload="auto" poster="assets/images/background-poster.webp" tabindex="-1" disablepictureinpicture>
-      <source src="assets/video/background.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)">
+      <source src="assets/video/background-mobile.mp4" type="video/mp4" media="(max-width: 640px) and (prefers-reduced-motion: no-preference)">
+      <source src="assets/video/background.mp4" type="video/mp4" media="(min-width: 641px) and (prefers-reduced-motion: no-preference)">
     </video>
   </div>
   <div class="job-gate-panel">
@@ -235,8 +236,9 @@
 
   <section id="home" class="hero">
     <span class="hero-background" aria-hidden="true">
-      <video class="hero-background-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/background-poster.webp" tabindex="-1" disablepictureinpicture>
-        <source src="assets/video/background.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)">
+      <video class="hero-background-video" muted loop playsinline preload="none" poster="assets/images/background-poster.webp" tabindex="-1" disablepictureinpicture>
+        <source src="assets/video/background-mobile.mp4" type="video/mp4" media="(max-width: 640px) and (prefers-reduced-motion: no-preference)">
+        <source src="assets/video/background.mp4" type="video/mp4" media="(min-width: 641px) and (prefers-reduced-motion: no-preference)">
       </video>
     </span>
     <div>
@@ -588,24 +590,27 @@
       </div>
     </div>
 
-    <div class="card">
-      <h2 class="section-title">Osiągnięcia i certyfikaty</h2>
+    <div class="card authorizations-card">
+      <h2 class="section-title">Uprawnienia</h2>
+      <p class="authorizations-lead">Formalne uprawnienia zawodowe i operacyjne.</p>
 
-      <div class="certs">
-        <div class="cert"><vk-icon name="file-check"></vk-icon> Excel dla początkujących</div>
-        <div class="cert"><vk-icon name="users"></vk-icon> Umiejętności interpersonalne</div>
-        <div class="cert"><vk-icon name="target"></vk-icon> Kierowanie zespołem</div>
-        <div class="cert"><vk-icon name="chart"></vk-icon> Praktyczny kurs inwestowania w akcje</div>
-        <div class="cert"><vk-icon name="paintbrush"></vk-icon> Photoshop dla początkujących</div>
-        <div class="cert"><vk-icon name="sparkles"></vk-icon> Wprowadzenie do Figmy</div>
-        <div class="cert"><vk-icon name="award"></vk-icon> Operator wózka widłowego UDT</div>
-        <div class="cert"><vk-icon name="navigation"></vk-icon> Pilot BSP A1/A3</div>
-        <div class="cert cert-new"><vk-icon name="message"></vk-icon> Polski język migowy A1</div>
-        <div class="cert cert-new"><vk-icon name="brain"></vk-icon> Psychologia inwestowania</div>
-        <div class="cert cert-new"><vk-icon name="chart"></vk-icon> Opcje giełdowe</div>
-        <div class="cert cert-new"><vk-icon name="target"></vk-icon> Kontrakty terminowe</div>
-        <div class="cert"><vk-icon name="heart-handshake"></vk-icon> Wolontariat Pernikalia 2025</div>
-      </div>
+      <ul class="authorizations">
+        <li class="authorization-card">
+          <span class="authorization-icon"><vk-icon name="award"></vk-icon></span>
+          <span class="authorization-copy">
+            <b>UDT II WJO</b>
+            <small>Operator wózka jezdniowego podnośnikowego</small>
+          </span>
+        </li>
+        <li class="authorization-card">
+          <span class="authorization-icon"><vk-icon name="navigation"></vk-icon></span>
+          <span class="authorization-copy">
+            <b>Pilot BSP A1/A3</b>
+            <small>Pilot bezzałogowego statku powietrznego</small>
+            <em>Ważne do 20.09.2030</em>
+          </span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -785,11 +790,11 @@
 <script src="assets/js/diplomas-data.js?v=20260826-1" defer></script>
 <script src="assets/js/references-data.js?v=20260826-1" defer></script>
 <script src="assets/js/icons.js?v=20260630-1" defer></script>
-<script src="assets/js/translations.js?v=20260825-3" defer></script>
-<script src="assets/js/job-personalizer.js?v=20260826-1" defer></script>
-<script src="assets/js/mobile-menu.js?v=20260825-2" defer></script>
-<script src="assets/js/diploma-gallery.js?v=20260825-4" defer></script>
+<script src="assets/js/translations.js?v=20260826-1" defer></script>
+<script src="assets/js/job-personalizer.js?v=20260826-3" defer></script>
+<script src="assets/js/mobile-menu.js?v=20260826-1" defer></script>
+<script src="assets/js/diploma-gallery.js?v=20260826-1" defer></script>
 <script src="assets/js/references.js?v=20260728-1" defer></script>
-<script src="assets/js/ui-enhancements.js?v=20260825-2" defer></script>
+<script src="assets/js/ui-enhancements.js?v=20260826-1" defer></script>
 </body>
 </html>

@@ -35,24 +35,46 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (event) => {
       const target = link.hash ? document.querySelector(link.hash) : null;
 
-      if (mobileMenu.matches && target) {
+      if (target) {
         event.preventDefault();
       }
 
       setMenuState(false);
 
-      if (mobileMenu.matches && target) {
+      if (target) {
+        const menuCloseDelay = mobileMenu.matches ? 340 : 0;
+
         window.setTimeout(() => {
           const html = document.documentElement;
           const previousScrollBehavior = html.style.scrollBehavior;
-          const navHeight = nav.getBoundingClientRect().height;
-          const targetTop = target.getBoundingClientRect().top + window.scrollY;
+          const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          const useSmoothScroll = !mobileMenu.matches && !prefersReducedMotion;
+          const alignTarget = (behavior = "auto") => {
+            const desiredTop = nav.getBoundingClientRect().bottom + 20;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - desiredTop;
+            window.scrollTo({ top: Math.max(0, targetTop), behavior });
+          };
 
-          html.style.scrollBehavior = "auto";
-          window.scrollTo(0, Math.max(0, targetTop - navHeight - 14));
+          if (useSmoothScroll) {
+            alignTarget("smooth");
+          } else {
+            html.style.scrollBehavior = "auto";
+            alignTarget();
+          }
+
+          const settleDelay = useSmoothScroll ? 520 : 0;
+          window.setTimeout(() => {
+            html.style.scrollBehavior = "auto";
+            alignTarget();
+            requestAnimationFrame(() => requestAnimationFrame(() => alignTarget()));
+            window.setTimeout(() => {
+              alignTarget();
+              html.style.scrollBehavior = previousScrollBehavior;
+            }, 180);
+          }, settleDelay);
+
           window.history.pushState(null, "", link.hash);
-          html.style.scrollBehavior = previousScrollBehavior;
-        }, 340);
+        }, menuCloseDelay);
       }
     });
   });

@@ -39,6 +39,33 @@
     [`${icon("graduation-cap")} 2021 – 2023`, "Technik BHP", "Szkoła Policealna MEDICUS"]
   ];
 
+  const authorizations = {
+    pl: {
+      title: "Uprawnienia",
+      lead: "Formalne uprawnienia zawodowe i operacyjne.",
+      items: [
+        ["award", "UDT II WJO", "Operator wózka jezdniowego podnośnikowego"],
+        ["navigation", "Pilot BSP A1/A3", "Pilot bezzałogowego statku powietrznego", "Ważne do 20.09.2030"]
+      ]
+    },
+    en: {
+      title: "Licenses and authorizations",
+      lead: "Formal professional and operational authorizations.",
+      items: [
+        ["award", "UDT II WJO", "Powered industrial truck operator"],
+        ["navigation", "UAV pilot A1/A3", "Unmanned aircraft pilot", "Valid until 20.09.2030"]
+      ]
+    },
+    ru: {
+      title: "Допуски и разрешения",
+      lead: "Официальные профессиональные и эксплуатационные допуски.",
+      items: [
+        ["award", "UDT II WJO", "Оператор вилочного погрузчика"],
+        ["navigation", "Пилот БПЛА A1/A3", "Пилот беспилотного воздушного судна", "Действительно до 20.09.2030"]
+      ]
+    }
+  };
+
   const defaultStrengths = {
     en: [
       ["clipboard-check", "Organization<br>and independence"],
@@ -291,15 +318,9 @@
           education: baseEducation,
           languageTitle: "Języki",
           languageRows: baseLanguages,
-          certTitle: "Kursy, certyfikaty i uprawnienia",
-          certs: [
-            ["award", "Operator wózka jezdniowego podnośnikowego UDT – II WJO"],
-            ["target", "Kierowanie zespołem – trening menedżerski"],
-            ["users", "Umiejętności interpersonalne – certyfikat"]
-          ],
           diplomaTitle: "Dyplomy i certyfikaty",
           diplomaHeading: "Dokumenty wspierające profil produkcyjny",
-          diplomaLead: "W tym wariancie pokazuję certyfikaty powiązane z zarządzaniem zespołem i komunikacją. Uprawnienie UDT jest ujęte w sekcji certyfikatów.",
+          diplomaLead: "W tym wariancie pokazuję certyfikaty powiązane z zarządzaniem zespołem i komunikacją. Formalne uprawnienia są przedstawione osobno w sekcji Uprawnienia.",
           diplomaIndexes: [3, 8],
           quote: "W produkcji liczą się jakość, porządek i bezpieczeństwo. Dobrze zorganizowane stanowisko pomaga zespołowi pracować spokojniej i skuteczniej."
         },
@@ -353,12 +374,6 @@
           education: baseEducation,
           languageTitle: "Języki",
           languageRows: baseLanguages,
-          certTitle: "Kursy i certyfikaty",
-          certs: [
-            ["target", "Kierowanie zespołem – trening menedżerski"],
-            ["message", "Kurs Polskiego Języka Migowego – poziom A1", true],
-            ["users", "Umiejętności interpersonalne – certyfikat"]
-          ],
           diplomaTitle: "Dyplomy i certyfikaty",
           diplomaHeading: "Dokumenty wspierające profil gastronomiczny",
           diplomaLead: "W tym wariancie pokazuję certyfikaty z komunikacji, pracy z ludźmi i podstaw PJM.",
@@ -428,16 +443,6 @@
           education: baseEducation,
           languageTitle: "Języki",
           languageRows: baseLanguages,
-          certTitle: "Kursy i certyfikaty",
-          certs: [
-            ["file-check", "Excel dla początkujących – certyfikat"],
-            ["target", "Kierowanie zespołem – trening menedżerski"],
-            ["users", "Umiejętności interpersonalne – certyfikat"],
-            ["message", "Kurs Polskiego Języka Migowego – poziom A1", true],
-            ["brain", "Psychologia inwestowania – Fundacja GPW", true],
-            ["chart", "Opcje giełdowe – Fundacja GPW", true],
-            ["target", "Kontrakty terminowe – Fundacja GPW", true]
-          ],
           diplomaTitle: "Dyplomy i certyfikaty",
           diplomaHeading: "Dokumenty wspierające profil biurowy",
           diplomaLead: "W tym wariancie pokazuję certyfikaty wspierające dokumentację, komunikację i pracę z ludźmi.",
@@ -492,22 +497,6 @@
           education: baseEducation,
           languageTitle: "Języki",
           languageRows: baseLanguages,
-          certTitle: "Kursy, certyfikaty i uprawnienia",
-          certs: [
-            ["award", "Operator wózka jezdniowego podnośnikowego UDT – II WJO"],
-            ["target", "Kierowanie zespołem – trening menedżerski"],
-            ["message", "Kurs Polskiego Języka Migowego – poziom A1", true],
-            ["users", "Umiejętności interpersonalne – certyfikat"],
-            ["navigation", "Pilot Bezzałogowego Statku Powietrznego BSP – A1/A3"],
-            ["file-check", "Excel dla początkujących – certyfikat"],
-            ["sparkles", "Wprowadzenie do Figmy – certyfikat"],
-            ["paintbrush", "Photoshop dla początkujących – certyfikat"],
-            ["chart", "Praktyczny kurs inwestowania w akcje – certyfikat"],
-            ["brain", "Psychologia inwestowania – Fundacja GPW", true],
-            ["chart", "Opcje giełdowe – Fundacja GPW", true],
-            ["target", "Kontrakty terminowe – Fundacja GPW", true],
-            ["heart-handshake", "Wolontariat podczas Pernikaliów 2025 – zaświadczenie"]
-          ],
           diplomaTitle: "Dyplomy i certyfikaty",
           diplomaHeading: "Pełna galeria dokumentów",
           diplomaLead: "Pełny wariant pokazuje dostępne dyplomy i zaświadczenia dopasowane do szerokiego profilu zawodowego.",
@@ -897,24 +886,28 @@
     });
   };
 
-  const updateCerts = (profile) => {
-    setText("#education .card:nth-child(3) .section-title", profile.certTitle);
-    const container = document.querySelector(".certs");
+  const updateAuthorizations = () => {
+    const content = authorizations[language()] || authorizations.pl;
+    const container = document.querySelector(".authorizations");
 
-    if (!profile.certs) {
-      document.querySelectorAll(".cert").forEach((element, index) => {
-        element.hidden = false;
-        element.className = `cert${[8, 9, 10, 11].includes(index) ? " cert-new" : ""}`;
-      });
-      return;
-    }
+    setText("#education .card:nth-child(3) .section-title", content.title);
+    setText(".authorizations-lead", content.lead);
 
     if (!container) {
       return;
     }
 
-    container.innerHTML = profile.certs
-      .map((cert) => `<div class="cert${cert[2] ? " cert-new" : ""}">${icon(cert[0])} ${cert[1]}</div>`)
+    container.innerHTML = content.items
+      .map((item) => `
+        <li class="authorization-card">
+          <span class="authorization-icon">${icon(item[0])}</span>
+          <span class="authorization-copy">
+            <b>${item[1]}</b>
+            <small>${item[2]}</small>
+            ${item[3] ? `<em>${item[3]}</em>` : ""}
+          </span>
+        </li>
+      `)
       .join("");
   };
 
@@ -977,7 +970,7 @@
     updateServices(profile);
     updateExperience(activeRole, profile);
     updateEducation(profile);
-    updateCerts(profile);
+    updateAuthorizations();
     updateDiplomas(profile);
     updateContactAndQuote(profile);
     updateCvLinks(activeRole, dictionary, profile);
@@ -985,6 +978,45 @@
 
     if (persist) {
       storage.set(STORAGE_KEY, activeRole);
+    }
+  };
+
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let heroInView = true;
+
+  const playVideo = (video) => {
+    if (!video || motionPreference.matches || document.hidden) {
+      return;
+    }
+
+    video.play().catch(() => {
+      // The poster remains visible when a browser blocks autoplay.
+    });
+  };
+
+  const syncBackgroundVideos = () => {
+    const gate = document.querySelector("[data-job-gate]");
+    const gateVideo = gate?.querySelector(".job-gate-background-video");
+    const heroVideo = document.querySelector(".hero-background-video");
+    const gateIsOpen = Boolean(gate && !gate.hidden);
+
+    if (motionPreference.matches || document.hidden) {
+      gateVideo?.pause();
+      heroVideo?.pause();
+      return;
+    }
+
+    if (gateIsOpen) {
+      heroVideo?.pause();
+      playVideo(gateVideo);
+      return;
+    }
+
+    gateVideo?.pause();
+    if (heroInView) {
+      playVideo(heroVideo);
+    } else {
+      heroVideo?.pause();
     }
   };
 
@@ -1002,6 +1034,7 @@
     document.documentElement.classList.add("job-gate-open");
     document.body.classList.add("job-gate-open");
     gate.querySelector(".job-gate-panel")?.scrollTo({ top: 0 });
+    syncBackgroundVideos();
 
     requestAnimationFrame(() => {
       const focusTarget = gate.querySelector(".job-gate-lang-switch button.active") || gate.querySelector(".job-choice.is-active") || gate.querySelector(".job-choice");
@@ -1018,6 +1051,7 @@
     gate.hidden = true;
     document.documentElement.classList.remove("job-gate-open");
     document.body.classList.remove("job-gate-open");
+    syncBackgroundVideos();
     gateReturnFocus?.focus({ preventScroll: true });
     gateReturnFocus = null;
   };
@@ -1035,6 +1069,17 @@
     });
 
     document.querySelector("[data-role-change]")?.addEventListener("click", openGate);
+    document.addEventListener("visibilitychange", syncBackgroundVideos);
+    motionPreference.addEventListener?.("change", syncBackgroundVideos);
+
+    const hero = document.querySelector(".hero");
+    if (hero && "IntersectionObserver" in window) {
+      const heroObserver = new IntersectionObserver(([entry]) => {
+        heroInView = entry.isIntersecting;
+        syncBackgroundVideos();
+      }, { threshold: .01, rootMargin: "200px 0px" });
+      heroObserver.observe(hero);
+    }
 
     document.addEventListener("keydown", (event) => {
       const gate = document.querySelector("[data-job-gate]");

@@ -52,15 +52,14 @@ body.job-gate-open {
   display: block;
   object-fit: cover;
   object-position: center;
-  filter: brightness(.68) saturate(.86) contrast(1.08);
   pointer-events: none;
 }
 
 .job-gate-background::after {
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(4, 8, 18, .78), rgba(6, 12, 27, .5) 50%, rgba(4, 8, 18, .78)),
-    linear-gradient(180deg, rgba(5, 9, 20, .58), rgba(5, 9, 20, .3) 46%, rgba(5, 9, 20, .78));
+    linear-gradient(90deg, rgba(4, 8, 18, .8), rgba(6, 12, 27, .58) 50%, rgba(4, 8, 18, .8)),
+    linear-gradient(180deg, rgba(5, 9, 20, .66), rgba(5, 9, 20, .43) 46%, rgba(5, 9, 20, .8));
 }
 
 .job-gate-panel {
