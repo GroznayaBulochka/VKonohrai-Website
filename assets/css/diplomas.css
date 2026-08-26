@@ -511,3 +511,23 @@
     font-size: 28px;
   }
 }
+
+@media (max-width: 380px) {
+  .credential-tabs button {
+    min-height: 58px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 6px 4px;
+    text-align: center;
+  }
+
+  .credential-tabs button span {
+    line-height: 1.15;
+  }
+
+  .credential-tabs strong {
+    min-width: 24px;
+    padding: 2px 4px;
+  }
+}

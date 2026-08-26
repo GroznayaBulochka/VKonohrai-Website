@@ -625,6 +625,28 @@
     padding-right: 16px;
   }
 
+  .contact-method {
+    grid-template-columns: 22px minmax(0, 1fr) 40px;
+    gap: 8px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .contact-method > vk-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .contact-email a {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .contact-quick-copy {
+    width: 40px;
+    height: 40px;
+  }
+
   .diploma-thumbs img {
     height: 96px;
   }
