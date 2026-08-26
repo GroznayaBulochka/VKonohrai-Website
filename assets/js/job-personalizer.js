@@ -6,19 +6,19 @@
 
   const files = {
     production: {
-      href: "CV/CV_Prod_Vladyslav_Konohrai.pdf",
+      href: "assets/CV/CV_Prod_Vladyslav_Konohrai.pdf",
       download: "CV_Prod_Vladyslav_Konohrai.pdf"
     },
     gastro: {
-      href: "CV/CV_Gastro_Vladyslav_Konohrai.pdf",
+      href: "assets/CV/CV_Gastro_Vladyslav_Konohrai.pdf",
       download: "CV_Gastro_Vladyslav_Konohrai.pdf"
     },
     office: {
-      href: "CV/CV_Biuro_Vladyslav_Konohrai.pdf",
+      href: "assets/CV/CV_Biuro_Vladyslav_Konohrai.pdf",
       download: "CV_Biuro_Vladyslav_Konohrai.pdf"
     },
     all: {
-      href: "CV/CV_All_Vladyslav_Konohrai.pdf",
+      href: "assets/CV/CV_All_Vladyslav_Konohrai.pdf",
       download: "CV_All_Vladyslav_Konohrai.pdf"
     }
   };
@@ -999,6 +999,7 @@
       ? activeElement
       : null;
     gate.hidden = false;
+    document.documentElement.classList.add("job-gate-open");
     document.body.classList.add("job-gate-open");
     gate.querySelector(".job-gate-panel")?.scrollTo({ top: 0 });
 
@@ -1015,6 +1016,7 @@
     }
 
     gate.hidden = true;
+    document.documentElement.classList.remove("job-gate-open");
     document.body.classList.remove("job-gate-open");
     gateReturnFocus?.focus({ preventScroll: true });
     gateReturnFocus = null;

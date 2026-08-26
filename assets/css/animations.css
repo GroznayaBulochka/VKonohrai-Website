@@ -181,4 +181,9 @@
   .bar div {
     transform: none;
   }
+
+  .hero-background-video,
+  .job-gate-background-video {
+    display: none;
+  }
 }

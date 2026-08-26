@@ -1,3 +1,21 @@
+@media (min-width: 1361px) {
+  .hero-background {
+    top: -132px;
+    bottom: -44px;
+  }
+}
+
+@media (min-width: 1361px) and (min-height: 830px) {
+  .hero {
+    min-height: calc(100svh - 180px);
+  }
+
+  .photo-wrap,
+  .side-info {
+    align-self: center;
+  }
+}
+
 @media (max-width: 1360px) {
   nav {
     gap: 10px;
@@ -179,6 +197,27 @@
     gap: 24px;
     min-height: auto;
     padding-top: 4px;
+  }
+
+  .hero-background {
+    top: -28px;
+    bottom: -18px;
+  }
+
+  .hero-background::before {
+    background-position: 54% 50%;
+    opacity: .88;
+  }
+
+  .hero-background-video {
+    object-position: 54% 50%;
+    opacity: .88;
+  }
+
+  .hero-background::after {
+    background:
+      linear-gradient(90deg, rgba(4,8,18,.78) 0%, rgba(5,9,20,.48) 54%, rgba(4,9,19,.68) 100%),
+      linear-gradient(180deg, rgba(5,8,18,.46) 0%, rgba(5,9,19,.18) 54%, #08111d 100%);
   }
 
   .photo-wrap {
@@ -522,6 +561,16 @@
   .photo-wrap {
     height: clamp(350px, 100vw, 400px);
     margin-bottom: 10px;
+  }
+
+  .hero-background::before {
+    background-position: 58% 50%;
+    opacity: .8;
+  }
+
+  .hero-background-video {
+    object-position: 58% 50%;
+    opacity: .8;
   }
 
   .photo {
