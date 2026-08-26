@@ -7,6 +7,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector("nav");
   let scrollFrame = null;
 
+  const experienceDisclosure = document.querySelector(".experience-disclosure");
+  const syncExperienceDisclosure = () => {
+    if (!experienceDisclosure) {
+      return;
+    }
+
+    const label = experienceDisclosure.open
+      ? experienceDisclosure.dataset.collapseLabel
+      : experienceDisclosure.dataset.expandLabel;
+    const toggleLabel = experienceDisclosure.querySelector("[data-experience-toggle]");
+
+    if (toggleLabel && label) {
+      toggleLabel.textContent = label;
+    }
+  };
+
+  experienceDisclosure?.addEventListener("toggle", syncExperienceDisclosure);
+  document.addEventListener("experiencechange", syncExperienceDisclosure);
+  document.querySelectorAll("a[href='#experience']").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (experienceDisclosure) {
+        experienceDisclosure.open = true;
+      }
+    });
+  });
+
+  if (window.location.hash === "#experience" && experienceDisclosure) {
+    experienceDisclosure.open = true;
+  }
+
+  const careerTimeline = document.querySelector("[data-career-timeline]");
+
   const updateScrollState = () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
@@ -142,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     uniqueElements.forEach((element) => element.classList.add("is-visible"));
     bars.forEach((bar) => bar.classList.add("is-visible"));
     statNumbers.forEach(animateStat);
+    careerTimeline?.classList.add("is-drawn");
     return;
   }
 
@@ -160,6 +193,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   uniqueElements.forEach((element) => revealObserver.observe(element));
+
+  if (careerTimeline) {
+    const careerObserver = new IntersectionObserver((entries, observer) => {
+      if (!entries[0]?.isIntersecting) {
+        return;
+      }
+
+      careerTimeline.classList.add("is-drawn");
+      observer.disconnect();
+    }, { threshold: .18 });
+
+    careerObserver.observe(careerTimeline);
+  }
 
   const barObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {

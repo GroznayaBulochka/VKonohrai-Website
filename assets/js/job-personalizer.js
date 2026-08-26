@@ -93,7 +93,6 @@
     cook: {
       title: "Kucharz",
       company: "MANEKIN Sp. z o.o.",
-      date: "04.2026 – obecnie",
       items: [
         "Przygotowywanie dań zgodnie z recepturami i standardami jakości",
         "Przyrządzanie sałatek, burgerów i dań makaronowych",
@@ -105,7 +104,6 @@
     safety: {
       title: "Inspektor ds. BHP",
       company: "SOL-WORK Tetiana Logvyn",
-      date: "10.2024 – obecnie",
       items: [
         "Opracowywanie dokumentacji BHP zgodnie z obowiązującymi przepisami",
         "Prowadzenie szkoleń wstępnych i okresowych z zakresu BHP",
@@ -117,7 +115,6 @@
     "restaurant-torun": {
       title: "Pracownik restauracji",
       company: "Happy Food AWK Sp. z o.o.",
-      date: "08.2025 – 11.2025",
       items: [
         "Realizacja i pakowanie zamówień",
         "Obsługa klientów, kasy i przyjmowanie płatności",
@@ -129,7 +126,6 @@
     painting: {
       title: "Pomocnik lakiernika",
       company: "Palfinger Poland Sp. z o.o.",
-      date: "06.2022 – 08.2024",
       items: [
         "Przygotowywanie maszyn i elementów do lakierowania",
         "Samodzielne lakierowanie elementów oraz przygotowywanie i mieszanie farb",
@@ -142,7 +138,6 @@
     "restaurant-bydgoszcz": {
       title: "Pracownik restauracji",
       company: "Wojciech Szpila Sp. z o.o.",
-      date: "09.2023 – 12.2023",
       items: [
         "Pakowanie zamówień i obsługa klientów",
         "Rozwiązywanie problemów klientów i wsparcie zespołu w trudnych sytuacjach",
@@ -154,7 +149,6 @@
     farm: {
       title: "Pracownik fizyczny na farmie",
       company: "Ukraina",
-      date: "01.2020 – 04.2020",
       items: [
         "Wykonywanie prac polowych: sadzenie, pielęgnacja i zbiór plonów",
         "Opieka nad zwierzętami i utrzymanie porządku w gospodarstwie"
@@ -163,7 +157,6 @@
     construction: {
       title: "Pomocnik budowlany",
       company: "Ukraina",
-      date: "04.2019 – 12.2019",
       items: [
         "Transport materiałów i przygotowywanie zapraw budowlanych",
         "Montaż rusztowań oraz wsparcie przy budowie ścian",
@@ -176,63 +169,210 @@
   const translatedExperience = {
     en: {
       cook: {
-        title: "Cook", company: "MANEKIN Sp. z o.o.", date: "04.2026 – present",
+        title: "Cook", company: "MANEKIN Sp. z o.o.",
         items: ["Preparing dishes according to recipes and quality standards", "Preparing salads, burgers and pasta dishes", "Thermal processing and frying meat", "Preparing ingredients and semi-finished products for current production", "Organizing the workstation and cooperating with the team on orders"]
       },
       safety: {
-        title: "OHS inspector", company: "SOL-WORK Tetiana Logvyn", date: "10.2024 – present",
+        title: "OHS inspector", company: "SOL-WORK Tetiana Logvyn",
         items: ["Preparing OHS documentation in accordance with applicable regulations", "Conducting introductory and periodic OHS training", "Identifying and analyzing hazards and proposing corrective and preventive actions", "Cooperating with management to implement procedures and a safety culture", "Monitoring compliance with OHS regulations and rules"]
       },
       "restaurant-torun": {
-        title: "Restaurant employee", company: "Happy Food AWK Sp. z o.o.", date: "08.2025 – 11.2025",
+        title: "Restaurant employee", company: "Happy Food AWK Sp. z o.o.",
         items: ["Fulfilling and packing orders", "Serving customers, operating the till and accepting payments", "Preparing products according to quality standards", "Maintaining continuity of kitchen operations", "Checking and replenishing stock"]
       },
       painting: {
-        title: "Painter assistant", company: "Palfinger Poland Sp. z o.o.", date: "06.2022 – 08.2024",
+        title: "Painter assistant", company: "Palfinger Poland Sp. z o.o.",
         items: ["Preparing machines and components for painting", "Painting components independently and preparing and mixing paints", "Shot blasting metal components and operating surface treatment equipment", "Performing minor repairs and maintaining equipment in good technical condition", "Organizing department work and cooperating with the warehouse on projects", "Training new employees and supporting the team"]
       },
       "restaurant-bydgoszcz": {
-        title: "Restaurant employee", company: "Wojciech Szpila Sp. z o.o.", date: "09.2023 – 12.2023",
+        title: "Restaurant employee", company: "Wojciech Szpila Sp. z o.o.",
         items: ["Packing orders and serving customers", "Resolving customer issues and supporting the team in difficult situations", "Maintaining smooth kitchen operations and checking stock", "Operating equipment and responding to faults", "Training and onboarding new employees"]
       },
       farm: {
-        title: "Farm worker", company: "Ukraine", date: "01.2020 – 04.2020",
+        title: "Farm worker", company: "Ukraine",
         items: ["Carrying out field work: planting, crop care and harvesting", "Caring for animals and maintaining order on the farm"]
       },
       construction: {
-        title: "Construction assistant", company: "Ukraine", date: "04.2019 – 12.2019",
+        title: "Construction assistant", company: "Ukraine",
         items: ["Transporting materials and preparing construction mortar", "Assembling scaffolding and assisting with wall construction", "Building simple structures from plans", "Finishing work: insulation, painting and decorative textures"]
       }
     },
     ru: {
       cook: {
-        title: "Повар", company: "MANEKIN Sp. z o.o.", date: "04.2026 – настоящее время",
+        title: "Повар", company: "MANEKIN Sp. z o.o.",
         items: ["Приготовление блюд по рецептурам и стандартам качества", "Приготовление салатов, бургеров и блюд из пасты", "Термическая обработка и жарка мяса", "Подготовка ингредиентов и полуфабрикатов для текущего производства", "Организация рабочего места и взаимодействие с командой при выполнении заказов"]
       },
       safety: {
-        title: "Инспектор по охране труда", company: "SOL-WORK Tetiana Logvyn", date: "10.2024 – настоящее время",
+        title: "Инспектор по охране труда", company: "SOL-WORK Tetiana Logvyn",
         items: ["Подготовка документации по охране труда в соответствии с действующими нормами", "Проведение вводных и периодических инструктажей по охране труда", "Выявление и анализ рисков, предложение корректирующих и профилактических мер", "Сотрудничество с руководством при внедрении процедур и культуры безопасности", "Контроль соблюдения норм и правил охраны труда"]
       },
       "restaurant-torun": {
-        title: "Работник ресторана", company: "Happy Food AWK Sp. z o.o.", date: "08.2025 – 11.2025",
+        title: "Работник ресторана", company: "Happy Food AWK Sp. z o.o.",
         items: ["Выполнение и упаковка заказов", "Обслуживание клиентов, работа с кассой и прием платежей", "Подготовка продуктов в соответствии со стандартами качества", "Обеспечение бесперебойной работы кухни", "Контроль и пополнение запасов"]
       },
       painting: {
-        title: "Помощник маляра", company: "Palfinger Poland Sp. z o.o.", date: "06.2022 – 08.2024",
+        title: "Помощник маляра", company: "Palfinger Poland Sp. z o.o.",
         items: ["Подготовка машин и деталей к покраске", "Самостоятельная покраска деталей, подготовка и смешивание красок", "Дробеструйная обработка металлических деталей и работа с оборудованием для обработки поверхностей", "Выполнение мелкого ремонта и поддержание оборудования в исправном состоянии", "Организация работы отдела и взаимодействие со складом при реализации проектов", "Обучение новых сотрудников и поддержка команды"]
       },
       "restaurant-bydgoszcz": {
-        title: "Работник ресторана", company: "Wojciech Szpila Sp. z o.o.", date: "09.2023 – 12.2023",
+        title: "Работник ресторана", company: "Wojciech Szpila Sp. z o.o.",
         items: ["Упаковка заказов и обслуживание клиентов", "Решение проблем клиентов и поддержка команды в сложных ситуациях", "Поддержание бесперебойной работы кухни и контроль запасов", "Работа с оборудованием и реагирование на неисправности", "Обучение и адаптация новых сотрудников"]
       },
       farm: {
-        title: "Рабочий на ферме", company: "Украина", date: "01.2020 – 04.2020",
+        title: "Рабочий на ферме", company: "Украина",
         items: ["Полевые работы: посадка, уход за культурами и сбор урожая", "Уход за животными и поддержание порядка в хозяйстве"]
       },
       construction: {
-        title: "Помощник строителя", company: "Украина", date: "04.2019 – 12.2019",
+        title: "Помощник строителя", company: "Украина",
         items: ["Перевозка материалов и приготовление строительных растворов", "Монтаж строительных лесов и помощь при возведении стен", "Выполнение простых конструкций по чертежам", "Отделочные работы: утепление, покраска и декоративные покрытия"]
       }
+    }
+  };
+
+  const experienceTimelineMeta = {
+    construction: {
+      startDate: "2019-04",
+      endDate: "2019-12",
+      icon: "building",
+      color: "#c176ff",
+      category: { pl: "Budownictwo", en: "Construction", ru: "Строительство" },
+      location: { pl: "Ukraina", en: "Ukraine", ru: "Украина" },
+      skills: {
+        pl: ["Transport materiałów", "Rusztowania", "Prace budowlane", "Wykończenia"],
+        en: ["Material transport", "Scaffolding", "Construction work", "Finishing work"],
+        ru: ["Перевозка материалов", "Строительные леса", "Строительные работы", "Отделочные работы"]
+      }
+    },
+    farm: {
+      startDate: "2020-01",
+      endDate: "2020-04",
+      icon: "sprout",
+      color: "#62a5ff",
+      category: { pl: "Praca fizyczna", en: "Physical work", ru: "Физическая работа" },
+      location: { pl: "Ukraina", en: "Ukraine", ru: "Украина" },
+      skills: {
+        pl: ["Prace polowe", "Opieka nad zwierzętami", "Organizacja pracy", "Samodzielność"],
+        en: ["Field work", "Animal care", "Work organization", "Independence"],
+        ru: ["Полевые работы", "Уход за животными", "Организация работы", "Самостоятельность"]
+      }
+    },
+    painting: {
+      startDate: "2022-06",
+      endDate: "2024-08",
+      icon: "paintbrush",
+      color: "#ad63ff",
+      category: { pl: "Produkcja", en: "Production", ru: "Производство" },
+      location: { pl: "Polska", en: "Poland", ru: "Польша" },
+      skills: {
+        pl: ["Lakierowanie", "Śrutowanie", "Obróbka powierzchni", "Organizacja pracy", "Szkolenie pracowników"],
+        en: ["Painting", "Shot blasting", "Surface treatment", "Work organization", "Employee training"],
+        ru: ["Покраска", "Дробеструйная обработка", "Обработка поверхностей", "Организация работы", "Обучение сотрудников"]
+      }
+    },
+    "restaurant-bydgoszcz": {
+      startDate: "2023-09",
+      endDate: "2023-12",
+      icon: "utensils",
+      color: "#65e0a3",
+      category: { pl: "Gastronomia", en: "Hospitality", ru: "Гастрономия" },
+      location: { pl: "Bydgoszcz, Polska", en: "Bydgoszcz, Poland", ru: "Быдгощ, Польша" },
+      skills: {
+        pl: ["Obsługa klienta", "Realizacja zamówień", "Kontrola zapasów", "Rozwiązywanie problemów", "Wdrażanie pracowników"],
+        en: ["Customer service", "Order fulfilment", "Stock control", "Problem solving", "Employee onboarding"],
+        ru: ["Обслуживание клиентов", "Выполнение заказов", "Контроль запасов", "Решение проблем", "Адаптация сотрудников"]
+      }
+    },
+    safety: {
+      startDate: "2024-10",
+      endDate: null,
+      isCurrent: true,
+      icon: "hard-hat",
+      color: "#9a5cff",
+      category: { pl: "BHP", en: "OHS", ru: "Охрана труда" },
+      location: { pl: "Toruń, Polska", en: "Toruń, Poland", ru: "Торунь, Польша" },
+      skills: {
+        pl: ["Dokumentacja BHP", "Szkolenia BHP", "Analiza zagrożeń", "Procedury bezpieczeństwa", "Współpraca z kierownictwem"],
+        en: ["OHS documentation", "OHS training", "Hazard analysis", "Safety procedures", "Management cooperation"],
+        ru: ["Документация по охране труда", "Инструктажи", "Анализ рисков", "Процедуры безопасности", "Работа с руководством"]
+      }
+    },
+    "restaurant-torun": {
+      startDate: "2025-08",
+      endDate: "2025-11",
+      icon: "store",
+      color: "#62d9ff",
+      category: { pl: "Gastronomia", en: "Hospitality", ru: "Гастрономия" },
+      location: { pl: "Toruń, Polska", en: "Toruń, Poland", ru: "Торунь, Польша" },
+      skills: {
+        pl: ["Obsługa klienta", "Obsługa kasy", "Płatności", "Kontrola zapasów", "Organizacja kuchni"],
+        en: ["Customer service", "Till operation", "Payments", "Stock control", "Kitchen organization"],
+        ru: ["Обслуживание клиентов", "Работа с кассой", "Платежи", "Контроль запасов", "Организация кухни"]
+      }
+    },
+    cook: {
+      startDate: "2026-04",
+      endDate: null,
+      isCurrent: true,
+      icon: "utensils",
+      color: "#d184ff",
+      category: { pl: "Gastronomia", en: "Hospitality", ru: "Гастрономия" },
+      location: { pl: "Toruń, Polska", en: "Toruń, Poland", ru: "Торунь, Польша" },
+      skills: {
+        pl: ["Przygotowywanie dań", "Obróbka termiczna", "Organizacja stanowiska", "Standardy jakości", "Praca zespołowa"],
+        en: ["Food preparation", "Thermal processing", "Workstation organization", "Quality standards", "Teamwork"],
+        ru: ["Приготовление блюд", "Термическая обработка", "Организация рабочего места", "Стандарты качества", "Командная работа"]
+      }
+    }
+  };
+
+  const experienceInterfaceText = {
+    pl: {
+      careerEyebrow: "ŚCIEŻKA ZAWODOWA",
+      roleColumn: "Stanowisko",
+      historyLabel: "Historia zatrudnienia",
+      showPoint: "Pokaż doświadczenie",
+      hint: "Kliknij stanowisko na osi czasu, aby zobaczyć szczegóły i zakres obowiązków.",
+      responsibilities: "Zakres obowiązków",
+      skills: "Kluczowe umiejętności",
+      updated: "Doświadczenie aktualizowane na bieżąco",
+      current: "obecnie",
+      duration: (years, months) => [years ? `${years} ${years === 1 ? "rok" : years < 5 ? "lata" : "lat"}` : "", months ? `${months} mies.` : ""].filter(Boolean).join(" "),
+      summary: "Pokaż szczegółowy przebieg zatrudnienia",
+      count: (value) => `${value} ${value === 1 ? "stanowisko" : value < 5 ? "stanowiska" : "stanowisk"} • firmy, dokładne daty i zakres obowiązków`,
+      expand: "Rozwiń szczegóły",
+      collapse: "Zwiń szczegóły"
+    },
+    en: {
+      careerEyebrow: "CAREER PATH",
+      roleColumn: "Position",
+      historyLabel: "Employment history",
+      showPoint: "Show experience",
+      hint: "Select a role on the timeline to see its details and responsibilities.",
+      responsibilities: "Responsibilities",
+      skills: "Key skills",
+      updated: "Experience updated on an ongoing basis",
+      current: "present",
+      duration: (years, months) => [years ? `${years} ${years === 1 ? "yr" : "yrs"}` : "", months ? `${months} mos.` : ""].filter(Boolean).join(" "),
+      summary: "Show the detailed employment history",
+      count: (value) => `${value} roles • employers, exact dates and responsibilities`,
+      expand: "Expand details",
+      collapse: "Collapse details"
+    },
+    ru: {
+      careerEyebrow: "ПРОФЕССИОНАЛЬНЫЙ ПУТЬ",
+      roleColumn: "Должность",
+      historyLabel: "История работы",
+      showPoint: "Показать опыт",
+      hint: "Выберите должность на шкале, чтобы увидеть подробности и обязанности.",
+      responsibilities: "Обязанности",
+      skills: "Ключевые навыки",
+      updated: "Опыт обновляется по мере изменений",
+      current: "по настоящее время",
+      duration: (years, months) => [years ? `${years} г.` : "", months ? `${months} мес.` : ""].filter(Boolean).join(" "),
+      summary: "Показать подробную историю работы",
+      count: (value) => `${value} ${value === 1 ? "должность" : value < 5 ? "должности" : "должностей"} • работодатели, точные даты и обязанности`,
+      expand: "Развернуть",
+      collapse: "Свернуть"
     }
   };
 
@@ -287,13 +427,6 @@
           journeyHeading: "Doświadczenie, które<br><span>buduje profil techniczny</span>",
           journeyText: "Ten wariant skupia się na produkcji, lakierni i bezpieczeństwie pracy. Najważniejsze są tu praktyczne umiejętności, samodzielność, dbałość o sprzęt oraz wdrażanie nowych pracowników.",
           journeyButton: `Zobacz doświadczenie produkcyjne ${icon("arrow-right")}`,
-          points: [
-            ["2021", "shield", "Technik BHP", "Wykształcenie dające podstawę do pracy zgodnej z przepisami."],
-            ["2022", "factory", "Palfinger", "Start pracy w środowisku produkcyjnym i lakierni."],
-            ["2023", "paintbrush", "Obróbka", "Lakierowanie, śrutowanie i przygotowanie powierzchni."],
-            ["2024", "award", "UDT", "Uprawnienia operatora wózka jezdniowego II WJO."],
-            ["2024", "users", "Wdrożenia", "Szkolenie nowych pracowników i wsparcie zespołu."]
-          ],
           skillTitle: "Umiejętności techniczne i produkcyjne",
           strengths: [
             ["factory", "Doświadczenie w pracy<br>w środowisku produkcyjnym"],
@@ -345,13 +478,6 @@
           journeyHeading: "Doświadczenie z kuchni<br><span>i pracy z klientem</span>",
           journeyText: "Ten wariant skupia się na gastronomii: kuchni, obsłudze, zamówieniach, kontroli zapasów i pracy w dynamicznym środowisku.",
           journeyButton: `Zobacz doświadczenie gastronomiczne ${icon("arrow-right")}`,
-          points: [
-            ["2023", "utensils", "Restauracja", "Pakowanie zamówień, obsługa klientów i praca na kuchni."],
-            ["2024", "brain", "Psychologia", "Rozwój komunikacji i lepszego rozumienia ludzi."],
-            ["2025", "store", "Happy Food", "Obsługa kasy, płatności, zapasów i jakości produktów."],
-            ["2026", "utensils", "MANEKIN", "Przygotowywanie dań i organizacja stanowiska kuchennego."],
-            ["2026", "users", "Zespół", "Szkolenie nowych osób i współpraca pod presją czasu."]
-          ],
           skillTitle: "Umiejętności gastronomiczne",
           strengths: [
             ["utensils", "Przygotowywanie dań<br>zgodnie z recepturami"],
@@ -401,13 +527,6 @@
           journeyHeading: "Dokładność, procedury<br><span>i praca z ludźmi</span>",
           journeyText: "Ten wariant skupia się na dokumentacji, procedurach, BHP, obsłudze klienta i organizacji pracy. Najważniejsze są dokładność, komunikacja i samodzielność.",
           journeyButton: `Zobacz doświadczenie biurowe ${icon("arrow-right")}`,
-          points: [
-            ["2021", "shield", "Technik BHP", "Podstawa do pracy z przepisami, procedurami i dokumentacją."],
-            ["2024", "hard-hat", "Inspektor BHP", "Dokumentacja, szkolenia, analiza zagrożeń i wdrażanie procedur."],
-            ["2024", "brain", "Psychologia", "Rozwój wiedzy o komunikacji i pracy z ludźmi."],
-            ["2025", "store", "Obsługa klienta", "Rozwiązywanie bieżących problemów i wsparcie organizacji pracy."],
-            ["2025", "file-check", "Narzędzia", "Szybkie przyswajanie procedur, danych i nowych narzędzi."]
-          ],
           skillTitle: "Umiejętności biurowe i organizacyjne",
           strengths: [
             ["file-check", "Praca z dokumentacją<br>i procedurami"],
@@ -470,13 +589,6 @@
           journeyHeading: "Różne doświadczenia,<br><span>jeden praktyczny profil</span>",
           journeyText: "Pełny profil łączy pracę fizyczną, produkcję, BHP, gastronomię, obsługę klienta i psychologię. To profil osoby, która szybko się uczy i potrafi działać w zmiennych warunkach.",
           journeyButton: `Zobacz pełne doświadczenie ${icon("arrow-right")}`,
-          points: [
-            ["2019", "building", "Budownictwo", "Prace budowlane, transport materiałów i wykończenia wnętrz."],
-            ["2020", "sprout", "Farma", "Prace polowe, opieka nad zwierzętami i praca fizyczna."],
-            ["2022", "factory", "Produkcja", "Lakierowanie, śrutowanie, organizacja pracy i szkolenie zespołu."],
-            ["2024", "shield", "BHP", "Dokumentacja, szkolenia, analiza zagrożeń i procedury."],
-            ["2026", "utensils", "Gastronomia", "Kuchnia, zamówienia, klient i praca pod presją czasu."]
-          ],
           skillTitle: "Najważniejsze umiejętności",
           strengths: [
             ["clipboard-check", "Samodzielna organizacja<br>pracy"],
@@ -530,8 +642,12 @@
           tag: "PRODUCTION • PAINT SHOP • OHS",
           subtitle: "Production experience.<br>Technique, quality and safety.",
           focusTitles: ["Production work", "Painting and processing", "OHS and quality"],
+          journeyHeading: "Experience that<br><span>builds a technical profile</span>",
+          journeyText: "This profile focuses on production, painting and workplace safety, including practical technical work, quality control and team support.",
+          journeyButton: `See production experience ${icon("arrow-right")}`,
           serviceTitle: "What I bring to production",
           contactTitle: "Let's talk about production work",
+          experienceTitle: "Production and technical experience",
           diplomaHeading: "Documents supporting the production profile"
         },
         gastro: {
@@ -542,8 +658,12 @@
           tag: "GASTRONOMY • KITCHEN • CUSTOMER SERVICE",
           subtitle: "Efficient kitchen work.<br>Pace, accuracy and teamwork.",
           focusTitles: ["Kitchen work", "Order fulfillment", "Service and team"],
+          journeyHeading: "Kitchen experience<br><span>and customer service</span>",
+          journeyText: "This profile focuses on food preparation, customer service, orders, stock control and reliable teamwork under time pressure.",
+          journeyButton: `See hospitality experience ${icon("arrow-right")}`,
           serviceTitle: "What I bring to gastronomy",
           contactTitle: "Let's talk about gastronomy work",
+          experienceTitle: "Gastronomy experience",
           diplomaHeading: "Documents supporting the gastronomy profile"
         },
         office: {
@@ -554,8 +674,12 @@
           tag: "OFFICE • ADMINISTRATION • OHS",
           subtitle: "Documentation and procedures.<br>Accuracy, contact and organization.",
           focusTitles: ["Documentation", "OHS procedures", "Service and organization"],
+          journeyHeading: "Accuracy, procedures<br><span>and working with people</span>",
+          journeyText: "This profile focuses on documentation, OHS procedures, training, work organization and clear communication with employees and management.",
+          journeyButton: `See office and OHS experience ${icon("arrow-right")}`,
           serviceTitle: "What I bring to office and OHS work",
           contactTitle: "Let's talk about office or OHS work",
+          experienceTitle: "Office and OHS experience",
           diplomaHeading: "Documents supporting the office profile"
         },
         all: {
@@ -566,8 +690,12 @@
           tag: "FULL PROFILE • OHS • GASTRONOMY • PRODUCTION",
           subtitle: "Broad experience.<br>Fast adaptation and responsibility.",
           focusTitles: ["Independent organization", "Working under pressure", "Team support"],
+          journeyHeading: "Different roles,<br><span>one practical profile</span>",
+          journeyText: "The full profile combines physical work, production, OHS, hospitality, customer service and psychology. It shows fast learning and reliable work in changing conditions.",
+          journeyButton: `See full experience ${icon("arrow-right")}`,
           serviceTitle: "What the full profile shows",
           contactTitle: "Let's talk about the best fit",
+          experienceTitle: "Full professional experience",
           diplomaHeading: "Full document gallery"
         }
       }
@@ -597,8 +725,12 @@
           tag: "ПРОИЗВОДСТВО • ПОКРАСКА • ОТ",
           subtitle: "Опыт производства.<br>Техника, качество и безопасность.",
           focusTitles: ["Производство", "Покраска и обработка", "ОТ и качество"],
+          journeyHeading: "Опыт, который<br><span>формирует технический профиль</span>",
+          journeyText: "Этот профиль сосредоточен на производстве, покраске и охране труда, включая техническую практику, контроль качества и поддержку команды.",
+          journeyButton: `Смотреть производственный опыт ${icon("arrow-right")}`,
           serviceTitle: "Что я даю производству",
           contactTitle: "Поговорим о работе на производстве",
+          experienceTitle: "Производственный и технический опыт",
           diplomaHeading: "Документы для производственного профиля"
         },
         gastro: {
@@ -609,8 +741,12 @@
           tag: "ГАСТРОНОМИЯ • КУХНЯ • КЛИЕНТЫ",
           subtitle: "Эффективная кухня.<br>Темп, точность и команда.",
           focusTitles: ["Кухня", "Выполнение заказов", "Сервис и команда"],
+          journeyHeading: "Опыт работы на кухне<br><span>и с клиентами</span>",
+          journeyText: "Этот профиль показывает приготовление блюд, обслуживание клиентов, выполнение заказов, контроль запасов и командную работу в быстром темпе.",
+          journeyButton: `Смотреть опыт в гастрономии ${icon("arrow-right")}`,
           serviceTitle: "Что я даю гастрономии",
           contactTitle: "Поговорим о работе в гастрономии",
+          experienceTitle: "Опыт работы в гастрономии",
           diplomaHeading: "Документы для гастрономического профиля"
         },
         office: {
@@ -621,8 +757,12 @@
           tag: "ОФИС • АДМИНИСТРАЦИЯ • ОХРАНА ТРУДА",
           subtitle: "Документы и процедуры.<br>Точность, контакт и организация.",
           focusTitles: ["Документация", "Процедуры ОТ", "Сервис и организация"],
+          journeyHeading: "Точность, процедуры<br><span>и работа с людьми</span>",
+          journeyText: "Этот профиль сосредоточен на документации, процедурах охраны труда, обучении, организации работы и ясном взаимодействии с сотрудниками и руководством.",
+          journeyButton: `Смотреть опыт в офисе и ОТ ${icon("arrow-right")}`,
           serviceTitle: "Что я даю офису и ОТ",
           contactTitle: "Поговорим об офисной работе или ОТ",
+          experienceTitle: "Опыт офисной работы и охраны труда",
           diplomaHeading: "Документы для офисного профиля"
         },
         all: {
@@ -633,8 +773,12 @@
           tag: "ПОЛНЫЙ ПРОФИЛЬ • ОХРАНА ТРУДА • ГАСТРОНОМИЯ • ПРОИЗВОДСТВО",
           subtitle: "Широкий опыт.<br>Быстрая адаптация и ответственность.",
           focusTitles: ["Самостоятельная организация", "Работа под давлением", "Поддержка команды"],
+          journeyHeading: "Разный опыт,<br><span>один практический профиль</span>",
+          journeyText: "Полный профиль объединяет физическую работу, производство, охрану труда, гастрономию, обслуживание клиентов и психологию. Он показывает быструю адаптацию к меняющимся условиям.",
+          journeyButton: `Смотреть весь опыт ${icon("arrow-right")}`,
           serviceTitle: "Что показывает полный профиль",
           contactTitle: "Поговорим о лучшем соответствии",
+          experienceTitle: "Полный профессиональный опыт",
           diplomaHeading: "Полная галерея документов"
         }
       }
@@ -642,6 +786,7 @@
   };
 
   let activeRole = "all";
+  let activeExperienceKey = "safety";
 
   const storage = {
     get(key) {
@@ -664,6 +809,60 @@
   const language = () => {
     const current = (document.documentElement.lang || "pl").slice(0, 2);
     return copy[current] ? current : "pl";
+  };
+
+  const timelineYears = Array.from({ length: 8 }, (_, index) => 2019 + index);
+  const timelineStart = Date.UTC(2019, 0, 1);
+  const timelineEnd = Date.UTC(2027, 0, 1);
+
+  const parseTimelineMonth = (value) => {
+    const [year, month] = value.split("-").map(Number);
+    return Date.UTC(year, month - 1, 1);
+  };
+
+  const endOfTimelinePeriod = (meta) => {
+    if (meta.isCurrent) {
+      const now = new Date();
+      return Math.min(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 1), timelineEnd);
+    }
+
+    const [year, month] = meta.endDate.split("-").map(Number);
+    return Math.min(Date.UTC(year, month, 1), timelineEnd);
+  };
+
+  const timelinePosition = (date) => Math.max(0, Math.min(100, ((date - timelineStart) / (timelineEnd - timelineStart)) * 100));
+  const formatMonth = (value) => {
+    const [year, month] = value.split("-");
+    return `${month}.${year}`;
+  };
+
+  const formatExperiencePeriod = (meta, interfaceText) => `${formatMonth(meta.startDate)} – ${meta.isCurrent ? interfaceText.current : formatMonth(meta.endDate)}`;
+
+  const formatExperienceDuration = (meta, interfaceText) => {
+    const [startYear, startMonth] = meta.startDate.split("-").map(Number);
+    const now = new Date();
+    const endValue = meta.isCurrent
+      ? [now.getUTCFullYear(), now.getUTCMonth() + 1]
+      : meta.endDate.split("-").map(Number);
+    const monthsTotal = Math.max(1, ((endValue[0] - startYear) * 12) + endValue[1] - startMonth + 1);
+    const years = Math.floor(monthsTotal / 12);
+    const months = monthsTotal % 12;
+    return interfaceText.duration(years, months);
+  };
+
+  const escapeHtml = (value = "") => String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+
+  const localizedExperience = (profile, key, currentLanguage = language()) => {
+    if (profile.experienceOverrides?.[key]) {
+      return profile.experienceOverrides[key];
+    }
+
+    return currentLanguage === "pl" ? experienceText[key] : translatedExperience[currentLanguage]?.[key];
   };
 
   const localizedProfile = (role) => {
@@ -791,24 +990,147 @@
     });
   };
 
+  const renderCareerDetails = (journey, profile, experienceKey, interfaceText, currentLanguage) => {
+    const details = journey.querySelector("[data-career-details]");
+    const content = localizedExperience(profile, experienceKey, currentLanguage);
+    const meta = experienceTimelineMeta[experienceKey];
+
+    if (!details || !content || !meta) {
+      return;
+    }
+
+    const period = formatExperiencePeriod(meta, interfaceText);
+    const duration = formatExperienceDuration(meta, interfaceText);
+    const category = meta.category[currentLanguage] || meta.category.pl;
+    const location = meta.location[currentLanguage] || meta.location.pl;
+    const skills = meta.skills[currentLanguage] || meta.skills.pl;
+
+    details.style.setProperty("--career-color", meta.color);
+    details.classList.remove("is-refreshed");
+    details.innerHTML = `
+      <div class="career-detail-identity">
+        <span class="career-detail-icon">${icon(meta.icon)}</span>
+        <div class="career-detail-copy">
+          <span class="career-detail-period">${escapeHtml(period)} · ${escapeHtml(duration)}</span>
+          <h3>${escapeHtml(content.title)}</h3>
+          <span class="career-detail-company">${escapeHtml(content.company)}</span>
+          <span class="career-detail-location">${icon("map-pin")}${escapeHtml(location)}</span>
+          <span class="career-category">${escapeHtml(category)}</span>
+        </div>
+      </div>
+      <div class="career-detail-responsibilities">
+        <h4>${escapeHtml(interfaceText.responsibilities)}</h4>
+        <ul>${content.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      </div>
+      <div class="career-detail-skills">
+        <h4>${escapeHtml(interfaceText.skills)}</h4>
+        <div class="career-skill-list">${skills.map((skill) => `<span class="career-skill">${escapeHtml(skill)}</span>`).join("")}</div>
+      </div>
+    `;
+
+    requestAnimationFrame(() => details.classList.add("is-refreshed"));
+  };
+
   const updateJourney = (profile) => {
-    setText(".journey .section-title", profile.journeyTitle);
-    setHtml(".journey h2", profile.journeyHeading);
-    setText(".journey p", profile.journeyText);
-    setHtml(".journey .btn", profile.journeyButton);
+    const journey = document.querySelector("[data-career-timeline]");
+    const currentLanguage = language();
+    const interfaceText = experienceInterfaceText[currentLanguage] || experienceInterfaceText.pl;
+    const years = journey?.querySelector("[data-career-years]");
+    const rows = journey?.querySelector("[data-career-rows]");
+    const order = (profile.visibleExperience || [])
+      .filter((key) => experienceTimelineMeta[key] && localizedExperience(profile, key, currentLanguage))
+      .sort((first, second) => experienceTimelineMeta[first].startDate.localeCompare(experienceTimelineMeta[second].startDate));
 
-    document.querySelectorAll(".point").forEach((point, index) => {
-      const value = profile.points?.[index];
-      if (!value) {
-        return;
-      }
+    setText(".career-intro .section-title", interfaceText.careerEyebrow);
+    setHtml(".career-intro h2", profile.journeyHeading);
+    setText(".career-intro > p", profile.journeyText);
+    setHtml(".career-intro .btn", profile.journeyButton);
+    setText(".career-hint span", interfaceText.hint);
+    setText(".career-updated span", interfaceText.updated);
+    setText(".career-scale-label", interfaceText.roleColumn);
 
-      const [year, iconName, title, description] = value;
-      point.querySelector(".year").textContent = year;
-      point.querySelector(".icon vk-icon")?.setAttribute("name", iconName);
-      point.querySelector("b").textContent = title;
-      point.querySelector("small").textContent = description;
+    if (!journey || !years || !rows || !order.length) {
+      return;
+    }
+
+    years.innerHTML = timelineYears.map((year) => `<span class="career-year">${year}</span>`).join("");
+    rows.setAttribute("aria-label", interfaceText.historyLabel);
+
+    if (!order.includes(activeExperienceKey)) {
+      activeExperienceKey = order.includes("safety")
+        ? "safety"
+        : order.find((key) => experienceTimelineMeta[key].isCurrent) || order[order.length - 1];
+    }
+
+    rows.innerHTML = order.map((key, index) => {
+      const content = localizedExperience(profile, key, currentLanguage);
+      const meta = experienceTimelineMeta[key];
+      const start = timelinePosition(parseTimelineMonth(meta.startDate));
+      const width = Math.max(.6, timelinePosition(endOfTimelinePeriod(meta)) - start);
+      const period = formatExperiencePeriod(meta, interfaceText);
+      const duration = formatExperienceDuration(meta, interfaceText);
+      const category = meta.category[currentLanguage] || meta.category.pl;
+      const isActive = key === activeExperienceKey;
+      const durationClasses = ["career-duration", width < 12 ? "is-short" : "", start > 78 ? "is-edge" : ""].filter(Boolean).join(" ");
+
+      return `
+        <button class="career-row${isActive ? " is-active" : ""}${meta.isCurrent ? " is-current" : ""}"
+          type="button"
+          data-experience-key="${key}"
+          aria-pressed="${isActive}"
+          aria-label="${escapeHtml(`${interfaceText.showPoint}: ${content.title}, ${period}, ${duration}`)}"
+          style="--career-color:${meta.color};--career-start:${start.toFixed(3)};--career-width:${width.toFixed(3)};--career-delay:${index * 70}ms">
+          <span class="career-role">
+            <span class="career-role-icon">${icon(meta.icon)}</span>
+            <span class="career-role-copy">
+              <strong>${escapeHtml(content.title)}</strong>
+              <small>${escapeHtml(category)}</small>
+              <span class="career-mobile-meta"><span>${escapeHtml(period)}</span><span>${escapeHtml(duration)}</span></span>
+            </span>
+          </span>
+          <span class="career-track" aria-hidden="true">
+            <span class="${durationClasses}">
+              <span class="career-date career-date-start">${escapeHtml(formatMonth(meta.startDate))}</span>
+              <span class="career-bar"><span class="career-bar-inner"></span></span>
+              <span class="career-date career-date-end">${escapeHtml(meta.isCurrent ? interfaceText.current : formatMonth(meta.endDate))}</span>
+              <span class="career-period-combined">${escapeHtml(period)}</span>
+            </span>
+          </span>
+        </button>
+      `;
+    }).join("");
+
+    const selectExperience = (key) => {
+      activeExperienceKey = key;
+      rows.querySelectorAll(".career-row").forEach((row) => {
+        const isActive = row.dataset.experienceKey === key;
+        row.classList.toggle("is-active", isActive);
+        row.setAttribute("aria-pressed", String(isActive));
+      });
+      renderCareerDetails(journey, profile, key, interfaceText, currentLanguage);
+    };
+
+    rows.querySelectorAll(".career-row").forEach((row, index, buttons) => {
+      row.addEventListener("click", () => selectExperience(row.dataset.experienceKey));
+      row.addEventListener("keydown", (event) => {
+        const direction = event.key === "ArrowDown" || event.key === "ArrowRight"
+          ? 1
+          : event.key === "ArrowUp" || event.key === "ArrowLeft" ? -1 : 0;
+
+        if (!direction && event.key !== "Home" && event.key !== "End") {
+          return;
+        }
+
+        event.preventDefault();
+        const targetIndex = event.key === "Home"
+          ? 0
+          : event.key === "End" ? buttons.length - 1 : Math.max(0, Math.min(buttons.length - 1, index + direction));
+        buttons[targetIndex].focus();
+        selectExperience(buttons[targetIndex].dataset.experienceKey);
+      });
     });
+
+    renderCareerDetails(journey, profile, activeExperienceKey, interfaceText, currentLanguage);
   };
 
   const updateStrengths = (profile) => {
@@ -856,11 +1178,26 @@
 
       card.querySelector("h3").textContent = content.title;
       card.querySelector("small").textContent = content.company;
-      card.querySelector(".date").textContent = content.date;
+      const meta = experienceTimelineMeta[key];
+      const interfaceText = experienceInterfaceText[language()] || experienceInterfaceText.pl;
+      card.querySelector(".date").textContent = meta ? formatExperiencePeriod(meta, interfaceText) : "";
       card.querySelector("ul").innerHTML = content.items.map((item) => `<li>${item}</li>`).join("");
     });
 
+    const interfaceText = experienceInterfaceText[language()] || experienceInterfaceText.pl;
+    const disclosure = document.querySelector(".experience-disclosure");
+
     setText("#experience .section-title", profile.experienceTitle);
+    setText(".experience-summary-copy strong", interfaceText.summary);
+    setText("[data-experience-count]", interfaceText.count(order.length));
+
+    if (disclosure) {
+      disclosure.dataset.expandLabel = interfaceText.expand;
+      disclosure.dataset.collapseLabel = interfaceText.collapse;
+      setText("[data-experience-toggle]", disclosure.open ? interfaceText.collapse : interfaceText.expand);
+    }
+
+    document.dispatchEvent(new CustomEvent("experiencechange"));
   };
 
   const updateEducation = (profile) => {

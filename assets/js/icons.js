@@ -18,6 +18,7 @@ const iconPaths = {
   "graduation-cap": '<path d="m3 8 9-5 9 5-9 5-9-5z"></path><path d="M7 11v5c3 2 7 2 10 0v-5"></path><path d="M21 8v6"></path>',
   hammer: '<path d="M14 5 5 14"></path><path d="M15 4 20 9"></path><path d="m12 7 5 5"></path><path d="M4 15l5 5"></path><path d="m3 21 6-6"></path>',
   "hard-hat": '<path d="M4 18h16"></path><path d="M5 18v-3a7 7 0 0 1 14 0v3"></path><path d="M9 15V7"></path><path d="M15 15V7"></path><path d="M8 18v2h8v-2"></path>',
+  info: '<circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 8h.01"></path>',
   "heart-handshake": '<path d="M12 21s-7-4.6-9-9.2C1.7 8.9 3.2 6 6.2 6c1.7 0 3 1 3.8 2.1C10.8 7 12.1 6 13.8 6c3 0 4.5 2.9 3.2 5.8C15 16.4 12 21 12 21z"></path><path d="M8 13h3l2 2 3-3"></path>',
   linkedin: '<rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M8 11v5"></path><path d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M12 13a2 2 0 0 1 4 0v3"></path>',
   mail: '<rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path>',

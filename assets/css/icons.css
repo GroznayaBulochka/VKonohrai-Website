@@ -52,10 +52,6 @@ vk-icon svg {
   height: 32px;
 }
 
-.point:last-child .icon vk-icon {
-  color: #fff;
-}
-
 .strength {
   gap: 10px;
 }

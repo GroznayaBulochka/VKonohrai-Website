@@ -382,11 +382,12 @@ h1 span {
   box-shadow: none;
 }
 
-.stats {
+.stats.section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin: 0 0 22px;
+  gap: 16px;
+  margin: 0 0 32px;
+  padding-top: 30px;
 }
 
 .stat,
@@ -400,11 +401,12 @@ h1 span {
 }
 
 .stat {
-  padding: 16px;
-  min-height: 94px;
+  padding: 20px;
+  min-height: 108px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 3px;
 }
 
 .stat strong {

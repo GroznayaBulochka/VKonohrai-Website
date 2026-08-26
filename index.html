@@ -62,14 +62,14 @@
 
 <link rel="preload" href="assets/images/photo.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preload" href="assets/images/background-poster.webp" as="image" type="image/webp">
-<link rel="stylesheet" href="assets/css/base.css?v=20260826-2">
-<link rel="stylesheet" href="assets/css/journey.css?v=20260825-2">
-<link rel="stylesheet" href="assets/css/sections.css?v=20260826-1">
+<link rel="stylesheet" href="assets/css/base.css?v=20260826-3">
+<link rel="stylesheet" href="assets/css/journey.css?v=20260826-7">
+<link rel="stylesheet" href="assets/css/sections.css?v=20260826-2">
 <link rel="stylesheet" href="assets/css/diplomas.css?v=20260826-1">
 <link rel="stylesheet" href="assets/css/icons.css?v=20260826-1">
 <link rel="stylesheet" href="assets/css/animations.css?v=20260826-3">
 <link rel="stylesheet" href="assets/css/job-personalizer.css?v=20260826-2">
-<link rel="stylesheet" href="assets/css/responsive.css?v=20260826-2">
+<link rel="stylesheet" href="assets/css/responsive.css?v=20260826-6">
 
 <script id="profile-structured-data" type="application/ld+json">
 {
@@ -308,87 +308,36 @@
   </section>
 
   <section id="about" class="section card">
-  <div class="journey">
+    <div class="journey career-timeline" data-career-timeline>
+      <aside class="journey-intro career-intro">
+        <div class="section-title">ŚCIEŻKA ZAWODOWA</div>
+        <h2>Różne doświadczenia,<br><span>jeden praktyczny profil.</span></h2>
+        <p>Pełny profil łączy pracę fizyczną, produkcję, BHP, gastronomię, obsługę klienta i psychologię. To profil osoby, która szybko się uczy i potrafi działać w zmiennych warunkach.</p>
+        <a href="#experience" class="btn secondary">
+          Zobacz pełne doświadczenie <vk-icon name="arrow-right"></vk-icon>
+        </a>
+        <div class="career-hint">
+          <vk-icon name="info"></vk-icon>
+          <span>Kliknij stanowisko na osi czasu, aby zobaczyć szczegóły i zakres obowiązków.</span>
+        </div>
+      </aside>
 
-    <div class="path-bg">
-      <svg viewBox="0 0 1200 220" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="mountainGrad" x1="0" x2="1">
-            <stop offset="0%" stop-color="#1b1238"/>
-            <stop offset="50%" stop-color="#34206a"/>
-            <stop offset="100%" stop-color="#141a34"/>
-          </linearGradient>
-        </defs>
+      <div class="career-main">
+        <div class="career-chart">
+          <div class="career-scale" aria-hidden="true">
+            <span class="career-scale-label">Stanowisko</span>
+            <div class="career-years" data-career-years></div>
+          </div>
+          <div class="career-rows" data-career-rows aria-label="Historia zatrudnienia"></div>
+        </div>
 
-        <path d="M0 150 L80 115 L140 135 L210 85 L280 135 L360 100 L440 145 L520 95 L610 135 L700 90 L800 145 L900 110 L980 150 L1080 90 L1200 130 L1200 220 L0 220 Z"
-              fill="url(#mountainGrad)"
-              opacity=".75"/>
+        <article class="career-details" data-career-details aria-live="polite" aria-atomic="true"></article>
 
-        <path d="M0 110 H1200 M0 150 H1200 M0 190 H1200"
-              stroke="rgba(154,124,255,.13)"
-              stroke-width="1"/>
-
-        <path d="M200 0 V220 M400 0 V220 M600 0 V220 M800 0 V220 M1000 0 V220"
-              stroke="rgba(154,124,255,.09)"
-              stroke-width="1"/>
-      </svg>
-    </div>
-
-    <div class="journey-intro">
-      <div class="section-title">MÓJ PUNKT DROGI</div>
-
-      <h2>
-        Droga, która mnie
-        <span>ukształtowała</span>
-      </h2>
-
-      <p>
-        Każde doświadczenie było krokiem naprzód.
-        Od pracy fizycznej przez przemysł, aż do
-        psychologii i bezpieczeństwa pracy.
-        Dziś łączę wiedzę o człowieku z dbałością
-        o bezpieczeństwo i rozwój.
-      </p>
-
-      <a href="#experience" class="btn secondary">
-        Poznaj moją historię <vk-icon name="arrow-right"></vk-icon>
-      </a>
-    </div>
-
-    <div class="point">
-      <div class="year">2019</div>
-      <div class="icon"><vk-icon name="building"></vk-icon></div>
-      <b>Budownictwo</b>
-      <small>Pierwsze doświadczenie w pracy fizycznej i na budowie.</small>
-    </div>
-
-    <div class="point">
-      <div class="year">2020</div>
-      <div class="icon"><vk-icon name="sprout"></vk-icon></div>
-      <b>Farma</b>
-      <small>Praca w gospodarstwie, opieka nad zwierzętami, dyscyplina.</small>
-    </div>
-
-    <div class="point">
-      <div class="year">2022</div>
-      <div class="icon"><vk-icon name="factory"></vk-icon></div>
-      <b>Przemysł</b>
-      <small>Lakierowanie, organizacja pracy i zarządzanie zespołem.</small>
-    </div>
-
-    <div class="point">
-      <div class="year">2024</div>
-      <div class="icon"><vk-icon name="shield"></vk-icon></div>
-      <b>Specjalista BHP</b>
-      <small>Odpowiedzialność za bezpieczeństwo, szkolenia i procedury.</small>
-    </div>
-
-    <div class="point">
-      <div class="year">2024+</div>
-      <div class="icon"><vk-icon name="brain"></vk-icon></div>
-      <b>Psychologia</b>
-      <small>Rozwój wiedzy o człowieku, motywacji i komunikacji.</small>
-    </div>
+        <div class="career-updated">
+          <vk-icon name="info"></vk-icon>
+          <span>Doświadczenie aktualizowane na bieżąco</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -440,10 +389,24 @@
     </div>
   </section>
 
-  <section id="experience" class="section card">
+  <section id="experience" class="section experience-section">
     <h2 class="section-title">Doświadczenie zawodowe</h2>
 
-    <div class="experience">
+    <details class="card experience-disclosure">
+      <summary>
+        <span class="experience-summary-icon"><vk-icon name="briefcase"></vk-icon></span>
+        <span class="experience-summary-copy">
+          <strong>Pokaż szczegółowy przebieg zatrudnienia</strong>
+          <small data-experience-count>7 stanowisk • firmy, dokładne daty i zakres obowiązków</small>
+        </span>
+        <span class="experience-summary-action">
+          <span data-experience-toggle>Rozwiń szczegóły</span>
+          <vk-icon name="arrow-right"></vk-icon>
+        </span>
+      </summary>
+
+      <div class="experience-disclosure-body">
+        <div class="experience">
       <div class="exp-card" data-experience-key="cook" data-role-match="gastro all">
         <div class="icon"><vk-icon name="utensils"></vk-icon></div>
         <h3>Kucharz</h3>
@@ -538,7 +501,9 @@
           <li>Opieka nad zwierzętami i utrzymanie porządku w gospodarstwie</li>
         </ul>
       </div>
-    </div>
+        </div>
+      </div>
+    </details>
   </section>
 
   <section id="education" class="bottom-grid">
@@ -789,12 +754,12 @@
 </div>
 <script src="assets/js/diplomas-data.js?v=20260826-1" defer></script>
 <script src="assets/js/references-data.js?v=20260826-1" defer></script>
-<script src="assets/js/icons.js?v=20260630-1" defer></script>
-<script src="assets/js/translations.js?v=20260826-1" defer></script>
-<script src="assets/js/job-personalizer.js?v=20260826-3" defer></script>
+<script src="assets/js/icons.js?v=20260826-2" defer></script>
+<script src="assets/js/translations.js?v=20260826-2" defer></script>
+<script src="assets/js/job-personalizer.js?v=20260826-5" defer></script>
 <script src="assets/js/mobile-menu.js?v=20260826-1" defer></script>
 <script src="assets/js/diploma-gallery.js?v=20260826-1" defer></script>
 <script src="assets/js/references.js?v=20260728-1" defer></script>
-<script src="assets/js/ui-enhancements.js?v=20260826-1" defer></script>
+<script src="assets/js/ui-enhancements.js?v=20260826-3" defer></script>
 </body>
 </html>

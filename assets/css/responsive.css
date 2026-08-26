@@ -108,28 +108,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .journey {
-    grid-template-columns: 300px repeat(5, minmax(118px, 1fr));
-    column-gap: 10px;
-  }
-
-  .journey::before,
-  .journey .path-bg {
-    left: 304px;
-  }
-
-  .journey::after {
-    left: 328px;
-  }
-
-  .journey h2 {
-    font-size: 36px;
-  }
-
-  .point b,
-  .point small {
-    max-width: 160px;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -270,82 +248,6 @@
     flex-direction: column;
   }
 
-  .journey {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 24px 18px;
-  }
-
-  .journey::before,
-  .journey::after,
-  .journey .path-bg {
-    display: none;
-  }
-
-  .journey-intro {
-    min-height: auto;
-    padding: 0;
-  }
-
-  .journey h2,
-  .journey p {
-    max-width: none;
-  }
-
-  .journey .btn {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  .point,
-  .point:nth-of-type(3),
-  .point:nth-of-type(4),
-  .point:nth-of-type(5),
-  .point:nth-of-type(6),
-  .point:nth-of-type(7) {
-    grid-column: 1;
-    min-height: auto;
-    grid-template-columns: 82px 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 14px;
-    justify-items: start;
-    text-align: left;
-  }
-
-  .year {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: center;
-  }
-
-  .point .icon {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 8px;
-  }
-
-  .point .icon::after,
-  .point::before,
-  .point:last-child::after {
-    display: none;
-  }
-
-  .point b,
-  .point small {
-    grid-column: 2;
-    width: 100%;
-    max-width: none;
-  }
-
-  .point b {
-    grid-row: 1;
-  }
-
-  .point small {
-    grid-row: 2;
-    min-height: auto;
-  }
 }
 
 @media (max-width: 768px) {
@@ -553,12 +455,16 @@
     width: 100%;
   }
 
-  .stats {
+  .stats.section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 22px;
+    padding-top: 18px;
   }
 
   .stat {
     min-height: auto;
+    padding: 16px;
   }
 
   .photo-wrap {
@@ -600,7 +506,41 @@
     padding: 18px;
   }
 
-  .journey h2,
+  .experience-section > .section-title {
+    margin-bottom: 10px;
+  }
+
+  .experience-disclosure {
+    padding: 0;
+  }
+
+  .experience-disclosure summary {
+    min-height: 0;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .experience-summary-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .experience-summary-copy strong {
+    font-size: 15px;
+  }
+
+  .experience-summary-action {
+    grid-column: 2;
+    min-width: 0;
+    justify-content: flex-start;
+    margin-top: 2px;
+  }
+
+  .experience-disclosure-body {
+    padding: 12px;
+  }
+
   .section-heading h2,
   .diploma-head h2 {
     font-size: 30px;
