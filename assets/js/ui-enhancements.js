@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ".stat",
     ".journey",
     ".strength",
-    ".service-card",
     ".exp-card",
     ".bottom-grid .card",
     ".diploma-section",

@@ -425,8 +425,7 @@
           focusIcons: ["factory", "paintbrush", "shield"],
           journeyTitle: "DROGA PRODUKCYJNA",
           journeyHeading: "Doświadczenie, które<br><span>buduje profil techniczny</span>",
-          journeyText: "Ten wariant skupia się na produkcji, lakierni i bezpieczeństwie pracy. Najważniejsze są tu praktyczne umiejętności, samodzielność, dbałość o sprzęt oraz wdrażanie nowych pracowników.",
-          journeyButton: `Zobacz doświadczenie produkcyjne ${icon("arrow-right")}`,
+          journeyText: "Doświadczenie produkcyjne obejmuje ponad dwa lata w Palfinger Poland przy lakierowaniu i obróbce powierzchni oraz bieżącą pracę w BHP. Łączy praktykę techniczną, szkolenie pracowników i kontrolę standardów bezpieczeństwa.",
           skillTitle: "Umiejętności techniczne i produkcyjne",
           strengths: [
             ["factory", "Doświadczenie w pracy<br>w środowisku produkcyjnym"],
@@ -439,12 +438,6 @@
             ["users", "Szkolenie i wdrażanie<br>nowych pracowników"],
             ["briefcase", "Współpraca z zespołem<br>i magazynem"]
           ],
-          serviceKicker: "Zakres współpracy",
-          serviceTitle: "Co wnoszę do produkcji",
-          serviceLead: "Ten profil jest zbudowany pod pracę techniczną: lakiernię, proces, porządek stanowiska, jakość i bezpieczeństwo.",
-          serviceIcons: ["paintbrush", "factory", "shield", "users"],
-          serviceTitles: ["Lakiernia i obróbka", "Proces produkcyjny", "BHP i standardy", "Wdrożenie zespołu"],
-          serviceTexts: ["Przygotowanie powierzchni, mieszanie farb, lakierowanie i śrutowanie.", "Organizacja pracy działu, współpraca z magazynem i realizacja projektów.", "Dbanie o przepisy, jakość, ergonomię i sprawny sprzęt.", "Szkolenie nowych osób i wspieranie zespołu w codziennych obowiązkach."],
           visibleExperience: ["safety", "painting"],
           experienceTitle: "Doświadczenie produkcyjne i techniczne",
           educationTitle: "Wykształcenie wspierające profil produkcyjny",
@@ -476,8 +469,7 @@
           focusIcons: ["utensils", "clipboard-check", "users"],
           journeyTitle: "DROGA GASTRONOMICZNA",
           journeyHeading: "Doświadczenie z kuchni<br><span>i pracy z klientem</span>",
-          journeyText: "Ten wariant skupia się na gastronomii: kuchni, obsłudze, zamówieniach, kontroli zapasów i pracy w dynamicznym środowisku.",
-          journeyButton: `Zobacz doświadczenie gastronomiczne ${icon("arrow-right")}`,
+          journeyText: "Trzy stanowiska gastronomiczne od 2023 roku: obsługa restauracji w Bydgoszczy i Toruniu oraz obecna praca kucharza w MANEKIN. Zakres obejmuje kuchnię, zamówienia, klientów, zapasy i wdrażanie nowych osób.",
           skillTitle: "Umiejętności gastronomiczne",
           strengths: [
             ["utensils", "Przygotowywanie dań<br>zgodnie z recepturami"],
@@ -488,12 +480,6 @@
             ["users", "Szkolenie nowych<br>pracowników"],
             ["heart-handshake", "Współpraca<br>zespołowa"]
           ],
-          serviceKicker: "Zakres współpracy",
-          serviceTitle: "Co wnoszę do gastronomii",
-          serviceLead: "Ten profil jest zbudowany pod kuchnię, obsługę klienta, tempo pracy i współpracę na zmianie.",
-          serviceIcons: ["utensils", "clipboard-check", "message", "users"],
-          serviceTitles: ["Kuchnia i przygotowanie", "Zamówienia i jakość", "Klient i kasa", "Zmiana i wdrożenia"],
-          serviceTexts: ["Przygotowywanie dań, składników i półproduktów zgodnie ze standardami.", "Realizacja, pakowanie i kontrola zamówień oraz uzupełnianie zapasów.", "Obsługa klientów, przyjmowanie płatności i rozwiązywanie problemów.", "Współpraca z zespołem i szkolenie nowych pracowników."],
           visibleExperience: ["cook", "restaurant-torun", "restaurant-bydgoszcz"],
           experienceTitle: "Doświadczenie gastronomiczne",
           educationTitle: "Wykształcenie",
@@ -525,8 +511,7 @@
           focusIcons: ["file-check", "shield", "clipboard-check"],
           journeyTitle: "DROGA BIUROWA I BHP",
           journeyHeading: "Dokładność, procedury<br><span>i praca z ludźmi</span>",
-          journeyText: "Ten wariant skupia się na dokumentacji, procedurach, BHP, obsłudze klienta i organizacji pracy. Najważniejsze są dokładność, komunikacja i samodzielność.",
-          journeyButton: `Zobacz doświadczenie biurowe ${icon("arrow-right")}`,
+          journeyText: "Profil opiera się na bieżącej pracy inspektora BHP oraz doświadczeniu w obsłudze klienta. Obejmuje dokumentację, szkolenia, analizę zagrożeń, organizację zadań i współpracę z kierownictwem.",
           skillTitle: "Umiejętności biurowe i organizacyjne",
           strengths: [
             ["file-check", "Praca z dokumentacją<br>i procedurami"],
@@ -537,12 +522,6 @@
             ["briefcase", "Współpraca z zespołem<br>i kierownictwem"],
             ["sparkles", "Szybkie przyswajanie<br>narzędzi i procedur"]
           ],
-          serviceKicker: "Zakres współpracy",
-          serviceTitle: "Co wnoszę do biura i BHP",
-          serviceLead: "Ten profil jest zbudowany pod dokumentację, obsługę klienta, procedury i sprawną organizację pracy.",
-          serviceIcons: ["file-check", "shield", "message", "clipboard-check"],
-          serviceTitles: ["Dokumentacja", "Procedury BHP", "Kontakt z ludźmi", "Priorytety"],
-          serviceTexts: ["Praca z dokumentami, uzupełnianie informacji i dbanie o porządek danych.", "Tworzenie dokumentacji BHP, szkolenia i analiza zagrożeń.", "Obsługa klientów, rozwiązywanie problemów i komunikacja z zespołem.", "Samodzielna organizacja zadań i szybka nauka nowych narzędzi."],
           visibleExperience: ["safety", "restaurant-torun"],
           experienceOverrides: {
             "restaurant-torun": {
@@ -587,8 +566,7 @@
           focusIcons: ["clipboard-check", "clock", "users"],
           journeyTitle: "PEŁNA DROGA",
           journeyHeading: "Różne doświadczenia,<br><span>jeden praktyczny profil</span>",
-          journeyText: "Pełny profil łączy pracę fizyczną, produkcję, BHP, gastronomię, obsługę klienta i psychologię. To profil osoby, która szybko się uczy i potrafi działać w zmiennych warunkach.",
-          journeyButton: `Zobacz pełne doświadczenie ${icon("arrow-right")}`,
+          journeyText: "Od pracy budowlanej i gospodarstwa w Ukrainie, przez lakiernię Palfinger i gastronomię, po bieżące role inspektora BHP i kucharza. Oś pokazuje rzeczywiste okresy zatrudnienia oraz doświadczenia, które rozwijały się równolegle.",
           skillTitle: "Najważniejsze umiejętności",
           strengths: [
             ["clipboard-check", "Samodzielna organizacja<br>pracy"],
@@ -597,12 +575,6 @@
             ["hammer", "Umiejętności techniczne:<br>lakierowanie, śrutowanie i prace budowlane"],
             ["users", "Szkolenie nowych pracowników<br>i wsparcie zespołu"]
           ],
-          serviceKicker: "Zakres współpracy",
-          serviceTitle: "Co pokazuje pełny profil",
-          serviceLead: "Pełny profil łączy BHP, gastronomię, produkcję, obsługę klienta i doświadczenie fizyczno-techniczne.",
-          serviceIcons: ["shield", "utensils", "factory", "users"],
-          serviceTitles: ["BHP i procedury", "Kuchnia i klient", "Produkcja i technika", "Zespół i adaptacja"],
-          serviceTexts: ["Dokumentacja, szkolenia, analiza zagrożeń i wdrażanie zasad pracy.", "Przygotowywanie dań, realizacja zamówień i obsługa klienta.", "Lakierowanie, śrutowanie, prace techniczne i organizacja stanowiska.", "Szkolenie nowych pracowników, współpraca i szybkie wejście w nowe obowiązki."],
           visibleExperience: ["cook", "safety", "restaurant-torun", "painting", "restaurant-bydgoszcz", "farm", "construction"],
           experienceTitle: "Pełne doświadczenie zawodowe",
           educationTitle: "Wykształcenie",
@@ -643,9 +615,7 @@
           subtitle: "Production experience.<br>Technique, quality and safety.",
           focusTitles: ["Production work", "Painting and processing", "OHS and quality"],
           journeyHeading: "Experience that<br><span>builds a technical profile</span>",
-          journeyText: "This profile focuses on production, painting and workplace safety, including practical technical work, quality control and team support.",
-          journeyButton: `See production experience ${icon("arrow-right")}`,
-          serviceTitle: "What I bring to production",
+          journeyText: "The production path includes more than two years at Palfinger Poland in painting and surface treatment, followed by ongoing OHS work. It combines technical practice, employee training and control of safety standards.",
           contactTitle: "Let's talk about production work",
           experienceTitle: "Production and technical experience",
           diplomaHeading: "Documents supporting the production profile"
@@ -659,9 +629,7 @@
           subtitle: "Efficient kitchen work.<br>Pace, accuracy and teamwork.",
           focusTitles: ["Kitchen work", "Order fulfillment", "Service and team"],
           journeyHeading: "Kitchen experience<br><span>and customer service</span>",
-          journeyText: "This profile focuses on food preparation, customer service, orders, stock control and reliable teamwork under time pressure.",
-          journeyButton: `See hospitality experience ${icon("arrow-right")}`,
-          serviceTitle: "What I bring to gastronomy",
+          journeyText: "Three hospitality roles since 2023: restaurant service in Bydgoszcz and Toruń, followed by the current cook position at MANEKIN. The experience covers kitchen work, orders, customers, stock and onboarding.",
           contactTitle: "Let's talk about gastronomy work",
           experienceTitle: "Gastronomy experience",
           diplomaHeading: "Documents supporting the gastronomy profile"
@@ -675,9 +643,7 @@
           subtitle: "Documentation and procedures.<br>Accuracy, contact and organization.",
           focusTitles: ["Documentation", "OHS procedures", "Service and organization"],
           journeyHeading: "Accuracy, procedures<br><span>and working with people</span>",
-          journeyText: "This profile focuses on documentation, OHS procedures, training, work organization and clear communication with employees and management.",
-          journeyButton: `See office and OHS experience ${icon("arrow-right")}`,
-          serviceTitle: "What I bring to office and OHS work",
+          journeyText: "This profile is based on ongoing OHS inspector work and customer service experience. It covers documentation, training, hazard analysis, task organization and cooperation with management.",
           contactTitle: "Let's talk about office or OHS work",
           experienceTitle: "Office and OHS experience",
           diplomaHeading: "Documents supporting the office profile"
@@ -691,9 +657,7 @@
           subtitle: "Broad experience.<br>Fast adaptation and responsibility.",
           focusTitles: ["Independent organization", "Working under pressure", "Team support"],
           journeyHeading: "Different roles,<br><span>one practical profile</span>",
-          journeyText: "The full profile combines physical work, production, OHS, hospitality, customer service and psychology. It shows fast learning and reliable work in changing conditions.",
-          journeyButton: `See full experience ${icon("arrow-right")}`,
-          serviceTitle: "What the full profile shows",
+          journeyText: "From construction and farm work in Ukraine, through the Palfinger paint shop and hospitality, to the current OHS inspector and cook roles. The timeline shows actual employment periods, including roles held in parallel.",
           contactTitle: "Let's talk about the best fit",
           experienceTitle: "Full professional experience",
           diplomaHeading: "Full document gallery"
@@ -726,9 +690,7 @@
           subtitle: "Опыт производства.<br>Техника, качество и безопасность.",
           focusTitles: ["Производство", "Покраска и обработка", "ОТ и качество"],
           journeyHeading: "Опыт, который<br><span>формирует технический профиль</span>",
-          journeyText: "Этот профиль сосредоточен на производстве, покраске и охране труда, включая техническую практику, контроль качества и поддержку команды.",
-          journeyButton: `Смотреть производственный опыт ${icon("arrow-right")}`,
-          serviceTitle: "Что я даю производству",
+          journeyText: "Производственный опыт включает более двух лет работы в Palfinger Poland с покраской и обработкой поверхностей, а также текущую работу в охране труда. Он объединяет техническую практику, обучение сотрудников и контроль стандартов безопасности.",
           contactTitle: "Поговорим о работе на производстве",
           experienceTitle: "Производственный и технический опыт",
           diplomaHeading: "Документы для производственного профиля"
@@ -742,9 +704,7 @@
           subtitle: "Эффективная кухня.<br>Темп, точность и команда.",
           focusTitles: ["Кухня", "Выполнение заказов", "Сервис и команда"],
           journeyHeading: "Опыт работы на кухне<br><span>и с клиентами</span>",
-          journeyText: "Этот профиль показывает приготовление блюд, обслуживание клиентов, выполнение заказов, контроль запасов и командную работу в быстром темпе.",
-          journeyButton: `Смотреть опыт в гастрономии ${icon("arrow-right")}`,
-          serviceTitle: "Что я даю гастрономии",
+          journeyText: "Три должности в гастрономии с 2023 года: работа в ресторанах Быдгоща и Торуни, а затем текущая должность повара в MANEKIN. Опыт включает кухню, заказы, клиентов, запасы и обучение новых сотрудников.",
           contactTitle: "Поговорим о работе в гастрономии",
           experienceTitle: "Опыт работы в гастрономии",
           diplomaHeading: "Документы для гастрономического профиля"
@@ -758,9 +718,7 @@
           subtitle: "Документы и процедуры.<br>Точность, контакт и организация.",
           focusTitles: ["Документация", "Процедуры ОТ", "Сервис и организация"],
           journeyHeading: "Точность, процедуры<br><span>и работа с людьми</span>",
-          journeyText: "Этот профиль сосредоточен на документации, процедурах охраны труда, обучении, организации работы и ясном взаимодействии с сотрудниками и руководством.",
-          journeyButton: `Смотреть опыт в офисе и ОТ ${icon("arrow-right")}`,
-          serviceTitle: "Что я даю офису и ОТ",
+          journeyText: "Профиль основан на текущей работе инспектором по охране труда и опыте обслуживания клиентов. Он включает документацию, обучение, анализ рисков, организацию задач и взаимодействие с руководством.",
           contactTitle: "Поговорим об офисной работе или ОТ",
           experienceTitle: "Опыт офисной работы и охраны труда",
           diplomaHeading: "Документы для офисного профиля"
@@ -774,9 +732,7 @@
           subtitle: "Широкий опыт.<br>Быстрая адаптация и ответственность.",
           focusTitles: ["Самостоятельная организация", "Работа под давлением", "Поддержка команды"],
           journeyHeading: "Разный опыт,<br><span>один практический профиль</span>",
-          journeyText: "Полный профиль объединяет физическую работу, производство, охрану труда, гастрономию, обслуживание клиентов и психологию. Он показывает быструю адаптацию к меняющимся условиям.",
-          journeyButton: `Смотреть весь опыт ${icon("arrow-right")}`,
-          serviceTitle: "Что показывает полный профиль",
+          journeyText: "От строительных и сельскохозяйственных работ в Украине через покрасочный цех Palfinger и гастрономию к текущим должностям инспектора по охране труда и повара. Шкала показывает реальные периоды работы, включая параллельную занятость.",
           contactTitle: "Поговорим о лучшем соответствии",
           experienceTitle: "Полный профессиональный опыт",
           diplomaHeading: "Полная галерея документов"
@@ -1044,7 +1000,6 @@
     setText(".career-intro .section-title", interfaceText.careerEyebrow);
     setHtml(".career-intro h2", profile.journeyHeading);
     setText(".career-intro > p", profile.journeyText);
-    setHtml(".career-intro .btn", profile.journeyButton);
     setText(".career-hint span", interfaceText.hint);
     setText(".career-updated span", interfaceText.updated);
     setText(".career-scale-label", interfaceText.roleColumn);
@@ -1145,15 +1100,6 @@
     container.innerHTML = strengths
       .map(([iconName, label]) => `<div class="strength">${icon(iconName)}<span>${label}</span></div>`)
       .join("");
-  };
-
-  const updateServices = (profile) => {
-    setText(".section-heading .section-title", profile.serviceKicker);
-    setText(".section-heading h2", profile.serviceTitle);
-    setText(".section-heading p", profile.serviceLead);
-    setIconList(".service-icon vk-icon", profile.serviceIcons);
-    setList(".service-card h3", profile.serviceTitles);
-    setList(".service-card p", profile.serviceTexts);
   };
 
   const updateExperience = (role, profile) => {
@@ -1304,7 +1250,6 @@
     updateStats(profile);
     updateJourney(profile);
     updateStrengths(profile);
-    updateServices(profile);
     updateExperience(activeRole, profile);
     updateEducation(profile);
     updateAuthorizations();

@@ -28,13 +28,10 @@ const translations = {
       ".skip-link": "Przejdź do treści",
       ".tag": "STUDENT PSYCHOLOGII • SPECJALISTA BHP",
       ".hero p": "Nazywam się Vladyslav Konohrai. Jestem studentem psychologii UMK w Toruniu i inspektorem BHP z doświadczeniem w pracy fizycznej, produkcji, gastronomii oraz obsłudze klienta. Motywuje mnie nauka, odpowiedzialność i rozwój.",
-      ".journey .section-title": "MÓJ PUNKT DROGI",
-      ".journey p": "Każde doświadczenie było krokiem naprzód. Od pracy fizycznej przez przemysł, aż do psychologii i bezpieczeństwa pracy. Dziś łączę wiedzę o człowieku z dbałością o bezpieczeństwo i rozwój.",
+      ".journey .section-title": "ŚCIEŻKA ZAWODOWA",
+      ".journey p": "Od pracy budowlanej i gospodarstwa w Ukrainie, przez lakiernię Palfinger i gastronomię, po bieżące role inspektora BHP i kucharza. Oś pokazuje rzeczywiste okresy zatrudnienia oraz doświadczenia, które rozwijały się równolegle.",
       "#skills .section-title": "Moje mocne strony",
-      ".section-heading .section-title": "Zakres współpracy",
-      ".section-heading h2": "Co wnoszę do zespołu",
-      ".section-heading p": "Łączę praktyczne doświadczenie z BHP, pracą operacyjną i psychologicznym spojrzeniem na ludzi.",
-      "#experience .section-title": "Doświadczenie zawodowe",
+      "#experience .section-title": "Pełne doświadczenie zawodowe",
       "#education .card:nth-child(1) .section-title": "Edukacja",
       "#education .card:nth-child(2) .section-title": "Języki",
       "#education .card:nth-child(3) .section-title": "Uprawnienia",
@@ -57,19 +54,16 @@ const translations = {
       ".side-info .info-box:nth-child(2)": `<b>${icon("phone")} +48 739-64-22-77</b>`,
       ".side-info .info-box:nth-child(3)": emailBox.pl,
       ".side-info .info-box:nth-child(4)": `<b>${icon("star")} Dostępny do współpracy</b><br>Otwarty na nowe możliwości`,
-      ".journey h2": "Droga, która mnie<br><span>ukształtowała</span>",
-      ".journey .btn": `Poznaj moją historię ${icon("arrow-right")}`,
+      ".journey h2": "Różne doświadczenia,<br><span>jeden praktyczny profil</span>",
       "#diplomaPdf": `Otwórz dyplom ${icon("external-link")}`,
       ".contact-location": `${icon("map-pin")}<br><b>Toruń</b><br><small>Polska</small>`,
       ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Zobacz mój profil</small>`
     },
     lists: [
-      [".menu a", ["O mnie", "Umiejętności", "Zakres", "Doświadczenie", "Edukacja", "Osiągnięcia", "Kontakt"]],
+      [".menu a", ["O mnie", "Umiejętności", "Doświadczenie", "Edukacja", "Osiągnięcia", "Referencje", "Kontakt"]],
       [".hero-pills span", [`${icon("shield")} Inspektor BHP`, `${icon("brain")} Psychologia UMK`, `${icon("clipboard-check")} Organizacja pracy`, `${icon("map-pin")} Toruń`], true],
       [".stat small", ["lat doświadczenia", "kierunki edukacji", "języków", "dyplomów i certyfikatów"]],
       [".strength span", ["Organizacja<br>i samodzielność", "Praca pod presją<br>czasu", "Obsługa klienta<br>i komunikacja", "Rozwiązywanie<br>problemów", "Szybka nauka<br>i adaptacja", "Odpowiedzialność<br>i zaangażowanie", "Uprawnienia<br>UDT", "Praca zespołowa<br>i wsparcie"], true],
-      [".service-card h3", ["Procedury i dokumentacja", "Komunikacja z zespołem", "Organizacja stanowiska", "Rozwój i nauka"]],
-      [".service-card p", ["Wsparcie w tworzeniu dokumentacji, analizie zagrożeń i porządkowaniu zasad pracy.", "Spokojna praca z ludźmi, wyjaśnianie zasad i budowanie odpowiedzialności.", "Praktyczne spojrzenie na proces, ergonomię, jakość i codzienną efektywność.", "Szybkie uczenie się, zbieranie informacji i przekładanie wiedzy na działanie."]],
       [".exp-card h3", ["Kucharz", "Inspektor ds. BHP", "Pomocnik lakiernika", "Pracownik restauracji", "Pracownik restauracji", "Pomocnik budowlany"]],
       [".exp-card .date", ["04.2026 – obecnie", "10.2024 – obecnie", "06.2022 – 08.2024", "09.2023 – 12.2023", "08.2025 – 11.2025", "04.2019 – 12.2019"]],
       [".exp-card li", ["Przygotowywanie dań zgodnie ze standardami jakości", "Obróbka termiczna i smażenie mięsa", "Przygotowywanie składników i półproduktów", "Organizacja stanowiska pracy", "Współpraca z zespołem przy realizacji zamówień", "Dokumentacja BHP", "Szkolenia pracowników", "Analiza zagrożeń", "Wdrażanie procedur", "Przygotowanie i lakierowanie", "Śrutowanie elementów", "Organizacja pracy działu", "Szkolenie pracowników", "Obsługa klienta", "Zarządzanie zapasami", "Praca w kuchni", "Szkolenie zespołu", "Realizacja zamówień", "Obsługa kasy i klientów", "Praca pod presją czasu", "Kontrola jakości", "Prace budowlane", "Montaż rusztowań", "Prace żelbetowe", "Wykończenia wnętrz"]],
@@ -109,13 +103,10 @@ const translations = {
       ".skip-link": "Skip to content",
       ".tag": "PSYCHOLOGY STUDENT • SAFETY SPECIALIST",
       ".hero p": "Psychology student with experience in physical work, customer service and occupational safety. I am driven by learning, responsibility and growth.",
-      ".journey .section-title": "MY ROADMAP",
-      ".journey p": "Every experience was a step forward. From physical work through industry to psychology and workplace safety. Today I combine knowledge about people with care for safety and development.",
+      ".journey .section-title": "CAREER PATH",
+      ".journey p": "From construction and farm work in Ukraine, through the Palfinger paint shop and hospitality, to the current OHS inspector and cook roles. The timeline shows actual employment periods, including roles held in parallel.",
       "#skills .section-title": "My strengths",
-      ".section-heading .section-title": "Collaboration scope",
-      ".section-heading h2": "What I bring to a team",
-      ".section-heading p": "I combine practical OHS experience, operational work and a psychological view of people.",
-      "#experience .section-title": "Professional experience",
+      "#experience .section-title": "Full professional experience",
       "#education .card:nth-child(1) .section-title": "Education",
       "#education .card:nth-child(2) .section-title": "Languages",
       "#education .card:nth-child(3) .section-title": "Licenses and authorizations",
@@ -138,19 +129,16 @@ const translations = {
       ".side-info .info-box:nth-child(2)": `<b>${icon("phone")} +48 739-64-22-77</b>`,
       ".side-info .info-box:nth-child(3)": emailBox.en,
       ".side-info .info-box:nth-child(4)": `<b>${icon("star")} Available for collaboration</b><br>Open to new opportunities`,
-      ".journey h2": "The road that<br><span>shaped me</span>",
-      ".journey .btn": `See my story ${icon("arrow-right")}`,
+      ".journey h2": "Different roles,<br><span>one practical profile</span>",
       "#diplomaPdf": `Open certificate ${icon("external-link")}`,
       ".contact-location": `${icon("map-pin")}<br><b>Toruń</b><br><small>Poland</small>`,
       ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>View my profile</small>`
     },
     lists: [
-      [".menu a", ["About", "Skills", "Scope", "Experience", "Education", "Achievements", "Contact"]],
+      [".menu a", ["About", "Skills", "Experience", "Education", "Achievements", "References", "Contact"]],
       [".hero-pills span", [`${icon("shield")} OHS inspector`, `${icon("brain")} Psychology at UMK`, `${icon("clipboard-check")} Work organization`, `${icon("map-pin")} Toruń`], true],
       [".stat small", ["years of experience", "education paths", "languages", "diplomas and certificates"]],
       [".strength span", ["Organization<br>and independence", "Working under<br>time pressure", "Customer service<br>and communication", "Problem<br>solving", "Fast learning<br>and adaptation", "Responsibility<br>and commitment", "UDT<br>license", "Teamwork<br>and support"], true],
-      [".service-card h3", ["Procedures and documentation", "Team communication", "Workstation organization", "Growth and learning"]],
-      [".service-card p", ["Support in creating documentation, hazard analysis and organizing work rules.", "Calm work with people, explaining rules and building responsibility.", "A practical view of process, ergonomics, quality and daily efficiency.", "Fast learning, gathering information and turning knowledge into action."]],
       [".exp-card h3", ["Cook", "OHS inspector", "Painter assistant", "Restaurant employee", "Restaurant employee", "Construction assistant"]],
       [".exp-card .date", ["04.2026 – present", "10.2024 – present", "06.2022 – 08.2024", "09.2023 – 12.2023", "08.2025 – 11.2025", "04.2019 – 12.2019"]],
       [".exp-card li", ["Preparing dishes according to quality standards", "Thermal processing and frying meat", "Preparing ingredients and semi-finished products", "Organizing the workstation", "Cooperating with the team on orders", "OHS documentation", "Employee training", "Hazard analysis", "Procedure implementation", "Preparation and painting", "Shot blasting elements", "Department work organization", "Employee training", "Customer service", "Inventory management", "Kitchen work", "Team training", "Order fulfillment", "Cash register and customer service", "Working under time pressure", "Quality control", "Construction work", "Scaffolding assembly", "Reinforced concrete work", "Interior finishing"]],
@@ -190,13 +178,10 @@ const translations = {
       ".skip-link": "Перейти к содержанию",
       ".tag": "СТУДЕНТ ПСИХОЛОГИИ • СПЕЦИАЛИСТ ПО ОХРАНЕ ТРУДА",
       ".hero p": "Меня зовут Владислав Конохрай (Vladyslav Konohrai). Я студент психологии UMK в Торуни и инспектор по охране труда с опытом производства, гастрономии и обслуживания клиентов.",
-      ".journey .section-title": "МОЙ ПУТЬ",
-      ".journey p": "Каждый опыт был шагом вперед. От физической работы через промышленность к психологии и охране труда. Сегодня я объединяю знания о человеке с заботой о безопасности и развитии.",
+      ".journey .section-title": "КАРЬЕРНЫЙ ПУТЬ",
+      ".journey p": "От строительных и сельскохозяйственных работ в Украине через покрасочный цех Palfinger и гастрономию к текущим должностям инспектора по охране труда и повара. Шкала показывает реальные периоды работы, включая параллельную занятость.",
       "#skills .section-title": "Мои сильные стороны",
-      ".section-heading .section-title": "Формат сотрудничества",
-      ".section-heading h2": "Что я даю команде",
-      ".section-heading p": "Я объединяю практический опыт в охране труда, операционную работу и психологический взгляд на людей.",
-      "#experience .section-title": "Профессиональный опыт",
+      "#experience .section-title": "Полный профессиональный опыт",
       "#education .card:nth-child(1) .section-title": "Образование",
       "#education .card:nth-child(2) .section-title": "Языки",
       "#education .card:nth-child(3) .section-title": "Допуски и разрешения",
@@ -219,19 +204,16 @@ const translations = {
       ".side-info .info-box:nth-child(2)": `<b>${icon("phone")} +48 739-64-22-77</b>`,
       ".side-info .info-box:nth-child(3)": emailBox.ru,
       ".side-info .info-box:nth-child(4)": `<b>${icon("star")} Открыт к сотрудничеству</b><br>Готов к новым возможностям`,
-      ".journey h2": "Путь, который<br><span>сформировал меня</span>",
-      ".journey .btn": `Узнать мою историю ${icon("arrow-right")}`,
+      ".journey h2": "Разный опыт,<br><span>один практический профиль</span>",
       "#diplomaPdf": `Открыть диплом ${icon("external-link")}`,
       ".contact-location": `${icon("map-pin")}<br><b>Торунь</b><br><small>Польша</small>`,
       ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Посмотреть профиль</small>`
     },
     lists: [
-      [".menu a", ["Обо мне", "Навыки", "Направления", "Опыт", "Образование", "Достижения", "Контакт"]],
+      [".menu a", ["Обо мне", "Навыки", "Опыт", "Образование", "Достижения", "Рекомендации", "Контакт"]],
       [".hero-pills span", [`${icon("shield")} Инспектор ОТ`, `${icon("brain")} Психология UMK`, `${icon("clipboard-check")} Организация работы`, `${icon("map-pin")} Торунь`], true],
       [".stat small", ["лет опыта", "направления образования", "языков", "дипломов и сертификатов"]],
       [".strength span", ["Организация<br>и самостоятельность", "Работа в условиях<br>дефицита времени", "Обслуживание клиентов<br>и коммуникация", "Решение<br>проблем", "Быстрое обучение<br>и адаптация", "Ответственность<br>и вовлеченность", "Допуск<br>UDT", "Командная работа<br>и поддержка"], true],
-      [".service-card h3", ["Процедуры и документация", "Коммуникация с командой", "Организация рабочего места", "Развитие и обучение"]],
-      [".service-card p", ["Поддержка в создании документации, анализе рисков и упорядочивании правил работы.", "Спокойная работа с людьми, объяснение правил и развитие ответственности.", "Практический взгляд на процесс, эргономику, качество и ежедневную эффективность.", "Быстрое обучение, сбор информации и перевод знаний в действие."]],
       [".exp-card h3", ["Повар", "Инспектор по ОТ", "Помощник маляра", "Работник ресторана", "Работник ресторана", "Помощник строителя"]],
       [".exp-card .date", ["04.2026 – настоящее время", "10.2024 – настоящее время", "06.2022 – 08.2024", "09.2023 – 12.2023", "08.2025 – 11.2025", "04.2019 – 12.2019"]],
       [".exp-card li", ["Приготовление блюд по стандартам качества", "Термическая обработка и жарка мяса", "Подготовка ингредиентов и полуфабрикатов", "Организация рабочего места", "Сотрудничество с командой при выполнении заказов", "Документация по ОТ", "Обучение сотрудников", "Анализ рисков", "Внедрение процедур", "Подготовка и покраска", "Дробеструйная обработка элементов", "Организация работы отдела", "Обучение сотрудников", "Обслуживание клиентов", "Управление запасами", "Работа на кухне", "Обучение команды", "Выполнение заказов", "Работа с кассой и клиентами", "Работа в условиях давления времени", "Контроль качества", "Строительные работы", "Монтаж лесов", "Железобетонные работы", "Отделка интерьеров"]],
@@ -272,15 +254,6 @@ translations.ru.diplomas.push([
   "Польский жестовый язык A1",
   "Сертификат, подтверждающий базовое знание польского жестового языка на уровне A1."
 ]);
-
-const addMenuItem = (language, label) => {
-  const menu = translations[language].lists.find(([selector]) => selector === ".menu a");
-  menu?.[1].splice(6, 0, label);
-};
-
-addMenuItem("pl", "Referencje");
-addMenuItem("en", "References");
-addMenuItem("ru", "Рекомендации");
 
 translations.pl.diplomas.splice(7, 0, [
   "YUFE Civic Star",

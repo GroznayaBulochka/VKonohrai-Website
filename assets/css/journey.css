@@ -58,12 +58,6 @@
   line-height: 1.65;
 }
 
-.career-timeline .career-intro .btn {
-  width: fit-content;
-  min-width: 214px;
-  margin: 0;
-}
-
 .career-hint {
   display: flex;
   align-items: flex-start;
@@ -598,10 +592,6 @@
     max-width: 620px;
   }
 
-  .career-timeline .career-intro .btn {
-    width: fit-content;
-  }
-
   .career-hint {
     margin-top: 0;
     padding-top: 18px;
@@ -710,11 +700,6 @@
     margin-bottom: 20px;
     font-size: 13px;
     line-height: 1.65;
-  }
-
-  .career-timeline .career-intro .btn {
-    width: 100%;
-    min-width: 0;
   }
 
   .career-hint {

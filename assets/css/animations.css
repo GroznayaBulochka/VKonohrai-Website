@@ -13,7 +13,6 @@
 }
 
 .stat,
-.service-card,
 .strength,
 .exp-card,
 .authorization-card,
@@ -24,7 +23,6 @@
 }
 
 .stat::before,
-.service-card::before,
 .strength::before,
 .exp-card::before,
 .authorization-card::before,
@@ -40,7 +38,6 @@
 }
 
 .stat:hover::before,
-.service-card:hover::before,
 .strength:hover::before,
 .exp-card:hover::before,
 .authorization-card:hover::before,
@@ -155,7 +152,6 @@
 
 @media (hover: none), (pointer: coarse) {
   .stat::before,
-  .service-card::before,
   .strength::before,
   .exp-card::before,
   .authorization-card::before,

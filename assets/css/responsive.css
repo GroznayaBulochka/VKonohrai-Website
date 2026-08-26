@@ -104,10 +104,6 @@
     margin-left: auto;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
 }
 
 @media (max-width: 1100px) {
@@ -214,18 +210,6 @@
 
   .hero-subtitle {
     font-size: 28px;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    min-height: auto;
-  }
-
-  .section-heading h2 {
-    font-size: 34px;
   }
 
   .diploma-head,
@@ -500,7 +484,6 @@
   .exp-card,
   .info-box,
   .contact-card,
-  .service-card,
   .diploma-info {
     border-radius: 10px;
     padding: 18px;
@@ -541,7 +524,6 @@
     padding: 12px;
   }
 
-  .section-heading h2,
   .diploma-head h2 {
     font-size: 30px;
   }
