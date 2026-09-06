@@ -379,20 +379,18 @@ translations.ru.attrs.push(
 );
 
 let activeLanguage = "pl";
+const canonicalUrl = "https://vkonohrai.me/";
 
 const languageSeo = {
   pl: {
-    url: "https://groznayabulochka.github.io/vladyslav-konohrai-cv/",
     locale: "pl_PL",
     imageAlt: "Portret Vladyslava Konohraia"
   },
   ru: {
-    url: "https://groznayabulochka.github.io/vladyslav-konohrai-cv/?lang=ru",
     locale: "ru_RU",
     imageAlt: "Портрет Владислава Конохрая"
   },
   en: {
-    url: "https://groznayabulochka.github.io/vladyslav-konohrai-cv/?lang=en",
     locale: "en_US",
     imageAlt: "Portrait of Vladyslav Konohrai"
   }
@@ -441,11 +439,11 @@ const setAttr = (selector, attr, value) => {
 const updateLanguageSeo = (dictionary) => {
   const seo = languageSeo[dictionary.lang] || languageSeo.pl;
 
-  setAttr('link[rel="canonical"]', "href", seo.url);
+  setAttr('link[rel="canonical"]', "href", canonicalUrl);
   setAttr('meta[name="description"]', "content", dictionary.description);
   setAttr('meta[property="og:title"]', "content", dictionary.title);
   setAttr('meta[property="og:description"]', "content", dictionary.description);
-  setAttr('meta[property="og:url"]', "content", seo.url);
+  setAttr('meta[property="og:url"]', "content", canonicalUrl);
   setAttr('meta[property="og:locale"]', "content", seo.locale);
   setAttr('meta[property="og:image:alt"]', "content", seo.imageAlt);
   setAttr('meta[name="twitter:title"]', "content", dictionary.title);
@@ -458,8 +456,8 @@ const updateLanguageSeo = (dictionary) => {
       const data = JSON.parse(structuredData.textContent);
       const profile = data["@graph"]?.find((item) => item["@type"] === "ProfilePage");
       if (profile) {
-        profile["@id"] = `${seo.url}#profile`;
-        profile.url = seo.url;
+        profile["@id"] = `${canonicalUrl}#profile`;
+        profile.url = canonicalUrl;
         profile.name = dictionary.title;
         profile.inLanguage = dictionary.lang;
         structuredData.textContent = JSON.stringify(data);
