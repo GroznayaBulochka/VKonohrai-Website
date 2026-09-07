@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".reference-section",
     ".reference-card",
     ".contact-card",
-    ".quote-card"
+    ".contact-form-disclosure"
   ];
 
   const elements = revealTargets.flatMap((selector) => [...document.querySelectorAll(selector)]);

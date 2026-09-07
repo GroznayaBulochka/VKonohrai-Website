@@ -448,7 +448,6 @@
           diplomaHeading: "Dokumenty wspierające profil produkcyjny",
           diplomaLead: "W tym wariancie pokazuję certyfikaty powiązane z zarządzaniem zespołem i komunikacją. Formalne uprawnienia są przedstawione osobno w sekcji Uprawnienia.",
           diplomaIndexes: [3, 8],
-          quote: "W produkcji liczą się jakość, porządek i bezpieczeństwo. Dobrze zorganizowane stanowisko pomaga zespołowi pracować spokojniej i skuteczniej."
         },
         gastro: {
           title: "Gastronomia",
@@ -490,7 +489,6 @@
           diplomaHeading: "Dokumenty wspierające profil gastronomiczny",
           diplomaLead: "W tym wariancie pokazuję certyfikaty z komunikacji, pracy z ludźmi i podstaw PJM.",
           diplomaIndexes: [3, 9, 8],
-          quote: "W gastronomii liczy się tempo, ale też spokój. Dobra zmiana działa wtedy, gdy kuchnia, obsługa i komunikacja idą razem."
         },
         office: {
           title: "Biuro, administracja i BHP",
@@ -545,7 +543,6 @@
           diplomaHeading: "Dokumenty wspierające profil biurowy",
           diplomaLead: "W tym wariancie pokazuję certyfikaty wspierające dokumentację, komunikację i pracę z ludźmi.",
           diplomaIndexes: [0, 3, 8, 9, 10, 11, 12],
-          quote: "W pracy biurowej i BHP największą wartość daje porządek: w dokumentach, procedurach, komunikacji i codziennych priorytetach."
         },
         all: {
           title: "Pełny profil",
@@ -585,7 +582,6 @@
           diplomaHeading: "Pełna galeria dokumentów",
           diplomaLead: "Pełny wariant pokazuje dostępne dyplomy i zaświadczenia dopasowane do szerokiego profilu zawodowego.",
           diplomaIndexes: null,
-          quote: "Różne środowiska pracy uczą elastyczności. Najważniejsze jest szybko zrozumieć zadanie, ludzi i standardy, a potem działać odpowiedzialnie."
         }
       }
     },
@@ -1215,11 +1211,10 @@
     document.dispatchEvent(new CustomEvent("diplomaschange"));
   };
 
-  const updateContactAndQuote = (profile) => {
+  const updateContact = (profile) => {
     setHtml(".side-info .info-box:nth-child(4)", profile.sideStatus);
     setText(".contact .contact-card:first-child h2", profile.contactTitle);
     setText(".contact .contact-card:first-child small", profile.contactLead);
-    setText(".quote-card p", profile.quote);
   };
 
   const applyRole = (role, { persist = true } = {}) => {
@@ -1254,7 +1249,7 @@
     updateEducation(profile);
     updateAuthorizations();
     updateDiplomas(profile);
-    updateContactAndQuote(profile);
+    updateContact(profile);
     updateCvLinks(activeRole, dictionary, profile);
     updateChoiceButtons(activeRole, dictionary);
 

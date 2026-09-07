@@ -226,12 +226,6 @@
     height: 360px;
   }
 
-  .quote-card {
-    align-items: flex-start;
-    gap: 18px;
-    flex-direction: column;
-  }
-
 }
 
 @media (max-width: 768px) {
@@ -563,15 +557,6 @@
     height: 110px;
   }
 
-  .quote-mark,
-  .quote-logo {
-    font-size: 42px;
-  }
-
-  .quote-card p {
-    font-size: 16px;
-  }
-
   .stat vk-icon,
   .contact-card > vk-icon {
     width: 24px;
@@ -585,14 +570,105 @@
   .contact .contact-card:first-child,
   .contact-method,
   .contact-location,
-  .contact-social {
+  .contact-social,
+  .contact-form-disclosure {
     grid-column: auto;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contact-form-lead {
+    max-width: 620px;
   }
 }
 
 @media (max-width: 430px) {
   nav {
     gap: 8px;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
+
+  .contact-form-disclosure > summary {
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+    gap: 11px;
+    min-height: 78px;
+    padding: 14px;
+  }
+
+  .contact-disclosure-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-disclosure-action span {
+    display: none;
+  }
+
+  .contact-form-disclosure[open] .contact-disclosure-close-label {
+    display: none;
+  }
+
+  .contact-form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field-wide {
+    grid-column: auto;
+  }
+
+  .contact-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-provider {
+    width: 100%;
+  }
+
+  .contact-form-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .email-choice-dialog {
+    width: min(100% - 20px, 520px);
+    max-height: calc(100dvh - 20px);
+  }
+
+  .email-choice-panel {
+    padding: 22px 18px 18px;
+  }
+
+  .email-choice-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .email-choice-heading {
+    gap: 11px;
+  }
+
+  .email-choice-heading h2 {
+    font-size: 21px;
+  }
+
+  .email-choice-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .email-choice-options {
+    grid-template-columns: 1fr;
+  }
+
+  .email-choice-copy {
+    grid-column: auto;
   }
 }
 

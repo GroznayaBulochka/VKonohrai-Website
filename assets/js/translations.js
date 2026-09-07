@@ -1,9 +1,9 @@
 const icon = (name) => `<vk-icon name="${name}"></vk-icon>`;
 
 const emailBox = {
-  pl: `<b>${icon("mail")} <a href="mailto:v.konohrai.work@gmail.com?subject=Kontakt%20ze%20strony%20CV">v.konohrai.work@gmail.com</a></b>`,
-  en: `<b>${icon("mail")} <a href="mailto:v.konohrai.work@gmail.com?subject=Contact%20from%20CV%20website">v.konohrai.work@gmail.com</a></b>`,
-  ru: `<b>${icon("mail")} <a href="mailto:v.konohrai.work@gmail.com?subject=Контакт%20со%20страницы%20CV">v.konohrai.work@gmail.com</a></b>`
+  pl: `<b>${icon("mail")} <a data-email-compose="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">contact@vkonohrai.me</a></b>`,
+  en: `<b>${icon("mail")} <a data-email-compose="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Contact%20from%20CV%20website" target="_blank" rel="noopener noreferrer">contact@vkonohrai.me</a></b>`,
+  ru: `<b>${icon("mail")} <a data-email-compose="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Контакт%20со%20страницы%20CV" target="_blank" rel="noopener noreferrer">contact@vkonohrai.me</a></b>`
 };
 
 const translations = {
@@ -22,7 +22,14 @@ const translations = {
       [".contact-email [data-copy]", "aria-label", "Skopiuj e-mail"],
       [".contact-email [data-copy]", "title", "Skopiuj e-mail"],
       [".contact-phone [data-copy]", "aria-label", "Skopiuj telefon"],
-      [".contact-phone [data-copy]", "title", "Skopiuj telefon"]
+      [".contact-phone [data-copy]", "title", "Skopiuj telefon"],
+      [".contact-field [name='name']", "placeholder", "Twoje imię i nazwisko"],
+      [".contact-field [name='email']", "placeholder", "Twój adres e-mail"],
+      [".contact-field [name='subject']", "placeholder", "W sprawie współpracy"],
+      [".contact-field [name='message']", "placeholder", "Napisz kilka słów o stanowisku, projekcie lub propozycji współpracy."],
+      [".contact-webmail-links", "aria-label", "Szybkie otwieranie poczty"],
+      ["[data-email-choice-close]", "aria-label", "Zamknij wybór poczty"],
+      ["[data-email-choice-close]", "title", "Zamknij"]
     ],
     text: {
       ".skip-link": "Przejdź do treści",
@@ -42,7 +49,27 @@ const translations = {
       ".contact .contact-card:first-child small": "Jestem otwarty na nowe możliwości i ciekawe projekty.",
       ".contact-email .contact-action-label": "Napisz do mnie",
       ".contact-phone .contact-action-label": "Zadzwoń",
-      ".quote-card p": "Najważniejszy zasób każdej organizacji to ludzie. Moim celem jest zrozumieć ich i tworzyć bezpieczne środowisko do rozwoju.",
+      ".contact-disclosure-title": "Formularz kontaktowy",
+      ".contact-disclosure-subtitle": "Przygotuj wiadomość w Gmailu lub Outlooku",
+      ".contact-disclosure-open-label": "Rozwiń formularz",
+      ".contact-disclosure-close-label": "Zwiń formularz",
+      ".contact-form-kicker": "Wiadomość",
+      ".contact-form-title": "Napisz bezpośrednio",
+      ".contact-form-lead": "Uzupełnij formularz i otwórz gotową wiadomość w wybranej poczcie internetowej.",
+      ".contact-gmail-label": "Otwórz Gmail",
+      ".contact-outlook-label": "Otwórz Outlook",
+      ".contact-label-name": "Imię i nazwisko",
+      ".contact-label-email": "E-mail do odpowiedzi",
+      ".contact-label-subject": "Temat",
+      ".contact-label-message": "Wiadomość",
+      ".contact-label-provider": "Otwórz wiadomość w",
+      ".contact-form-note": "Strona nie zapisuje wpisanych danych. Wiadomość zostanie otwarta w nowej karcie i wyślesz ją ze swojej skrzynki.",
+      ".email-choice-kicker": "Kontakt e-mail",
+      "#email-choice-title": "Jak chcesz napisać?",
+      ".email-choice-description": "Wybierz pocztę internetową albo skopiuj adres.",
+      ".email-choice-gmail-detail": "Otwórz nową wiadomość",
+      ".email-choice-outlook-detail": "Otwórz nową wiadomość",
+      ".email-choice-copy-title": "Skopiuj adres",
       ".rodo": "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w CV na potrzeby obecnej oraz przyszłych rekrutacji, zgodnie z RODO."
     },
     html: {
@@ -57,7 +84,8 @@ const translations = {
       ".journey h2": "Różne doświadczenia,<br><span>jeden praktyczny profil</span>",
       "#diplomaPdf": `Otwórz dyplom ${icon("external-link")}`,
       ".contact-location": `${icon("map-pin")}<br><b>Toruń</b><br><small>Polska</small>`,
-      ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Zobacz mój profil</small>`
+      ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Zobacz mój profil</small>`,
+      ".contact-form-submit": `Otwórz gotową wiadomość ${icon("external-link")}`
     },
     lists: [
       [".menu a", ["O mnie", "Umiejętności", "Doświadczenie", "Edukacja", "Osiągnięcia", "Referencje", "Kontakt"]],
@@ -97,7 +125,14 @@ const translations = {
       [".contact-email [data-copy]", "aria-label", "Copy e-mail"],
       [".contact-email [data-copy]", "title", "Copy e-mail"],
       [".contact-phone [data-copy]", "aria-label", "Copy phone number"],
-      [".contact-phone [data-copy]", "title", "Copy phone number"]
+      [".contact-phone [data-copy]", "title", "Copy phone number"],
+      [".contact-field [name='name']", "placeholder", "Your full name"],
+      [".contact-field [name='email']", "placeholder", "Your email address"],
+      [".contact-field [name='subject']", "placeholder", "Regarding a job or collaboration"],
+      [".contact-field [name='message']", "placeholder", "Share a few details about the role, project or opportunity."],
+      [".contact-webmail-links", "aria-label", "Quick webmail links"],
+      ["[data-email-choice-close]", "aria-label", "Close email options"],
+      ["[data-email-choice-close]", "title", "Close"]
     ],
     text: {
       ".skip-link": "Skip to content",
@@ -117,7 +152,27 @@ const translations = {
       ".contact .contact-card:first-child small": "I am open to new opportunities and interesting projects.",
       ".contact-email .contact-action-label": "Write to me",
       ".contact-phone .contact-action-label": "Call me",
-      ".quote-card p": "People are the most important resource in every organization. My goal is to understand them and create a safe environment for growth.",
+      ".contact-disclosure-title": "Contact form",
+      ".contact-disclosure-subtitle": "Prepare a message in Gmail or Outlook",
+      ".contact-disclosure-open-label": "Expand form",
+      ".contact-disclosure-close-label": "Collapse form",
+      ".contact-form-kicker": "Message",
+      ".contact-form-title": "Write directly",
+      ".contact-form-lead": "Complete the form and open a ready message in your chosen webmail service.",
+      ".contact-gmail-label": "Open Gmail",
+      ".contact-outlook-label": "Open Outlook",
+      ".contact-label-name": "Full name",
+      ".contact-label-email": "Reply email",
+      ".contact-label-subject": "Subject",
+      ".contact-label-message": "Message",
+      ".contact-label-provider": "Open message in",
+      ".contact-form-note": "The website does not store your input. The message opens in a new tab and is sent from your own mailbox.",
+      ".email-choice-kicker": "Email contact",
+      "#email-choice-title": "How would you like to write?",
+      ".email-choice-description": "Choose a webmail service or copy the address.",
+      ".email-choice-gmail-detail": "Open a new message",
+      ".email-choice-outlook-detail": "Open a new message",
+      ".email-choice-copy-title": "Copy address",
       ".rodo": "I consent to the processing of my personal data included in this CV for current and future recruitment processes in accordance with GDPR."
     },
     html: {
@@ -132,7 +187,8 @@ const translations = {
       ".journey h2": "Different roles,<br><span>one practical profile</span>",
       "#diplomaPdf": `Open certificate ${icon("external-link")}`,
       ".contact-location": `${icon("map-pin")}<br><b>Toruń</b><br><small>Poland</small>`,
-      ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>View my profile</small>`
+      ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>View my profile</small>`,
+      ".contact-form-submit": `Open prepared message ${icon("external-link")}`
     },
     lists: [
       [".menu a", ["About", "Skills", "Experience", "Education", "Achievements", "References", "Contact"]],
@@ -172,7 +228,14 @@ const translations = {
       [".contact-email [data-copy]", "aria-label", "Скопировать e-mail"],
       [".contact-email [data-copy]", "title", "Скопировать e-mail"],
       [".contact-phone [data-copy]", "aria-label", "Скопировать телефон"],
-      [".contact-phone [data-copy]", "title", "Скопировать телефон"]
+      [".contact-phone [data-copy]", "title", "Скопировать телефон"],
+      [".contact-field [name='name']", "placeholder", "Ваше имя и фамилия"],
+      [".contact-field [name='email']", "placeholder", "Ваш адрес электронной почты"],
+      [".contact-field [name='subject']", "placeholder", "По поводу работы или сотрудничества"],
+      [".contact-field [name='message']", "placeholder", "Расскажите немного о вакансии, проекте или предложении."],
+      [".contact-webmail-links", "aria-label", "Быстрое открытие веб-почты"],
+      ["[data-email-choice-close]", "aria-label", "Закрыть выбор почты"],
+      ["[data-email-choice-close]", "title", "Закрыть"]
     ],
     text: {
       ".skip-link": "Перейти к содержанию",
@@ -192,7 +255,27 @@ const translations = {
       ".contact .contact-card:first-child small": "Я открыт к новым возможностям и интересным проектам.",
       ".contact-email .contact-action-label": "Написать мне",
       ".contact-phone .contact-action-label": "Позвонить",
-      ".quote-card p": "Самый важный ресурс любой организации — это люди. Моя цель — понимать их и создавать безопасную среду для развития.",
+      ".contact-disclosure-title": "Форма обратной связи",
+      ".contact-disclosure-subtitle": "Подготовьте сообщение в Gmail или Outlook",
+      ".contact-disclosure-open-label": "Развернуть форму",
+      ".contact-disclosure-close-label": "Свернуть форму",
+      ".contact-form-kicker": "Сообщение",
+      ".contact-form-title": "Написать напрямую",
+      ".contact-form-lead": "Заполните форму и откройте готовое сообщение в выбранной веб-почте.",
+      ".contact-gmail-label": "Открыть Gmail",
+      ".contact-outlook-label": "Открыть Outlook",
+      ".contact-label-name": "Имя и фамилия",
+      ".contact-label-email": "E-mail для ответа",
+      ".contact-label-subject": "Тема",
+      ".contact-label-message": "Сообщение",
+      ".contact-label-provider": "Открыть сообщение в",
+      ".contact-form-note": "Сайт не сохраняет введённые данные. Сообщение откроется в новой вкладке и будет отправлено из вашей почты.",
+      ".email-choice-kicker": "Связаться по e-mail",
+      "#email-choice-title": "Как вы хотите написать?",
+      ".email-choice-description": "Выберите веб-почту или скопируйте адрес.",
+      ".email-choice-gmail-detail": "Открыть новое сообщение",
+      ".email-choice-outlook-detail": "Открыть новое сообщение",
+      ".email-choice-copy-title": "Скопировать адрес",
       ".rodo": "Я даю согласие на обработку моих персональных данных, содержащихся в CV, для текущих и будущих процессов подбора персонала в соответствии с GDPR."
     },
     html: {
@@ -207,7 +290,8 @@ const translations = {
       ".journey h2": "Разный опыт,<br><span>один практический профиль</span>",
       "#diplomaPdf": `Открыть диплом ${icon("external-link")}`,
       ".contact-location": `${icon("map-pin")}<br><b>Торунь</b><br><small>Польша</small>`,
-      ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Посмотреть профиль</small>`
+      ".contact-social": `${icon("linkedin")}<br><b>LinkedIn</b><br><small>Посмотреть профиль</small>`,
+      ".contact-form-submit": `Открыть готовое сообщение ${icon("external-link")}`
     },
     lists: [
       [".menu a", ["Обо мне", "Навыки", "Опыт", "Образование", "Достижения", "Рекомендации", "Контакт"]],

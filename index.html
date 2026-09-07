@@ -60,14 +60,14 @@
 
 <link rel="preload" href="assets/images/photo.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preload" href="assets/images/background-poster.webp" as="image" type="image/webp">
-<link rel="stylesheet" href="assets/css/base.css?v=20260826-3">
+<link rel="stylesheet" href="assets/css/base.css?v=20260907-2">
 <link rel="stylesheet" href="/assets/css/journey.css?v=20260906-1">
-<link rel="stylesheet" href="assets/css/sections.css?v=20260826-3">
+<link rel="stylesheet" href="assets/css/sections.css?v=20260907-3">
 <link rel="stylesheet" href="assets/css/diplomas.css?v=20260826-2">
-<link rel="stylesheet" href="assets/css/icons.css?v=20260826-2">
+<link rel="stylesheet" href="assets/css/icons.css?v=20260907-1">
 <link rel="stylesheet" href="assets/css/animations.css?v=20260826-4">
 <link rel="stylesheet" href="assets/css/job-personalizer.css?v=20260826-2">
-<link rel="stylesheet" href="assets/css/responsive.css?v=20260826-8">
+<link rel="stylesheet" href="assets/css/responsive.css?v=20260907-3">
 
 <script id="profile-structured-data" type="application/ld+json">
 {
@@ -108,7 +108,7 @@
       "image": "https://vkonohrai.me/assets/images/photo.png",
       "jobTitle": ["Inspektor ds. BHP", "Student psychologii"],
       "description": "Vladyslav Konohrai to inspektor BHP i student psychologii UMK w Toruniu z doświadczeniem w bezpieczeństwie pracy, produkcji, gastronomii i obsłudze klienta.",
-      "email": "v.konohrai.work@gmail.com",
+      "email": "contact@vkonohrai.me",
       "telephone": "+48739642277",
       "address": {
         "@type": "PostalAddress",
@@ -130,7 +130,7 @@
       ],
       "sameAs": [
         "https://github.com/GroznayaBulochka",
-        "https://www.linkedin.com/in/vkonohrai/"
+        "https://www.linkedin.com/in/vladyslav-konohrai-636a66275/"
       ]
     }
   ]
@@ -273,7 +273,7 @@
    download="CV_All_Vladyslav_Konohrai.pdf">
    Pobierz CV <vk-icon name="download"></vk-icon>
 </a>
-        <a class="btn secondary" href="mailto:v.konohrai.work@gmail.com">Skontaktuj się <vk-icon name="arrow-right"></vk-icon></a>
+        <a class="btn secondary" data-email-compose="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">Skontaktuj się <vk-icon name="arrow-right"></vk-icon></a>
       </div>
 
     </div>
@@ -288,8 +288,8 @@
       <div class="info-box">
   <b>
     <vk-icon name="mail"></vk-icon>
-    <a href="mailto:v.konohrai.work@gmail.com?subject=Kontakt%20ze%20strony%20CV">
-      v.konohrai.work@gmail.com
+    <a data-email-compose="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">
+      contact@vkonohrai.me
     </a>
   </b>
 </div>
@@ -676,10 +676,10 @@
     <div class="contact-card contact-method contact-email">
       <vk-icon name="mail"></vk-icon>
       <div>
-        <a href="mailto:v.konohrai.work@gmail.com?subject=Kontakt%20ze%20strony%20CV"><b>v.konohrai.work@gmail.com</b></a>
+        <a data-email-compose="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer"><b>contact@vkonohrai.me</b></a>
         <small class="contact-action-label">Napisz do mnie</small>
       </div>
-      <button class="contact-quick-copy" type="button" data-copy="v.konohrai.work@gmail.com" aria-label="Skopiuj e-mail" title="Skopiuj e-mail">
+      <button class="contact-quick-copy" type="button" data-copy="contact@vkonohrai.me" aria-label="Skopiuj e-mail" title="Skopiuj e-mail">
         <vk-icon name="copy"></vk-icon>
       </button>
     </div>
@@ -694,32 +694,133 @@
       </button>
     </div>
     <div class="contact-card contact-location"><vk-icon name="map-pin"></vk-icon><br><b>Toruń</b><br><small>Polska</small></div>
-    <a class="contact-card contact-social contact-link" href="https://www.linkedin.com/in/vkonohrai/" target="_blank" rel="noopener noreferrer"><vk-icon name="linkedin"></vk-icon><br><b>LinkedIn</b><br><small>Zobacz mój profil</small></a>
+    <a class="contact-card contact-social contact-link" href="https://www.linkedin.com/in/vladyslav-konohrai-636a66275/" target="_blank" rel="noopener noreferrer"><vk-icon name="linkedin"></vk-icon><br><b>LinkedIn</b><br><small>Zobacz mój profil</small></a>
+
+    <details class="contact-form-disclosure" data-contact-disclosure>
+      <summary>
+        <span class="contact-disclosure-icon"><vk-icon name="mail"></vk-icon></span>
+        <span class="contact-disclosure-copy">
+          <strong class="contact-disclosure-title">Formularz kontaktowy</strong>
+          <small class="contact-disclosure-subtitle">Przygotuj wiadomość w Gmailu lub Outlooku</small>
+        </span>
+        <span class="contact-disclosure-action">
+          <span class="contact-disclosure-open-label">Rozwiń formularz</span>
+          <span class="contact-disclosure-close-label">Zwiń formularz</span>
+          <vk-icon name="arrow-right"></vk-icon>
+        </span>
+      </summary>
+
+      <form class="contact-form" data-contact-form aria-labelledby="contact-form-title">
+        <div class="contact-form-intro">
+          <div class="section-title contact-form-kicker">Wiadomość</div>
+          <h3 id="contact-form-title" class="contact-form-title">Napisz bezpośrednio</h3>
+          <p class="contact-form-lead">Uzupełnij formularz i otwórz gotową wiadomość w wybranej poczcie internetowej.</p>
+          <div class="contact-webmail-links" aria-label="Szybkie otwieranie poczty">
+            <a class="contact-webmail-link" data-mail-provider="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">
+              <span class="contact-gmail-label">Otwórz Gmail</span>
+              <vk-icon name="external-link"></vk-icon>
+            </a>
+            <a class="contact-webmail-link" data-mail-provider="outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=contact%40vkonohrai.me&amp;subject=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">
+              <span class="contact-outlook-label">Otwórz Outlook</span>
+              <vk-icon name="external-link"></vk-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-fields">
+          <label class="contact-field">
+            <span class="contact-label-name">Imię i nazwisko</span>
+            <input type="text" name="name" autocomplete="name" maxlength="80" placeholder="Twoje imię i nazwisko" required>
+          </label>
+          <label class="contact-field">
+            <span class="contact-label-email">E-mail do odpowiedzi</span>
+            <input type="email" name="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="Twój adres e-mail" required>
+          </label>
+          <label class="contact-field contact-field-wide">
+            <span class="contact-label-subject">Temat</span>
+            <input type="text" name="subject" maxlength="120" placeholder="W sprawie współpracy" required>
+          </label>
+          <label class="contact-field contact-field-wide">
+            <span class="contact-label-message">Wiadomość</span>
+            <textarea name="message" rows="6" maxlength="2000" placeholder="Napisz kilka słów o stanowisku, projekcie lub propozycji współpracy." required></textarea>
+          </label>
+          <div class="contact-form-footer contact-field-wide">
+            <label class="contact-provider">
+              <span class="contact-label-provider">Otwórz wiadomość w</span>
+              <select name="mailProvider">
+                <option value="gmail">Gmail</option>
+                <option value="outlook">Outlook</option>
+              </select>
+            </label>
+            <button class="btn contact-form-submit" type="submit">Otwórz gotową wiadomość <vk-icon name="external-link"></vk-icon></button>
+          </div>
+          <p class="contact-form-note contact-field-wide">Strona nie zapisuje wpisanych danych. Wiadomość zostanie otwarta w nowej karcie i wyślesz ją ze swojej skrzynki.</p>
+          <p class="contact-form-status contact-field-wide" data-contact-form-status role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </details>
   </section>
-    <blockquote class="quote-card">
-    <div class="quote-mark">“</div>
-
-    <p>
-        Najważniejszy zasób każdej organizacji to ludzie.<br>
-        Moim celem jest zrozumieć ich i tworzyć bezpieczne środowisko do rozwoju.
-    </p>
-
-    <div class="quote-logo">VK</div>
-    </blockquote>
   <footer class="rodo">
     Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w CV na potrzeby obecnej oraz przyszłych rekrutacji, zgodnie z RODO.
   </footer>
   </main>
 
 </div>
+
+<dialog class="email-choice-dialog" data-email-choice-dialog aria-labelledby="email-choice-title" aria-describedby="email-choice-description">
+  <div class="email-choice-panel">
+    <button class="email-choice-close" type="button" data-email-choice-close aria-label="Zamknij wybór poczty" title="Zamknij">
+      <vk-icon name="x"></vk-icon>
+    </button>
+
+    <div class="email-choice-heading">
+      <span class="email-choice-icon"><vk-icon name="mail"></vk-icon></span>
+      <div>
+        <div class="section-title email-choice-kicker">Kontakt e-mail</div>
+        <h2 id="email-choice-title">Jak chcesz napisać?</h2>
+      </div>
+    </div>
+    <p id="email-choice-description" class="email-choice-description">Wybierz pocztę internetową albo skopiuj adres.</p>
+
+    <div class="email-choice-options">
+      <a class="email-choice-option" data-email-choice-provider="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40vkonohrai.me&amp;su=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">
+        <span class="email-choice-option-icon"><vk-icon name="mail"></vk-icon></span>
+        <span>
+          <strong>Gmail</strong>
+          <small class="email-choice-gmail-detail">Otwórz nową wiadomość</small>
+        </span>
+        <vk-icon name="external-link"></vk-icon>
+      </a>
+      <a class="email-choice-option" data-email-choice-provider="outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=contact%40vkonohrai.me&amp;subject=Kontakt%20ze%20strony%20CV" target="_blank" rel="noopener noreferrer">
+        <span class="email-choice-option-icon"><vk-icon name="mail"></vk-icon></span>
+        <span>
+          <strong>Outlook</strong>
+          <small class="email-choice-outlook-detail">Otwórz nową wiadomość</small>
+        </span>
+        <vk-icon name="external-link"></vk-icon>
+      </a>
+      <button class="email-choice-option email-choice-copy" type="button" data-email-choice-copy>
+        <span class="email-choice-option-icon"><vk-icon name="copy"></vk-icon></span>
+        <span>
+          <strong class="email-choice-copy-title">Skopiuj adres</strong>
+          <small>contact@vkonohrai.me</small>
+        </span>
+        <vk-icon name="copy"></vk-icon>
+      </button>
+    </div>
+    <p class="email-choice-status" data-email-choice-status role="status" aria-live="polite"></p>
+  </div>
+</dialog>
+
 <script src="assets/js/diplomas-data.js?v=20260826-1" defer></script>
 <script src="assets/js/references-data.js?v=20260826-1" defer></script>
 <script src="assets/js/icons.js?v=20260826-2" defer></script>
-<script src="assets/js/translations.js?v=20260906-1" defer></script>
-<script src="assets/js/job-personalizer.js?v=20260826-6" defer></script>
+<script src="assets/js/translations.js?v=20260907-3" defer></script>
+<script src="assets/js/job-personalizer.js?v=20260907-1" defer></script>
 <script src="assets/js/mobile-menu.js?v=20260826-1" defer></script>
 <script src="assets/js/diploma-gallery.js?v=20260826-1" defer></script>
 <script src="assets/js/references.js?v=20260728-1" defer></script>
-<script src="assets/js/ui-enhancements.js?v=20260826-4" defer></script>
+<script src="assets/js/contact-form.js?v=20260907-3" defer></script>
+<script src="assets/js/ui-enhancements.js?v=20260907-1" defer></script>
 </body>
 </html>
