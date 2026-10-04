@@ -61,6 +61,16 @@
       inactive: "Аналитика пока не настроена — аналитические данные не отправляются.", policy: "Информация о конфиденциальности", policyText: "Владелец сайта: Vladyslav Konohrai, contact@vkonohrai.me. Хостинг: GitHub Pages; провайдер может обрабатывать технические данные соединения. При включении аналитики Google получает данные и может обрабатывать их за пределами ЕЭЗ. Отзыв согласия останавливает измерения и удаляет аналитические cookies из этого браузера, но не удаляет уже отправленные данные. Форма открывает выбранную почту и не сохраняет сообщение на сайте.", google: "Конфиденциальность Google"
     }
   };
+  const presentation = {
+    pl: { eyebrow: "TWOJA PRYWATNOŚĆ", title: "Twój wybór ma znaczenie", intro: "Używam cookies, aby zapamiętać Twoje ustawienia i lepiej zrozumieć, jak odwiedzający korzystają ze strony. Ty decydujesz, na co się zgadzasz.", settingsTitle: "Ustawienia prywatności", settingsIntro: "Wybierz, co mogę zapamiętać. Opcjonalne kategorie uruchomię tylko za Twoją zgodą.", necessary: "Niezbędne", necessaryText: "Pozwalają zapisać Twój wybór dotyczący prywatności.", preferences: "Preferencje", preferencesText: "Zapamiętują język strony i wybrany wariant CV na kolejne wizyty.", analytics: "Analityka", analyticsText: "Pomagają mi poznać liczbę wizyt i sprawdzić, które części profilu są przydatne.", always: "Zawsze aktywne", optional: "Opcjonalne", details: "Szczegóły przechowywania danych", note: "Możesz zmienić decyzję w każdej chwili w stopce strony.", reject: "Odrzuć opcjonalne", settings: "Dostosuj", save: "Zapisz ustawienia", policy: "Jak dbam o Twoje dane" },
+    en: { eyebrow: "YOUR PRIVACY", title: "Your choice matters", intro: "I use cookies to remember your settings and understand how visitors use this website. You decide what to allow.", settingsTitle: "Privacy settings", settingsIntro: "Choose what I can remember. Optional categories start only with your permission.", necessary: "Essential", necessaryText: "Save your privacy choices so I can respect them.", preferences: "Preferences", preferencesText: "Remember your language and chosen CV profile for future visits.", analytics: "Analytics", analyticsText: "Help me understand visitor numbers and which parts of the profile are useful.", always: "Always active", optional: "Optional", details: "Data storage details", note: "You can change your choice at any time in the website footer.", reject: "Reject optional", settings: "Customize", save: "Save settings", policy: "How I handle your data" },
+    ru: { eyebrow: "ВАША КОНФИДЕНЦИАЛЬНОСТЬ", title: "Ваш выбор имеет значение", intro: "Я использую cookies, чтобы запоминать настройки и понимать, как посетители пользуются сайтом. Вы решаете, что разрешить.", settingsTitle: "Настройки конфиденциальности", settingsIntro: "Выберите, что можно запомнить. Необязательные категории включаются только с вашего согласия.", necessary: "Необходимые", necessaryText: "Сохраняют ваш выбор, чтобы сайт учитывал его.", preferences: "Предпочтения", preferencesText: "Запоминают язык сайта и вариант резюме для следующих посещений.", analytics: "Аналитика", analyticsText: "Помогает понять количество посещений и полезность разделов профиля.", always: "Всегда активны", optional: "Необязательно", details: "Подробности хранения данных", note: "Изменить решение можно в любое время внизу страницы.", reject: "Отклонить необязательные", settings: "Настроить", save: "Сохранить настройки", policy: "Как я обрабатываю данные" }
+  };
+  Object.entries(presentation).forEach(([language, text]) => {
+    const original = copy[language];
+    original.storageDetails = [original.necessaryText, original.preferencesText, original.analyticsText].join("\n\n");
+    Object.assign(original, text);
+  });
   const id = window.siteAnalyticsConfig?.measurementId || "";
   const configured = /^G-[A-Z0-9]+$/.test(id);
   let started = false;
@@ -87,22 +97,64 @@
     const banner = document.createElement("section");
     banner.className = "cookie-banner";
     banner.setAttribute("aria-labelledby", "cookie-banner-title");
-    banner.innerHTML = '<h2 id="cookie-banner-title" data-cookie-text="title"></h2><p data-cookie-text="intro"></p><div class="cookie-actions"><button data-cookie-action="reject" data-cookie-text="reject"></button><button data-cookie-action="settings" data-cookie-text="settings"></button><button data-cookie-action="accept" data-cookie-text="accept"></button></div>';
+    banner.innerHTML = `
+      <div class="cookie-heading">
+        <span class="cookie-emblem" aria-hidden="true"><vk-icon name="shield"></vk-icon></span>
+        <div><span class="cookie-eyebrow" data-cookie-text="eyebrow"></span><h2 id="cookie-banner-title" data-cookie-text="title"></h2></div>
+      </div>
+      <p class="cookie-intro" data-cookie-text="intro"></p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-button cookie-button-primary" data-cookie-action="accept" data-cookie-text="accept"></button>
+        <button type="button" class="cookie-button" data-cookie-action="reject" data-cookie-text="reject"></button>
+        <button type="button" class="cookie-button cookie-button-quiet" data-cookie-action="settings"><span data-cookie-text="settings"></span><vk-icon name="arrow-right" aria-hidden="true"></vk-icon></button>
+      </div>
+      <p class="cookie-note"><vk-icon name="shield" aria-hidden="true"></vk-icon><span data-cookie-text="note"></span></p>`;
     const dialog = document.createElement("dialog");
     dialog.className = "cookie-dialog";
     dialog.setAttribute("aria-labelledby", "cookie-dialog-title");
-    dialog.innerHTML = '<button class="cookie-close" type="button" data-cookie-text="close"></button><h2 id="cookie-dialog-title" data-cookie-text="title"></h2><p data-cookie-text="intro"></p><label><input type="checkbox" checked disabled><span data-cookie-text="necessary"></span></label><p data-cookie-text="necessaryText"></p><label><input type="checkbox" name="preferences"><span data-cookie-text="preferences"></span></label><p data-cookie-text="preferencesText"></p><label><input type="checkbox" name="analytics"><span data-cookie-text="analytics"></span></label><p data-cookie-text="analyticsText"></p><p data-cookie-text="inactive"></p><div class="cookie-actions"><button data-cookie-action="reject" data-cookie-text="reject"></button><button data-cookie-action="save" data-cookie-text="save"></button><button data-cookie-action="accept" data-cookie-text="accept"></button></div><div class="cookie-policy"><h3 data-cookie-text="policy"></h3><p data-cookie-text="policyText"></p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" data-cookie-text="google"></a></div>';
+    dialog.setAttribute("aria-describedby", "cookie-dialog-intro");
+    dialog.innerHTML = `
+      <div class="cookie-dialog-shell">
+        <header class="cookie-dialog-header">
+          <div class="cookie-heading"><span class="cookie-emblem" aria-hidden="true"><vk-icon name="shield"></vk-icon></span><div><span class="cookie-eyebrow" data-cookie-text="eyebrow"></span><h2 id="cookie-dialog-title" data-cookie-text="settingsTitle"></h2></div></div>
+          <button class="cookie-close" type="button" autofocus><vk-icon name="x" aria-hidden="true"></vk-icon></button>
+        </header>
+        <div class="cookie-dialog-body">
+          <p id="cookie-dialog-intro" class="cookie-intro" data-cookie-text="settingsIntro"></p>
+          <div class="cookie-categories">
+            <article class="cookie-category">
+              <div class="cookie-category-top"><h3 data-cookie-text="necessary"></h3><span class="cookie-locked"><vk-icon name="shield" aria-hidden="true"></vk-icon><span data-cookie-text="always"></span></span></div>
+              <p data-cookie-text="necessaryText"></p>
+            </article>
+            <article class="cookie-category">
+              <label class="cookie-category-top"><span class="cookie-category-name"><span data-cookie-text="preferences"></span><small data-cookie-text="optional"></small></span><span class="cookie-switch"><input type="checkbox" name="preferences" aria-describedby="cookie-preferences-description"><span class="cookie-switch-track" aria-hidden="true"></span></span></label>
+              <p id="cookie-preferences-description" data-cookie-text="preferencesText"></p>
+            </article>
+            <article class="cookie-category">
+              <label class="cookie-category-top"><span class="cookie-category-name"><span data-cookie-text="analytics"></span><small data-cookie-text="optional"></small></span><span class="cookie-switch"><input type="checkbox" name="analytics" aria-describedby="cookie-analytics-description"><span class="cookie-switch-track" aria-hidden="true"></span></span></label>
+              <p id="cookie-analytics-description" data-cookie-text="analyticsText"></p>
+              <p class="cookie-inactive" data-cookie-text="inactive"></p>
+            </article>
+          </div>
+          <details class="cookie-policy"><summary><span data-cookie-text="details"></span><vk-icon name="arrow-right" aria-hidden="true"></vk-icon></summary><div class="cookie-policy-content"><p class="cookie-storage-details" data-cookie-text="storageDetails"></p><h3 data-cookie-text="policy"></h3><p data-cookie-text="policyText"></p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"><span data-cookie-text="google"></span><vk-icon name="external-link" aria-hidden="true"></vk-icon></a></div></details>
+        </div>
+        <footer class="cookie-dialog-footer"><div class="cookie-actions"><button type="button" class="cookie-button" data-cookie-action="reject" data-cookie-text="reject"></button><button type="button" class="cookie-button cookie-button-primary" data-cookie-action="save" data-cookie-text="save"></button></div><p class="cookie-note" data-cookie-text="note"></p></footer>
+      </div>`;
     document.body.append(banner, dialog);
     const update = () => {
       const t = copy[document.documentElement.lang] || copy.pl;
       document.querySelectorAll("[data-cookie-text]").forEach(el => { el.textContent = t[el.dataset.cookieText]; });
       document.querySelectorAll("[data-cookie-settings]").forEach(el => { el.textContent = t.footer; });
       dialog.querySelector('[data-cookie-text="inactive"]').hidden = configured;
+      dialog.querySelector(".cookie-close").setAttribute("aria-label", t.close);
+      dialog.querySelector(".cookie-close").title = t.close;
     };
     const open = () => {
       dialog.querySelector('[name="preferences"]').checked = !!consent?.preferences;
       dialog.querySelector('[name="analytics"]').checked = !!consent?.analytics;
+      dialog.querySelector(".cookie-policy").open = false;
       dialog.showModal();
+      dialog.querySelector(".cookie-dialog-body").scrollTop = 0;
     };
     const save = (preferences, analytics) => {
       const previouslyRunning = started;
