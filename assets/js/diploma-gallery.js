@@ -135,15 +135,15 @@
     thumbnailObserver = undefined;
     const labels = window.getDiplomaGroupLabels?.() || {
       groupsLabel: "Kategorie certyfikatów",
-      featuredTab: "Prestiżowe",
+      featuredTab: "Wybrane",
       otherTab: "Pozostałe",
-      featuredKicker: "Wyróżnione kwalifikacje",
-      featuredTitle: "Najbardziej prestiżowe certyfikaty",
+      featuredKicker: "Kursy i uprawnienia",
+      featuredTitle: "Wybrane certyfikaty",
       featuredDescription: "Dokumenty wydane lub potwierdzone przez rozpoznawalne instytucje.",
       otherKicker: "Pozostałe kwalifikacje",
       otherTitle: "Pozostałe certyfikaty",
       otherDescription: "Kursy i szkolenia uzupełniające kompetencje.",
-      featuredBadge: "Wyróżniony",
+      featuredBadge: "Wybrany",
       openLabel: "Pokaż dokument",
       issuerLabel: "Wystawca"
     };
@@ -225,7 +225,7 @@
     }
     if (elements.featuredBadge) {
       elements.featuredBadge.hidden = !diploma.featured;
-      elements.featuredBadge.textContent = labels?.featuredBadge || "Wyróżniony";
+      elements.featuredBadge.textContent = labels?.featuredBadge || "Wybrany";
     }
     if (elements.source) {
       const sourceText = [diploma.issuer, diploma.detail].filter(Boolean).join(" · ");

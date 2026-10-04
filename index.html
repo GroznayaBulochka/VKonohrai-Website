@@ -137,6 +137,10 @@
 }
 </script>
 
+<link rel="stylesheet" href="assets/css/cookies.css?v=20261004-1">
+<!-- Set your own GA4 measurement ID in analytics-config.js. -->
+<script src="assets/js/analytics-config.js?v=20261004-1" defer></script>
+<script src="assets/js/cookies.js?v=20261004-1" defer></script>
 </head>
 
 <body>
@@ -166,7 +170,7 @@
     </div>
     <div class="job-gate-kicker" data-job-gate-kicker>Dopasuj profil</div>
     <h2 id="jobGateTitle" data-job-gate-title>Na jakie stanowisko szukasz pracownika?</h2>
-    <p id="jobGateDesc" data-job-gate-desc>Wybierz obszar, a strona od razu pokaże najważniejsze doświadczenia, umiejętności i dokumenty.</p>
+    <p id="jobGateDesc" data-job-gate-desc>Wybierz obszar, a strona od razu pokaże doświadczenia związane z tym obszarem, umiejętności i dokumenty.</p>
 
     <div class="job-choice-grid" role="group" aria-label="Obszary stanowiska" data-job-choice-grid>
       <button class="job-choice" type="button" data-role-choice="production">
@@ -210,7 +214,7 @@
       <a href="#skills">Umiejętności</a>
       <a href="#experience">Doświadczenie</a>
       <a href="#education">Edukacja</a>
-      <a href="#achievements">Osiągnięcia</a>
+      <a href="#achievements">Certyfikaty</a>
       <a href="#references">Referencje</a>
       <a href="#contact">Kontakt</a>
     </div>
@@ -240,7 +244,7 @@
     </span>
     <div>
       <div class="hero-profile-tools">
-        <div class="tag">STUDENT PSYCHOLOGII • SPECJALISTA BHP</div>
+        <div class="tag">STUDENT PSYCHOLOGII • INSPEKTOR BHP</div>
         <button class="role-change hero-role-change" type="button" data-role-change>
           Zmień profil <vk-icon name="arrow-right"></vk-icon>
         </button>
@@ -249,17 +253,17 @@
       <h1>Vladyslav <span>Konohrai</span></h1>
 
         <h2 class="hero-subtitle">
-        Rozumiem ludzi.<br>
-        Buduję bezpieczniejsze środowiska.
+        Uczę się rozumieć ludzi.<br>
+        Rozwijam się w obszarze BHP.
         </h2>
 
         <p>
         Nazywam się Vladyslav Konohrai. Jestem studentem psychologii UMK w Toruniu
         i inspektorem BHP z doświadczeniem w pracy fizycznej, produkcji, gastronomii
-        oraz obsłudze klienta. Motywuje mnie nauka, odpowiedzialność i rozwój.
+        oraz obsłudze klienta. Nadal się uczę i chcę zdobywać kolejne doświadczenia.
         </p>
 
-      <div class="hero-pills" aria-label="Najważniejsze obszary">
+      <div class="hero-pills" aria-label="Obszary doświadczenia">
         <span><vk-icon name="shield"></vk-icon> Inspektor BHP</span>
         <span><vk-icon name="brain"></vk-icon> Psychologia UMK</span>
         <span><vk-icon name="clipboard-check"></vk-icon> Organizacja pracy</span>
@@ -453,13 +457,13 @@
   </section>
 
   <section id="skills" class="section card">
-    <h2 class="section-title">Moje mocne strony</h2>
+    <h2 class="section-title">Umiejętności, które rozwijam</h2>
     <div class="strengths">
       <div class="strength"><vk-icon name="clipboard-check"></vk-icon><span>Organizacja<br>i samodzielność</span></div>
       <div class="strength"><vk-icon name="clock"></vk-icon><span>Praca pod presją<br>czasu</span></div>
       <div class="strength"><vk-icon name="message"></vk-icon><span>Obsługa klienta<br>i komunikacja</span></div>
       <div class="strength"><vk-icon name="target"></vk-icon><span>Rozwiązywanie<br>problemów</span></div>
-      <div class="strength"><vk-icon name="sparkles"></vk-icon><span>Szybka nauka<br>i adaptacja</span></div>
+      <div class="strength"><vk-icon name="sparkles"></vk-icon><span>Nauka<br>nowych zadań</span></div>
       <div class="strength"><vk-icon name="shield"></vk-icon><span>Odpowiedzialność<br>i zaangażowanie</span></div>
       <div class="strength"><vk-icon name="award"></vk-icon><span>Uprawnienia<br>UDT</span></div>
       <div class="strength"><vk-icon name="users"></vk-icon><span>Praca zespołowa<br>i wsparcie</span></div>
@@ -553,7 +557,7 @@
     <div class="credential-navigation">
       <div class="credential-tabs" role="tablist" aria-label="Kategorie certyfikatów" data-credential-tabs>
         <button type="button" role="tab" aria-selected="true" aria-controls="featuredCertificates" data-credential-tab="featured">
-          <span data-featured-tab-label>Najbardziej prestiżowe</span>
+          <span data-featured-tab-label>Wybrane</span>
           <strong data-featured-count>0</strong>
         </button>
         <button type="button" role="tab" aria-selected="false" aria-controls="otherCertificates" data-credential-tab="other">
@@ -566,9 +570,9 @@
         <section id="featuredCertificates" class="credential-group credential-featured" data-certificate-group="featured" role="tabpanel">
           <div class="credential-group-head">
             <div>
-          <span class="credential-group-kicker" data-featured-kicker>Wyróżnione kwalifikacje</span>
-          <h3 data-featured-title>Najbardziej prestiżowe certyfikaty</h3>
-          <p data-featured-description>Dokumenty wydane lub potwierdzone przez rozpoznawalne instytucje branżowe i akademickie.</p>
+          <span class="credential-group-kicker" data-featured-kicker>Kursy i uprawnienia</span>
+          <h3 data-featured-title>Wybrane certyfikaty</h3>
+          <p data-featured-description>Dokumenty wydane lub potwierdzone przez instytucje branżowe i akademickie.</p>
             </div>
           </div>
           <div class="credential-list" data-featured-certificates></div>
@@ -595,7 +599,7 @@
       <div class="diploma-info" aria-live="polite" aria-atomic="true">
         <div class="diploma-meta">
           <span id="diplomaCount">01 / 05</span>
-          <span class="diploma-featured-badge" data-diploma-featured>Wyróżniony</span>
+          <span class="diploma-featured-badge" data-diploma-featured>Wybrany</span>
         </div>
         <h3 id="diplomaTitle">Pilot BSP A1/A3</h3>
         <p id="diplomaDesc">Potwierdzenie zaliczenia szkolenia i zdania egzaminu.</p>
@@ -669,7 +673,7 @@
 
   <section id="contact" class="contact" aria-labelledby="contact-title">
     <div class="contact-card">
-      <h2 id="contact-title">Porozmawiajmy!</h2>
+      <h2 id="contact-title">Zapraszam do kontaktu</h2>
       <small>Jestem otwarty na nowe możliwości i ciekawe projekty.</small>
     </div>
 
@@ -763,6 +767,7 @@
   <footer class="rodo">
     Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w CV na potrzeby obecnej oraz przyszłych rekrutacji, zgodnie z RODO.
   </footer>
+  <div class="privacy-footer"><button type="button" data-cookie-settings>Ustawienia cookies i prywatność</button></div>
   </main>
 
 </div>
@@ -815,10 +820,10 @@
 <script src="assets/js/diplomas-data.js?v=20260826-1" defer></script>
 <script src="assets/js/references-data.js?v=20260826-1" defer></script>
 <script src="assets/js/icons.js?v=20260826-2" defer></script>
-<script src="assets/js/translations.js?v=20260907-3" defer></script>
-<script src="assets/js/job-personalizer.js?v=20260907-1" defer></script>
+<script src="assets/js/translations.js?v=20261004-1" defer></script>
+<script src="assets/js/job-personalizer.js?v=20261004-1" defer></script>
 <script src="assets/js/mobile-menu.js?v=20260826-1" defer></script>
-<script src="assets/js/diploma-gallery.js?v=20260826-1" defer></script>
+<script src="assets/js/diploma-gallery.js?v=20261004-1" defer></script>
 <script src="assets/js/references.js?v=20260728-1" defer></script>
 <script src="assets/js/contact-form.js?v=20260907-3" defer></script>
 <script src="assets/js/ui-enhancements.js?v=20260907-1" defer></script>

@@ -72,7 +72,7 @@
       ["clock", "Working under<br>time pressure"],
       ["message", "Customer service<br>and communication"],
       ["target", "Problem<br>solving"],
-      ["sparkles", "Fast learning<br>and adaptation"],
+      ["sparkles", "Learning<br>new tasks"],
       ["shield", "Responsibility<br>and commitment"],
       ["award", "UDT<br>license"],
       ["users", "Teamwork<br>and support"]
@@ -82,7 +82,7 @@
       ["clock", "Работа в условиях<br>дефицита времени"],
       ["message", "Обслуживание клиентов<br>и коммуникация"],
       ["target", "Решение<br>проблем"],
-      ["sparkles", "Быстрое обучение<br>и адаптация"],
+      ["sparkles", "Освоение<br>новых задач"],
       ["shield", "Ответственность<br>и вовлеченность"],
       ["award", "Допуск<br>UDT"],
       ["users", "Командная работа<br>и поддержка"]
@@ -380,7 +380,7 @@
     pl: {
       gateKicker: "Dopasuj profil",
       gateTitle: "Na jakie stanowisko szukasz pracownika?",
-      gateDesc: "Wybierz obszar, a strona od razu pokaże najważniejsze doświadczenia, umiejętności i dokumenty.",
+      gateDesc: "Wybierz obszar, a strona od razu pokaże doświadczenia związane z tym obszarem, umiejętności i dokumenty.",
       choiceLabel: "Obszary stanowiska",
       languageLabel: "Język strony",
       languageAria: "Wybierz język strony",
@@ -413,13 +413,13 @@
           meta: "Vladyslav Konohrai - profil produkcyjny: lakierowanie, śrutowanie, organizacja pracy, BHP, UDT i szkolenie nowych pracowników.",
           tag: "PRODUKCJA • LAKIERNIA • BHP",
           subtitle: "Doświadczenie na produkcji.<br>Technika, jakość i bezpieczeństwo.",
-          hero: "Pracownik z ponad dwuletnim doświadczeniem w środowisku produkcyjnym oraz wykształceniem BHP. Ma praktykę w lakierowaniu, śrutowaniu, obróbce powierzchni, drobnych naprawach i organizacji pracy działu.",
+          hero: "Mam ponad dwa lata doświadczenia w środowisku produkcyjnym i wykształcenie BHP. Zajmowałem się lakierowaniem, śrutowaniem, obróbką powierzchni, drobnymi naprawami i organizacją pracy działu.",
           pills: [`${icon("factory")} Produkcja`, `${icon("paintbrush")} Lakierowanie`, `${icon("award")} UDT II WJO`, `${icon("shield")} BHP`],
           stats: [["2+", "lata produkcji"], ["3", "certyfikaty"], ["5", "języków"], ["2", "kluczowe role"]],
           orbit: ["Produkcja", "Lakiernia", "UDT", "BHP"],
           sideStatus: `<b>${icon("star")} Profil produkcyjny</b><br>Gotowy do pracy technicznej i produkcyjnej`,
           contactTitle: "Porozmawiajmy o pracy na produkcji",
-          contactLead: "Najlepiej sprawdzi się rozmowa o lakierni, obróbce, BHP lub pracy technicznej.",
+          contactLead: "Chętnie porozmawiam o lakierni, obróbce, BHP lub pracy technicznej.",
           focusTitles: ["Praca produkcyjna", "Lakierowanie i obróbka", "BHP i jakość"],
           focusTexts: ["Ponad dwa lata praktyki w środowisku produkcyjnym.", "Przygotowanie elementów, lakierowanie, śrutowanie i drobne naprawy.", "Przestrzeganie standardów pracy, jakości i bezpieczeństwa."],
           focusIcons: ["factory", "paintbrush", "shield"],
@@ -455,14 +455,14 @@
           pageTitle: "Vladyslav Konohrai | Gastronomia",
           meta: "Vladyslav Konohrai - profil gastronomiczny: kuchnia, przygotowywanie dań, realizacja zamówień, obsługa klienta, zapasy i szkolenie pracowników.",
           tag: "GASTRONOMIA • KUCHNIA • OBSŁUGA KLIENTA",
-          subtitle: "Sprawna kuchnia.<br>Tempo, dokładność i zespół.",
-          hero: "Pracownik gastronomii z doświadczeniem w pracy na kuchni, przygotowywaniu dań, realizacji zamówień i obsłudze klienta. Dobrze pracuje pod presją czasu, szybko uczy się nowych obowiązków i sprawnie współpracuje z zespołem.",
+          subtitle: "Praktyka w kuchni.<br>Nauka i współpraca z zespołem.",
+          hero: "Mam doświadczenie w pracy na kuchni, przygotowywaniu dań, realizacji zamówień i obsłudze klienta. Ta praca uczy mnie działania pod presją czasu, dokładności i współpracy z zespołem.",
           pills: [`${icon("utensils")} Kuchnia`, `${icon("clock")} Presja czasu`, `${icon("message")} Klient`, `${icon("users")} Zespół`],
           stats: [["3", "role gastronomiczne"], ["3", "certyfikaty"], ["5", "języków"], ["1", "aktualna rola"]],
           orbit: ["Kuchnia", "Zamówienia", "Zespół", "Klient"],
           sideStatus: `<b>${icon("star")} Profil gastronomiczny</b><br>Gotowy do pracy na kuchni i obsłudze`,
           contactTitle: "Porozmawiajmy o pracy w gastronomii",
-          contactLead: "Najlepiej sprawdzi się rozmowa o kuchni, zamówieniach, obsłudze klienta lub pracy zmianowej.",
+          contactLead: "Chętnie porozmawiam o kuchni, zamówieniach, obsłudze klienta lub pracy zmianowej.",
           focusTitles: ["Praca na kuchni", "Realizacja zamówień", "Obsługa i zespół"],
           focusTexts: ["Przygotowywanie dań, składników i półproduktów zgodnie z recepturami.", "Pakowanie, kompletowanie zamówień oraz kontrola jakości i zapasów.", "Kontakt z klientem, rozwiązywanie problemów i wdrażanie nowych osób."],
           focusIcons: ["utensils", "clipboard-check", "users"],
@@ -497,15 +497,15 @@
           meta: "Vladyslav Konohrai - profil biurowy i BHP: dokumentacja, procedury, szkolenia, obsługa klienta, organizacja pracy i szybka nauka narzędzi.",
           tag: "BIURO • ADMINISTRACJA • BHP",
           subtitle: "Dokumentacja i procedury.<br>Dokładność, kontakt i organizacja.",
-          hero: "Student psychologii i technik BHP z doświadczeniem w pracy z dokumentacją, procedurami, prowadzeniu szkoleń oraz obsłudze klienta. Stawia na dokładność, odpowiedzialność i dobrą organizację.",
+          hero: "Jestem studentem psychologii i technikiem BHP z doświadczeniem w pracy z dokumentacją, procedurami, prowadzeniu szkoleń oraz obsłudze klienta. Staram się pracować dokładnie i rozwijać umiejętność organizacji zadań.",
           pills: [`${icon("clipboard-check")} Dokumentacja`, `${icon("shield")} BHP`, `${icon("message")} Obsługa klienta`, `${icon("file-check")} Excel`],
           stats: [["2", "role"], ["7", "certyfikatów"], ["5", "języków"], ["3", "kierunki edukacji"]],
           orbit: ["Dokumenty", "BHP", "Klienci", "Narzędzia"],
           sideStatus: `<b>${icon("star")} Profil biurowy i BHP</b><br>Gotowy do dokumentacji, procedur i obsługi`,
           contactTitle: "Porozmawiajmy o pracy biurowej lub BHP",
-          contactLead: "Najlepiej sprawdzi się rozmowa o dokumentacji, procedurach, szkoleniach albo obsłudze klienta.",
+          contactLead: "Chętnie porozmawiam o dokumentacji, procedurach, szkoleniach albo obsłudze klienta.",
           focusTitles: ["Dokumentacja", "Procedury BHP", "Obsługa i organizacja"],
-          focusTexts: ["Praca z dokumentami, procedurami i szybkie przyswajanie nowych narzędzi.", "Szkolenia, analiza zagrożeń i współpraca przy wdrażaniu zasad bezpieczeństwa.", "Obsługa klienta, rozwiązywanie problemów i ustalanie priorytetów."],
+          focusTexts: ["Praca z dokumentami, procedurami i poznawanie nowych narzędzi.", "Szkolenia, analiza zagrożeń i współpraca przy wdrażaniu zasad bezpieczeństwa.", "Obsługa klienta, rozwiązywanie problemów i ustalanie priorytetów."],
           focusIcons: ["file-check", "shield", "clipboard-check"],
           journeyTitle: "DROGA BIUROWA I BHP",
           journeyHeading: "Dokładność, procedury<br><span>i praca z ludźmi</span>",
@@ -518,7 +518,7 @@
             ["target", "Rozwiązywanie<br>problemów"],
             ["users", "Szkolenie i wdrażanie<br>nowych pracowników"],
             ["briefcase", "Współpraca z zespołem<br>i kierownictwem"],
-            ["sparkles", "Szybkie przyswajanie<br>narzędzi i procedur"]
+            ["sparkles", "Poznawanie<br>narzędzi i procedur"]
           ],
           visibleExperience: ["safety", "restaurant-torun"],
           experienceOverrides: {
@@ -550,21 +550,21 @@
           pageTitle: "Vladyslav Konohrai | Inspektor BHP i psychologia, Toruń",
           meta: "Vladyslav Konohrai - CV inspektora BHP i studenta psychologii UMK w Toruniu. Doświadczenie w BHP, produkcji, gastronomii, szkoleniach i obsłudze klienta.",
           tag: "PEŁNY PROFIL • BHP • GASTRONOMIA • PRODUKCJA",
-          subtitle: "Szerokie doświadczenie.<br>Szybka adaptacja i odpowiedzialność.",
-          hero: "Student psychologii UMK w Toruniu i inspektor BHP z doświadczeniem w pracy technicznej, gastronomii oraz obsłudze klienta. Potrafi samodzielnie organizować pracę, szkolić nowych pracowników i skutecznie rozwiązywać problemy.",
+          subtitle: "Doświadczenie z różnych miejsc.<br>Chęć nauki i współpracy.",
+          hero: "Jestem studentem psychologii UMK w Toruniu i inspektorem BHP z doświadczeniem w pracy technicznej, gastronomii oraz obsłudze klienta. W dotychczasowej pracy zajmowałem się organizacją zadań i wdrażaniem nowych pracowników. Nadal rozwijam swoje umiejętności.",
           pills: [`${icon("shield")} BHP`, `${icon("utensils")} Gastronomia`, `${icon("factory")} Produkcja`, `${icon("users")} Obsługa klienta`],
           stats: [["7", "doświadczeń"], ["3", "kierunki edukacji"], ["5", "języków"], ["13", "dyplomów i certyfikatów"]],
           orbit: ["BHP", "Kuchnia", "Produkcja", "Ludzie"],
           sideStatus: `<b>${icon("star")} Pełny profil</b><br>BHP, gastronomia, produkcja i obsługa klienta`,
-          contactTitle: "Porozmawiajmy o najlepszym dopasowaniu",
+          contactTitle: "Porozmawiajmy o możliwej współpracy",
           contactLead: "Pełny profil sprawdzi się, gdy zakres stanowiska jest mieszany.",
           focusTitles: ["Samodzielna organizacja", "Praca pod presją", "Wsparcie zespołu"],
-          focusTexts: ["Doświadczenie w różnych środowiskach i szybka adaptacja do nowych zadań.", "Gastronomia, produkcja i obsługa klienta uczą tempa oraz rozwiązywania problemów.", "Szkolenie nowych pracowników, komunikacja i odpowiedzialność za wspólny wynik."],
+          focusTexts: ["Doświadczenie w różnych środowiskach i uczenie się nowych zadań.", "Gastronomia, produkcja i obsługa klienta uczą tempa oraz rozwiązywania problemów.", "Szkolenie nowych pracowników, komunikacja i odpowiedzialność za wspólny wynik."],
           focusIcons: ["clipboard-check", "clock", "users"],
           journeyTitle: "PEŁNA DROGA",
           journeyHeading: "Różne doświadczenia,<br><span>jeden praktyczny profil</span>",
           journeyText: "Od pracy budowlanej i gospodarstwa w Ukrainie, przez lakiernię Palfinger i gastronomię, po bieżące role inspektora BHP i kucharza. Oś pokazuje rzeczywiste okresy zatrudnienia oraz doświadczenia, które rozwijały się równolegle.",
-          skillTitle: "Najważniejsze umiejętności",
+          skillTitle: "Umiejętności zdobywane w pracy",
           strengths: [
             ["clipboard-check", "Samodzielna organizacja<br>pracy"],
             ["clock", "Praca pod presją czasu<br>i rozwiązywanie problemów"],
@@ -588,7 +588,7 @@
     en: {
       gateKicker: "Match the profile",
       gateTitle: "What position are you hiring for?",
-      gateDesc: "Choose the area and the page will highlight the most relevant experience, skills and documents.",
+      gateDesc: "Choose the area and the page will highlight the relevant experience, skills and documents.",
       choiceLabel: "Position areas",
       languageLabel: "Page language",
       languageAria: "Choose page language",
@@ -622,7 +622,7 @@
           meta: "CV of Vladyslav Konohrai from Toruń: kitchen work, food preparation, order fulfillment, customer service, inventory and employee training.",
           summary: "This variant highlights kitchen work, pace and customer service.",
           tag: "GASTRONOMY • KITCHEN • CUSTOMER SERVICE",
-          subtitle: "Efficient kitchen work.<br>Pace, accuracy and teamwork.",
+          subtitle: "Kitchen experience.<br>Learning and teamwork.",
           focusTitles: ["Kitchen work", "Order fulfillment", "Service and team"],
           journeyHeading: "Kitchen experience<br><span>and customer service</span>",
           journeyText: "Three hospitality roles since 2023: restaurant service in Bydgoszcz and Toruń, followed by the current cook position at MANEKIN. The experience covers kitchen work, orders, customers, stock and onboarding.",
@@ -646,15 +646,15 @@
         },
         all: {
           title: "Full profile",
-          pageTitle: "Vladyslav Konohrai | OHS specialist and psychology, Toruń",
+          pageTitle: "Vladyslav Konohrai | OHS inspector and psychology, Toruń",
           meta: "CV of Vladyslav Konohrai, an OHS inspector and psychology student at Nicolaus Copernicus University in Toruń, with experience in safety, production, gastronomy and customer service.",
           summary: "This variant shows the full range of experience and skills.",
           tag: "FULL PROFILE • OHS • GASTRONOMY • PRODUCTION",
-          subtitle: "Broad experience.<br>Fast adaptation and responsibility.",
+          subtitle: "Experience in different workplaces.<br>Willingness to learn and cooperate.",
           focusTitles: ["Independent organization", "Working under pressure", "Team support"],
           journeyHeading: "Different roles,<br><span>one practical profile</span>",
           journeyText: "From construction and farm work in Ukraine, through the Palfinger paint shop and hospitality, to the current OHS inspector and cook roles. The timeline shows actual employment periods, including roles held in parallel.",
-          contactTitle: "Let's talk about the best fit",
+          contactTitle: "Let's discuss possible cooperation",
           experienceTitle: "Full professional experience",
           diplomaHeading: "Full document gallery"
         }
@@ -663,7 +663,7 @@
     ru: {
       gateKicker: "Подобрать профиль",
       gateTitle: "На какую должность вы ищете сотрудника?",
-      gateDesc: "Выберите направление, и страница сразу покажет самые важные опыт, навыки и документы.",
+      gateDesc: "Выберите направление, и страница сразу покажет связанный с направлением опыт, навыки и документы.",
       choiceLabel: "Направления работы",
       languageLabel: "Язык страницы",
       languageAria: "Выберите язык страницы",
@@ -697,7 +697,7 @@
           meta: "Vladyslav Konohrai (Владислав Конохрай) - опыт работы на кухне, приготовления блюд, выполнения заказов и обслуживания клиентов.",
           summary: "Этот вариант выделяет кухню, темп работы и обслуживание клиентов.",
           tag: "ГАСТРОНОМИЯ • КУХНЯ • КЛИЕНТЫ",
-          subtitle: "Эффективная кухня.<br>Темп, точность и команда.",
+          subtitle: "Опыт на кухне.<br>Обучение и работа в команде.",
           focusTitles: ["Кухня", "Выполнение заказов", "Сервис и команда"],
           journeyHeading: "Опыт работы на кухне<br><span>и с клиентами</span>",
           journeyText: "Три должности в гастрономии с 2023 года: работа в ресторанах Быдгоща и Торуни, а затем текущая должность повара в MANEKIN. Опыт включает кухню, заказы, клиентов, запасы и обучение новых сотрудников.",
@@ -725,11 +725,11 @@
           meta: "Vladyslav Konohrai (Владислав Конохрай) - инспектор по охране труда и студент психологии UMK в Торуни. Опыт в производстве, гастрономии и работе с клиентами.",
           summary: "Этот вариант показывает весь опыт и полный обзор компетенций.",
           tag: "ПОЛНЫЙ ПРОФИЛЬ • ОХРАНА ТРУДА • ГАСТРОНОМИЯ • ПРОИЗВОДСТВО",
-          subtitle: "Широкий опыт.<br>Быстрая адаптация и ответственность.",
+          subtitle: "Опыт в разных местах.<br>Готовность учиться и сотрудничать.",
           focusTitles: ["Самостоятельная организация", "Работа под давлением", "Поддержка команды"],
           journeyHeading: "Разный опыт,<br><span>один практический профиль</span>",
           journeyText: "От строительных и сельскохозяйственных работ в Украине через покрасочный цех Palfinger и гастрономию к текущим должностям инспектора по охране труда и повара. Шкала показывает реальные периоды работы, включая параллельную занятость.",
-          contactTitle: "Поговорим о лучшем соответствии",
+          contactTitle: "Поговорим о возможном сотрудничестве",
           experienceTitle: "Полный профессиональный опыт",
           diplomaHeading: "Полная галерея документов"
         }
@@ -743,14 +743,14 @@
   const storage = {
     get(key) {
       try {
-        return localStorage.getItem(key);
+        return window.sitePrivacy?.getPreference(key) ?? null;
       } catch {
         return null;
       }
     },
     set(key, value) {
       try {
-        localStorage.setItem(key, value);
+        window.sitePrivacy?.setPreference(key, value);
       } catch {
         // The chosen CV profile still works during the current visit.
       }
@@ -1336,7 +1336,8 @@
   document.addEventListener("DOMContentLoaded", () => {
     activeRole = normalizeRole(storage.get(STORAGE_KEY));
     applyRole(activeRole, { persist: false });
-    openGate();
+    if (window.sitePrivacy?.getConsent()) openGate();
+    else document.addEventListener("consentchange", openGate, { once: true });
 
     document.querySelectorAll("[data-role-choice]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -1359,6 +1360,7 @@
     }
 
     document.addEventListener("keydown", (event) => {
+      if (document.querySelector(".cookie-dialog[open]") || event.target.closest(".cookie-banner")) return;
       const gate = document.querySelector("[data-job-gate]");
       if (!gate || gate.hidden) {
         return;
